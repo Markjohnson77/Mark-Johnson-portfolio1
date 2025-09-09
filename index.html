@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mark Johnson — Portfolio</title>
+  <meta name="description" content="Mark Johnson — Computer Science & Engineering student blending technology with creativity. UI/UX, web & app development, photography and videography."/>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%230C3B2E'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='sans-serif' font-size='54' fill='%23FFBA00'%3EM%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header" aria-label="Main">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#home" aria-label="Mark Johnson home">
+        <div class="brand-mark"><span>MJ</span></div>
+        <span>Mark Johnson</span>
+      </a>
+      <div class="nav-links" role="navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills & Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero" aria-labelledby="home-title">
+    <div>
+      <p class="eyebrow">HELLO WELCOME</p>
+      <h1 id="home-title">Blending Technology with Creativity.</h1>
+      <p class="lead">I’m Mark Johnson, a Computer Science and Engineering student with a strong passion for blending technology and creativity.Exploring software development, UI/UX, and digital media.What motivates me most is the opportunity to use technology and design to create solutions that make everyday life easier and more engaging.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View My Work</a>
+        <a class="btn ghost" href="#contact">Get in Touch</a>
+      </div>
+    </div>
+    <div>
+      <div class="portrait" role="img" aria-label="Profile photo placeholder"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" aria-labelledby="about-title">
+    <h2 id="about-title">About</h2>
+    <div class="grid cols-2">
+      <article class="card">
+        <h3>Bio</h3>
+        <p>I’m a Computer Science and Engineering student passionate about building innovative digital solutions. My expertise spans web development, UI/UX design, and creative media production, with experience in academic projects, internships, and event design. I enjoy combining technical skills with creativity—whether it’s developing applications like a bus pass management system, designing intuitive interfaces. Driven by curiosity, discipline, and resilience, I strive to use technology and design to solve real-world problems while continuously growing as a learner and creator.</p>
+        <article class="card">
+            <h3>Education</h3>
+            <div class="edu-details">
+              <p>
+                <strong>B.Tech in Computer Science & Engineering</strong>
+                <span class="edu-college"><br>St. Joseph’s College of Engineering and Technology, Palai</span>
+              </p>
+            </div>
+          </article>
+          
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" aria-labelledby="exp-title">
+    <h2 id="exp-title">Experience</h2>
+    <div class="grid cols-2">
+      <article class="card">
+        <p class="eyebrow">Internship — June 2024</p>
+        <h3>Full Stack Web Development — SMEC Automation Pvt. Ltd., Infopark Kakkanad</h3>
+        <ul class="list-clean">
+          <li>Hands-on work across frontend and backend with real-world workflows.</li>
+          <li>Developed practical coding habits with initiative and discipline.</li>
+          <li>Recognized for meeting deadlines and delivering tasks reliably.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <p class="eyebrow">Collaboration</p>
+        <h3>Asthra Tech Fest Design Contributions</h3>
+        <p>Designed posters and created promotional videos for Asthra, our college tech fest. This project showcased my creative design and digital media production skills, combining storytelling and technology to promote the event.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills & Services -->
+  <section id="skills" aria-labelledby="skills-title">
+    <h2 id="skills-title">Skills & Services</h2>
+    <div class="grid cols-3">
+      <article class="card">
+        <h3>Technical Skills</h3>
+        <ul class="list-clean">
+          <li><strong>Programming:</strong> Python, C, Java</li>
+          <li><strong>Web:</strong> HTML, CSS, JavaScript (responsive, accessible)</li>
+          <li><strong>Tools:</strong> Git/GitHub</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Design & Media</h3>
+        <ul class="list-clean">
+          <li><strong>UI/UX:</strong> Prototyping, usability-first interfaces</li>
+          <li><strong>Design-Tools:</strong> Figma, Photoshop, Canva</li>
+          <li><strong>Media:</strong> Photography & Videography (shooting, editing)</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>Services</h3>
+        <ul class="list-clean">
+          <li>UI/UX design for web & apps (clean, user-friendly)</li>
+          <li>Web design & development with basic backend integration</li>
+          <li>App development support (design + dev phases)</li>
+          <li>Photography/Videography content creation</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" aria-labelledby="projects-title">
+    <h2 id="projects-title">Projects</h2>
+
+    <article class="card project">
+      <div class="thumb"></div>
+      <div>
+        <p class="eyebrow">MINI-PROJECT</p>
+        <h3>College Bus Pass Management System</h3>
+        <p>Designed an intuitive, student-friendly interface to simplify registration, generation, and renewal of bus passes for hostel students. Emphasis on clean layouts and minimal steps to complete tasks.</p>
+      </div>
+    </article>
+
+    <div style="height:16px"></div>
+
+    <div class="grid cols-3">
+      <article class="card">
+        <h3>Daily Expense Tracking System</h3>
+        <p>Simple personal finance tool emphasizing clarity, speed and privacy-friendly UX.</p>
+      </article>
+      <article class="card">
+        <h3>Car Wash Management System</h3>
+        <p>Appointment and ticket flow concepts designed for frictionless service intake.</p>
+      </article>
+      <article class="card">
+        <h3>Turf Booking System</h3>
+        <p>Mobile-first booking UI with real-time slot states and quick actions.</p>
+      </article>
+    </div>
+  </section>
+
+    <!-- Certificates -->
+    <section id="certificates" aria-labelledby="certificates-title">
+        <h2 id="certificates-title">Certificates</h2>
+        <div class="grid cols-3">
+          <a href="IMAGES\SMEC.jpg" target="_blank" class="card cert-card">
+            <img src="IMAGES/SMEC.jpg" alt="SMEC">
+          </a>
+          <a href="IMAGES\PALAKKAD.jpg" target="_blank" class="card cert-card">
+            <img src="IMAGES\PALAKKAD.jpg" alt="KTU Workshop">
+          </a>
+          <a href="IMAGES/ASTHRA.jpeg" target="_blank" class="card cert-card">
+            <img src="IMAGES/ASTHRA.jpeg" alt="ASTHRA">
+          </a>
+          <a href="IMAGES/IEEE.jpeg" target="_blank" class="card cert-card">
+            <img src="IMAGES/IEEE.jpeg" alt="IEEE">
+          </a>
+          <a href="IMAGES/SUMMIT1.jpg" target="_blank" class="card cert-card">
+            <img src="IMAGES/SUMMIT1.jpg" alt="AI SUMMIT1">
+          </a>
+          <a href="IMAGES/SUMMIT2.jpg" target="_blank" class="card cert-card">
+            <img src="IMAGES/SUMMIT2.jpg" alt="AI SUMMIT2">
+          </a>
+        </div>
+      </section>
+    
+
+  <!-- Contact -->
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact</h2>
+
+    <div class="grid cols-2">
+      <form class="card" onsubmit="event.preventDefault(); alert('Thanks, your message has been sent!');">
+        <h3>Let’s build something great</h3>
+        <label>
+          Name
+          <input required name="name" placeholder="Your name"/>
+        </label>
+        <label>
+          Email
+          <input required type="email" name="email" placeholder="you@example.com"/>
+        </label>
+        <label>
+          Message
+          <textarea required name="message" rows="5" placeholder="How can I help?"></textarea>
+        </label>
+        <button class="btn primary" type="submit">Send Message</button>
+      </form>
+
+      <aside class="card">
+        <h3>Direct</h3>
+        <ul class="list-clean">
+          <li><strong>Email:</strong> <a href="mailto:markjohnson2026@cs.sjcetpalai.ac.in">markjohnson2026@cs.sjcetpalai.ac.in</a></li>
+          <li><strong>Phone:</strong> <a href="tel:+919746843121">+91 9746843121</a></li>
+        </ul>
+        <h3>Links</h3>
+        <ul class="list-clean">
+          <li><a href="https://www.linkedin.com/in/mark-johnson-marcus077/" target="_blank" rel="noreferrer">LinkedIn</a></li>
+          <li><a href="https://github.com/Markjohnson77" target="_blank" rel="noreferrer">GitHub</a></li>
+          <li><a href="https://www.instagram.com/_marcus.j_/" target="_blank" rel="noreferrer">Instagram</a></li>
+        </ul>
+        <div style="margin-top:16px">
+          <a class="btn ghost" href="#" aria-label="Download resume as PDF">Download Resume</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-wrap">
+      <span>© <span id="year"></span> Mark Johnson</span>
+      <span style="opacity:.75">Designed with #6D9773, #0C3B2E, #BB8A52, #FFBA00</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
