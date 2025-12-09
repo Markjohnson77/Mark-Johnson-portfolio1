@@ -43,24 +43,42 @@
   </section>
 
   <!-- About -->
-  <section id="about" aria-labelledby="about-title">
-    <h2 id="about-title">About</h2>
-    <div class="grid cols-2">
-      <article class="card">
-        <h3>Bio</h3>
-        <p>I’m a Computer Science and Engineering student passionate about building innovative digital solutions. My expertise spans web development, UI/UX design, and creative media production, with experience in academic projects, internships, and event design. I enjoy combining technical skills with creativity—whether it’s developing applications like a bus pass management system, designing intuitive interfaces. Driven by curiosity, discipline, and resilience, I strive to use technology and design to solve real-world problems while continuously growing as a learner and creator.</p>
-        <article class="card">
-            <h3>Education</h3>
-            <div class="edu-details">
-              <p>
-                <strong>B.Tech in Computer Science & Engineering</strong>
-                <span class="edu-college"><br>St. Joseph’s College of Engineering and Technology, Palai</span>
-              </p>
-            </div>
-          </article>
-          
-    </div>
-  </section>
+<section id="about" aria-labelledby="about-title">
+  <h2 id="about-title">About</h2>
+
+  <!-- Use a dedicated wrapper (no .grid class) -->
+  <div class="about-grid">
+
+    <!-- Left: Bio card (keeps your .card look) -->
+    <article class="card about-bio">
+      <h3>BIO</h3>
+      <p>
+        I’m a Computer Science and Engineering student passionate about building innovative digital solutions. My expertise spans web development, UI/UX design, and creative media production, with experience in academic projects, internships, and event design. I enjoy combining technical skills with creativity—whether it’s developing applications like a bus pass management system or designing intuitive interfaces. Driven by curiosity, discipline, and resilience, I strive to use technology and design to solve real-world problems while continuously growing as a learner and creator.
+      </p>
+    </article>
+
+    <!-- Right: Education timeline (text-only, aligned center of the bio) -->
+    <aside class="education-timeline">
+      <h3>Education</h3>
+      <ul class="timeline">
+        <li>
+          <span class="year">2020</span>
+          <span class="edu-detail">10th Grade — Passed</span>
+        </li>
+        <li>
+          <span class="year">2022</span>
+          <span class="edu-detail">12th Grade — Passed</span>
+        </li>
+        <li>
+          <span class="year">2026</span>
+          <span class="edu-detail">B.Tech CSE — Expected</span>
+        </li>
+      </ul>
+    </aside>
+
+  </div>
+</section>
+
 
   <!-- Experience -->
   <section id="experience" aria-labelledby="exp-title">
@@ -146,31 +164,48 @@
     </div>
   </section>
 
-    <!-- Certificates -->
-    <section id="certificates" aria-labelledby="certificates-title">
-        <h2 id="certificates-title">Certificates</h2>
-        <div class="grid cols-3">
-          <a href="SMEC.jpg" target="_blank" class="card cert-card">
-            <img src="SMEC.jpg" alt="SMEC">
-          </a>
-          <a href="PALAKKAD.jpg" target="_blank" class="card cert-card">
-            <img src="PALAKKAD.jpg" alt="KTU Workshop">
-          </a>
-          <a href="ASTHRA.jpeg" target="_blank" class="card cert-card">
-            <img src="ASTHRA.jpeg" alt="ASTHRA">
-          </a>
-          <a href="IEEE.jpeg" target="_blank" class="card cert-card">
-            <img src="IEEE.jpeg" alt="IEEE">
-          </a>
-          <a href="SUMMIT1.jpg" target="_blank" class="card cert-card">
-            <img src="SUMMIT1.jpg" alt="AI SUMMIT1">
-          </a>
-          <a href="SUMMIT2.jpg" target="_blank" class="card cert-card">
-            <img src="SUMMIT2.jpg" alt="AI SUMMIT2">
-          </a>
-        </div>
-      </section>
-    
+   <!-- Certificates -->
+<section id="certificates" aria-labelledby="certificates-title">
+  <h2 id="certificates-title">Certificates</h2>
+  <div class="cert-grid">
+    <div class="cert-card" data-cert="IMAGES/SMEC.jpg">
+      <img src="IMAGES/SMEC.jpg" alt="SMEC">
+      <p>Full Stack Web Development Internship</p>
+    </div>
+
+    <div class="cert-card" data-cert="IMAGES/PALAKKAD.jpg">
+      <img src="IMAGES/PALAKKAD.jpg" alt="KTU Workshop">
+      <p>KTU Techfest Workshop</p>
+    </div>
+
+    <div class="cert-card" data-cert="IMAGES/ASTHRA.jpeg">
+      <img src="IMAGES/ASTHRA.jpeg" alt="ASTHRA">
+      <p>Volunteer - Web & Design Team</p>
+    </div>
+
+    <div class="cert-card" data-cert="IMAGES/IEEE.jpeg">
+      <img src="IMAGES/IEEE.jpeg" alt="IEEE">
+      <p>IEEE Participation Certificate</p>
+    </div>
+
+    <div class="cert-card" data-cert="IMAGES/SUMMIT1.jpg">
+      <img src="IMAGES/SUMMIT1.jpg" alt="AI SUMMIT 1">
+      <p>AI Summit Workshop</p>
+    </div>
+
+    <div class="cert-card" data-cert="IMAGES/SUMMIT2.jpg">
+      <img src="IMAGES/SUMMIT2.jpg" alt="AI SUMMIT 2">
+      <p>AI Summit Project Showcase</p>
+    </div>
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="certModal" class="cert-modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
+</section>
+
 
   <!-- Contact -->
   <section id="contact" aria-labelledby="contact-title">
@@ -207,8 +242,9 @@
           <li><a href="https://www.instagram.com/_marcus.j_/" target="_blank" rel="noreferrer">Instagram</a></li>
         </ul>
         <div style="margin-top:16px">
-          <a class="btn ghost" href="#" aria-label="Download resume as PDF">Download Resume</a>
+          <a class="btn ghost" href="IMAGES/resume.png" target="_blank" aria-label="View Resume">View Resume</a>
         </div>
+        
       </aside>
     </div>
   </section>
@@ -216,13 +252,26 @@
   <footer>
     <div class="footer-wrap">
       <span>© <span id="year"></span> Mark Johnson</span>
-      <span style="opacity:.75">Designed with #6D9773, #0C3B2E, #BB8A52, #FFBA00</span>
+      <!-- <span style="opacity:.75">Designed with #6D9773, #0C3B2E, #BB8A52, #FFBA00</span> -->
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script>
+  const modal = document.getElementById("certModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.querySelector(".close");
+
+  document.querySelectorAll(".cert-card").forEach(card => {
+    card.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = card.getAttribute("data-cert");
+    });
+  });
+
+  closeBtn.onclick = () => { modal.style.display = "none"; };
+  modal.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+</script>
+
+  
 </body>
 </html>
-
