@@ -51,14 +51,33 @@
   .cta{display:flex; gap:12px; flex-wrap:wrap}
   .btn{appearance:none; border:none; border-radius:12px; padding:12px 16px; font-weight:700; cursor:pointer; transition: transform .2s ease, background .2s ease;}
   .btn:active{transform: translateY(1px)}
-  .btn.primary{background: linear-gradient(180deg, var(--accent-4), #D79A00); color:#0c0c0c}
+  .btn.primary{background: linear-gradient(180deg, var(--accent-4), #ffffff); color:#0c0c0c}
   .btn.ghost{background: transparent; border:1px solid var(--border); color:var(--text)}
   .btn.ghost:hover{background: rgba(255,255,255,.06)}
   
-  .portrait{
-    width:100%; aspect-ratio: 1/1; border-radius: 24px; background:linear-gradient(135deg, rgba(210, 227, 213, 0), rgba(12, 59, 46, 0.081)), url('MJ.jpg') center/cover;
-    box-shadow: var(--shadow); border:1px solid var(--border)
+  .portrait {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 24px;
+    background: linear-gradient(
+        135deg,
+        rgba(210, 227, 213, 0),
+        rgba(12, 59, 46, 0.081)
+      ),
+      url('IMAGES/MJ.jpg') center/cover;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: all 0.6s ease;
+    cursor: pointer;
   }
+  
+  .portrait:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.101),
+                0 0 25px rgba(109, 140, 151, 0.25);
+    border-color: var(--accent-4);
+  }
+  
   
   .grid{display:grid; gap:18px}
   .grid.cols-3{grid-template-columns: repeat(3, 1fr)}
@@ -89,41 +108,756 @@
     html{scroll-behavior:auto}
   }
   
-  /* Contact inputs */
-  input, textarea{
-    width:100%; margin-top:6px; padding:12px 14px; border-radius:12px; border:1px solid var(--border); background:rgba(255,255,255,.04); color:var(--text)
-  }
-  .chip-container{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap}
+  /* Certificates Section */
+#certificates {
+  position: relative;
+  padding: 3rem 1rem;
+  color: var(--text-color);
+  text-align: center;
+}
 
-  #certificates {
-    margin: 60px 0;
-  }
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.cert-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  text-align: center;
+  padding: 1rem;
+}
+
+.cert-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.cert-card p {
+  margin-top: 0.8rem;
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
+/* Hover Effects */
+.cert-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+}
+
+.cert-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Modal */
+.cert-modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.cert-modal img {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  border-radius: 12px;
+  animation: zoomIn 0.5s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* Close Button */
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #ffcc00;
+}
   
-  #certificates h2 {
-    margin-bottom: 24px;
-    font-size: 1.8rem;
-  }
-  
-  .cert-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    overflow: hidden;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .cert-card img {
+  /* =====================
+   Premium Contact Section Enhancements
+===================== */
+
+/* Contact Section Layout */
+#contact {
+  position: relative;
+  z-index: 10;
+}
+
+#contact h2 {
+  text-align: center;
+  margin-bottom: 48px;
+  font-size: var(--h2);
+  background: linear-gradient(90deg, var(--accent-4), var(--accent-1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Contact Cards (Form + Info) */
+#contact .card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px) saturate(160%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#contact .card:hover {
+  transform: translateY(-6px);
+  border-color: var(--accent-4);
+  box-shadow: 0 0 25px rgba(255, 186, 0, 0.2);
+}
+
+/* Form Headline */
+#contact form h3 {
+  font-size: var(--h3);
+  color: var(--accent-4);
+  margin-bottom: 16px;
+}
+
+/* Inputs & Textarea */
+#contact input,
+#contact textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: var(--accent-4);
+  background: rgba(255, 255, 255, 0.08);
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 187, 0, 0.159);
+}
+
+/* Send Button */
+#contact .btn.primary {
+  width: 100%;
+  background: linear-gradient(90deg, var(--accent-4), var(--accent-3));
+  color: #0c0c0c;
+  box-shadow: 0 6px 18px rgba(255, 186, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#contact .btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(255, 186, 0, 0.4);
+}
+
+/* Info Card Styling */
+#contact aside.card h3 {
+  color: var(--accent-1);
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+
+#contact aside.card ul a {
+  color: var(--accent-4);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+#contact aside.card ul a:hover {
+  color: var(--accent-1);
+  text-shadow: 0 0 8px rgba(255, 187, 0, 0.225);
+}
+
+/* Resume Button */
+#contact .btn.ghost {
+  width: 100%;
+  text-align: center;
+  border: 1px solid var(--accent-4);
+  color: var(--accent-4);
+  transition: all 0.3s ease;
+}
+
+#contact .btn.ghost:hover {
+  background: var(--accent-4);
+  color: #0c0c0c;
+  box-shadow: 0 6px 20px rgba(255, 186, 0, 0.4);
+  transform: translateY(-2px);
+}
+/* Fix for button overflow inside contact form */
+form.card {
+  position: relative;
+  overflow: hidden; /* Keeps button glow and scaling inside the frame */
+}
+
+.btn.primary {
+  background: linear-gradient(180deg, var(--accent-4), #d79a00);
+  color: #0c0c0c;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 0 rgba(255, 186, 0, 0);
+}
+
+.btn.primary:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 18px rgba(255, 186, 0, 0.4);
+}
+
+/* ===== About Section Grid ===== */
+.about-grid {
+  align-items: start;
+  gap: 40px;
+}
+
+.about-bio {
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* ===== Education Timeline (Minimal Style) ===== */
+.education-timeline {
+  position: relative;
+  padding-left: 30px;
+}
+
+.education-timeline h3 {
+  margin-bottom: 20px;
+  color: var(--accent-1);
+  font-size: 1.3rem;
+  letter-spacing: 0.5px;
+}
+
+/* Timeline vertical line */
+.timeline {
+  position: relative;
+  list-style: none;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent-3), var(--accent-1), transparent);
+  border-radius: 2px;
+}
+
+/* Each item */
+.timeline li {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  transition: transform 0.3s ease;
+}
+
+/* Circle marker */
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 3px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent-2);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent-2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Text */
+.timeline .year {
+  font-weight: 700;
+  color: var(--accent-1);
+  display: block;
+  font-size: 1rem;
+}
+
+.timeline .edu-detail {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* Hover effect */
+.timeline li:hover {
+  transform: translateX(5px);
+}
+
+.timeline li:hover::before {
+  transform: scale(1.3);
+  box-shadow: 0 0 15px var(--accent-3), 0 0 30px var(--accent-1);
+}
+
+.timeline li:hover .year {
+  color: var(--accent-3);
+  text-shadow: 0 0 8px var(--accent-1);
+}
+
+.timeline li::before {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+/* Timeline container */
+.education-timeline {
+  flex: 0 0 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 6px;
+}
+
+.education-timeline h3 {
+  margin: 0 0 16px 0;
+  color: var(--accent-1);
+  font-size: 1.2rem;
+}
+
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent-3), var(--accent-1));
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+/* Each timeline item */
+.timeline li {
+  position: relative;
+  padding: 8px 0 26px 40px;
+  cursor: pointer;
+  transition: transform .25s ease;
+}
+
+/* Rectangle highlight (initially invisible) */
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 17px;
+  top: 10px;
+  width: 4px;
+  height: 24px;
+  background: transparent;
+  border-radius: 2px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+/* Glow + line highlight on hover */
+.timeline li:hover::before {
+  background: linear-gradient(180deg, var(--accent-4), var(--accent-3));
+  opacity: 1;
+  box-shadow: 0 0 12px var(--accent-4), 0 0 24px rgba(255,186,0,0.3);
+}
+
+/* Move text slightly on hover */
+.timeline li:hover {
+  transform: translateX(6px);
+}
+
+/* Year and details */
+.timeline .year {
+  display: block;
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--accent-1);
+  margin-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+.timeline .edu-detail {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Text glow when hovered */
+.timeline li:hover .year {
+  color: var(--accent-4);
+  text-shadow: 0 0 10px rgba(255,186,0,0.4);
+}
+
+/* Responsive stacking */
+@media (max-width: 900px) {
+  .education-timeline {
+    flex: none;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    padding-left: 0;
+    align-items: flex-start;
   }
-  
-  .cert-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
-  }
-  
+  .timeline::before { left: 12px; }
+  .timeline li { padding-left: 36px; }
+  .timeline li::before { left: 11px; top: 10px; }
+}
+/* Align About and Education side-by-side */
+.about-grid {
+  display: flex;
+  justify-content: space-between; /* space between bio and timeline */
+  align-items: center; /* vertically center timeline with bio */
+  gap: 60px; /* spacing between the two sections */
+  flex-wrap: wrap; /* make it stack on smaller screens */
+}
 
-  
+/* Left side: Bio */
+.about-bio {
+  flex: 1 1 60%;
+}
+
+/* Right side: Education timeline */
+.education-timeline {
+  flex: 1 1 35%;
+  text-align: left;
+}
+
+/* Timeline text styling */
+.education-timeline ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.education-timeline li {
+  margin-bottom: 20px;
+  position: relative;
+  padding-left: 25px;
+}
+
+/* The vertical line (subtle) */
+.education-timeline li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 2px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.15);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Glow rectangle when hovered */
+.education-timeline li:hover::before {
+  background-color: var(--accent-3);
+  box-shadow: 0 0 8px var(--accent-3);
+}
+
+/* Text hover effect */
+.education-timeline li:hover .year,
+.education-timeline li:hover .edu-detail {
+  color: var(--accent-3);
+  transition: color 0.3s ease;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .about-grid {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .education-timeline {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+/* ---------- Force two-column About layout (drop-in) ---------- */
+#about { box-sizing: border-box; }
+
+/* make the wrapper a true flex row (high specificity) */
+#about > .about-grid {
+  display: flex !important;           /* ensure flex wins */
+  flex-wrap: nowrap;                  /* keep them side-by-side */
+  justify-content: space-between;
+  align-items: center;                /* vertical center */
+  gap: 40px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* left column (Bio) — ensure card fills its column */
+#about > .about-grid > .about-bio,
+#about > .about-grid > .about-bio.card {
+  flex: 0 1 60%;           /* take ~60% of the row */
+  max-width: 60%;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* right column (Timeline) aligned to the right and center-vertical */
+#about > .about-grid > .education-timeline {
+  flex: 0 0 34%;           /* take ~34% of the row */
+  max-width: 34%;
+  box-sizing: border-box;
+  align-self: center;      /* vertically center against bio */
+  position: relative;
+  text-align: left;
+}
+
+/* Timeline internals (no backgrounds — text-only) */
+.education-timeline h3 { margin: 0 0 12px; color: var(--accent-1); }
+.education-timeline .timeline { position: relative; margin: 0; padding: 0; list-style: none; }
+
+/* thin vertical line inside the timeline container */
+.education-timeline .timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--accent-3), var(--accent-1));
+  opacity: 0.45;
+  border-radius: 2px;
+}
+
+/* items */
+.education-timeline .timeline li {
+  padding-left: 36px;
+  margin-bottom: 20px;
+  position: relative;
+  transition: transform .22s ease;
+  cursor: default;
+}
+
+/* rectangular highlight on the line for each item (hidden by default) */
+.education-timeline .timeline li::before {
+  content: "";
+  position: absolute;
+  left: 6px;           /* sits over the vertical line */
+  top: 6px;
+  width: 4px;
+  height: 24px;
+  background: transparent;
+  border-radius: 2px;
+  opacity: 0;
+  transition: all .28s ease;
+}
+
+/* hover */
+.education-timeline .timeline li:hover { transform: translateX(6px); }
+.education-timeline .timeline li:hover::before {
+  background: linear-gradient(180deg, var(--accent-4), var(--accent-3));
+  opacity: 1;
+  box-shadow: 0 0 12px var(--accent-4);
+}
+
+/* text */
+.education-timeline .year { display:block; font-weight:700; color:var(--accent-1); }
+.education-timeline .edu-detail { display:block; color:var(--muted); }
+
+/* Responsive: stack on small screens */
+@media (max-width: 900px) {
+  #about > .about-grid {
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+  #about > .about-grid > .about-bio { max-width: 100%; flex: none; }
+  #about > .about-grid > .education-timeline { max-width: 100%; flex: none; margin-top: 8px; }
+  .education-timeline .timeline::before { left: 10px; }
+  .education-timeline .timeline li { padding-left: 42px; }
+  .education-timeline .timeline li::before { left: 8px; }
+}
+
+/* ===== Stylish Skill Cards (hover / focus effects) ===== */
+
+/* make sure cards are positioned for pseudo-elements */
+#skills .card {
+  position: relative;
+  overflow: hidden;                /* contain glows */
+  transition: transform .28s cubic-bezier(.2,.9,.2,1),
+              box-shadow .28s cubic-bezier(.2,.9,.2,1),
+              border-color .28s ease;
+  will-change: transform;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+/* subtle lift & shadow on hover / focus */
+#skills .card:hover,
+#skills .card:focus-within {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.55),
+              0 6px 18px rgba(109,151,115,0.06);
+  border-color: rgba(255,255,255,0.12);
+}
+
+/* gradient stroke that fades in on hover */
+#skills .card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;                 /* for border-like effect */
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--accent-4) 0%, var(--accent-3) 45%, var(--accent-1) 100%);
+  -webkit-mask: 
+    linear-gradient(#fff,#fff) content-box, 
+    linear-gradient(#fff,#fff);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity .28s ease, transform .28s ease;
+  transform: scale(0.98);
+}
+
+/* show the gradient stroke on hover */
+#skills .card:hover::before,
+#skills .card:focus-within::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* inner highlight sweep (diagonal shine) */
+#skills .card::after {
+  content: "";
+  position: absolute;
+  left: -60%;
+  top: -30%;
+  width: 40%;
+  height: 160%;
+  background: linear-gradient(120deg, rgba(255,255,255,0.03), rgba(255,255,255,0.18), rgba(255,255,255,0.02));
+  transform: rotate(-25deg);
+  transition: left .9s cubic-bezier(.2,.9,.2,1), opacity .5s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* sweep across on hover */
+#skills .card:hover::after,
+#skills .card:focus-within::after {
+  left: 120%;
+  opacity: 1;
+}
+
+/* title emphasis */
+#skills .card h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  transition: color .25s ease, text-shadow .25s ease;
+}
+
+/* small accent bar left of headings (appears on hover) */
+#skills .card h3::before {
+  content: "";
+  width: 36px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent-4), var(--accent-1));
+  transform-origin: left;
+  transform: scaleX(.0);
+  transition: transform .35s cubic-bezier(.2,.9,.2,1);
+}
+
+/* expand accent bar on hover */
+#skills .card:hover h3::before,
+#skills .card:focus-within h3::before {
+  transform: scaleX(1);
+}
+
+/* subtle text glow */
+#skills .card:hover h3 {
+  color: var(--accent-4);
+  text-shadow: 0 4px 18px rgba(255,186,0,0.12);
+}
+
+/* list items: custom bullets and spacing */
+#skills .card .list-clean {
+  gap: 10px;
+}
+#skills .card .list-clean li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 10px;
+}
+#skills .card .list-clean li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, var(--accent-4), var(--accent-3));
+  box-shadow: 0 0 8px rgba(255,186,0,0.14);
+  opacity: .9;
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+
+/* accent the bullets when hovering the card */
+#skills .card:hover .list-clean li::before {
+  transform: translateX(2px) scale(1.05);
+  box-shadow: 0 0 12px rgba(255,186,0,0.25);
+}
+
+/* keyboard accessibility - same as hover */
+#skills .card:focus-within { outline: none; }
+
+/* ensure good spacing on small screens */
+@media (max-width: 960px) {
+  .grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  #skills .card { transform: none; }
+}
+@media (max-width: 640px) {
+  .grid.cols-3, .grid.cols-2 { grid-template-columns: 1fr; }
+  #skills .card { transform: none; }
+}
+
+/* Project Card Thumbnail */
+.project .thumb {
+  background-image: url('IMAGES/college go design.png'); /* your image file here */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
