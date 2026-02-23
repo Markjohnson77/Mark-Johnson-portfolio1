@@ -1,0 +1,895 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mark Johnson — Computer Science student & Creative Developer</title>
+  <meta name="description"
+    content="Portfolio of Mark Johnson, a Computer Science student blending technology with creativity. Focused on UI/UX, Web Dev, and Creative Media." />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://markjohnson.dev/" />
+  <meta property="og:title" content="Mark Johnson — Computer Science & Creative Developer" />
+  <meta property="og:description"
+    content="Blending technology with creativity through UI/UX, web development, and digital media." />
+  <meta property="og:image" content="MJ.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Mark Johnson — Computer Science & Creative Developer" />
+  <meta property="twitter:description"
+    content="Blending technology with creativity through UI/UX, web development, and digital media." />
+  <meta property="twitter:image" content="MJ.jpg" />
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%230C3B2E'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='sans-serif' font-size='54' fill='%23FFBA00'%3EM%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Global cursor ambient glow (page-wide, fixed) -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" aria-label="Main">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand" href="#home" aria-label="Mark Johnson home">
+        <div class="brand-mark"><span>MJ</span></div>
+        <span class="brand-name">
+          <span class="first-name">Mark</span>
+          <span class="last-name">Johnson</span>
+        </span>
+      </a>
+      <div class="nav-links" role="navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills & Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero" aria-labelledby="home-title">
+
+    <!-- Left: Text -->
+    <div class="hero-content">
+      <p class="hero-label">UI/UX Designer &amp; Front-End Developer</p>
+      <h1 id="home-title" class="hero-title">
+        Blending Technology<br>with <em class="hero-accent">Creativity.</em>
+      </h1>
+      <p class="hero-sub">I design intuitive digital experiences<br>with clarity and purpose.</p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#projects">View Projects</a>
+        <a class="btn btn-ghost" href="#contact">Contact Me</a>
+      </div>
+    </div>
+
+    <!-- Right: Portrait -->
+    <div class="hero-visual">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-circle">
+        <img src="MJ1.jpeg" alt="Mark Johnson" class="hero-portrait" />
+      </div>
+    </div>
+
+  </section>
+
+  <!-- About -->
+  <section id="about" aria-labelledby="about-title">
+    <h2 id="about-title">About</h2>
+
+    <!-- Use a dedicated wrapper (no .grid class) -->
+    <div class="about-grid">
+
+      <!-- Left: Bio text, no card -->
+      <p class="about-text">I'm a UI/UX-focused Computer Science student passionate about designing intuitive digital
+        products.I combine structured design thinking with front-end development to create interfaces that are clean,
+        usable, and purposeful. My work centers around simplifying complex workflows and building experiences that feel
+        effortless for users.</p>
+
+      <!-- Right: Design Focus -->
+      <aside class="design-focus">
+        <h3 class="focus-heading">Design Focus</h3>
+        <ul class="focus-list">
+          <li class="focus-item" style="--i:0">
+            <span class="focus-icon"><i data-lucide="target"></i></span>
+            <span class="focus-label">UX Strategy</span>
+          </li>
+          <li class="focus-item" style="--i:1">
+            <span class="focus-icon"><i data-lucide="layout-dashboard"></i></span>
+            <span class="focus-label">Interface Design</span>
+          </li>
+          <li class="focus-item" style="--i:2">
+            <span class="focus-icon"><i data-lucide="code-2"></i></span>
+            <span class="focus-label">Front-End Development</span>
+          </li>
+          <li class="focus-item" style="--i:3">
+            <span class="focus-icon"><i data-lucide="git-branch"></i></span>
+            <span class="focus-label">Workflow Simplification</span>
+          </li>
+          <li class="focus-item" style="--i:4">
+            <span class="focus-icon"><i data-lucide="eye"></i></span>
+            <span class="focus-label">Accessibility Awareness</span>
+          </li>
+        </ul>
+      </aside>
+
+    </div>
+  </section>
+
+
+  <!-- Experience -->
+  <section id="experience" aria-labelledby="exp-title">
+    <h2 id="exp-title">Experience</h2>
+
+    <div class="exp-carousel-container">
+      <button class="carousel-btn prev" aria-label="Previous Experience"><i data-lucide="chevron-left"></i></button>
+
+      <div class="exp-carousel-track">
+        <!-- Entry 1 -->
+        <article class="exp-card active">
+          <div class="exp-meta">
+            <span class="exp-badge">Internship</span>
+            <span class="exp-date">June 2024 · Infopark, Kochi</span>
+          </div>
+          <h3 class="exp-role">UI-Focused Full-Stack Development Intern</h3>
+          <p class="exp-org">SMEC Automation Pvt. Ltd.</p>
+          <p class="exp-summary">
+            Contributed to internal automation tools with a strong focus on interface clarity, usability, and structured
+            frontend architecture within production environments.
+          </p>
+          <ul class="exp-bullets">
+            <li>Implemented responsive UI components aligned with backend automation workflows.</li>
+            <li>Improved interface structure and layout consistency across internal dashboards.</li>
+            <li>Collaborated with backend engineers to ensure accurate data visualization and logical user flows.</li>
+            <li>Reduced workflow friction by refining navigation patterns and simplifying feature interactions.</li>
+          </ul>
+        </article>
+
+        <!-- Entry 2 -->
+        <article class="exp-card next">
+          <div class="exp-meta">
+            <span class="exp-badge">Design Leadership</span>
+            <span class="exp-date">2023 – Present · Campus</span>
+          </div>
+          <h3 class="exp-role">Co-Lead, UI & Visual Design</h3>
+          <p class="exp-org">Computer Society of India (CSI)</p>
+          <p class="exp-summary">
+            Led interface and visual communication design for technical initiatives, ensuring structured layout systems
+            and
+            consistent digital branding across campus platforms.
+          </p>
+          <ul class="exp-bullets">
+            <li>Defined visual hierarchy and layout systems for event websites and digital promotions.</li>
+            <li>Collaborated with developers and event teams to align user experience goals with communication strategy.
+            </li>
+            <li>Mentored junior designers on usability principles, spacing systems, and typography consistency.</li>
+            <li>Enhanced engagement through cohesive design language across multiple digital touchpoints.</li>
+          </ul>
+        </article>
+
+        <!-- Entry 3 -->
+        <article class="exp-card hidden">
+          <div class="exp-meta">
+            <span class="exp-badge">Product Branding & UX Contribution</span>
+            <span class="exp-date">2023 · SJCET</span>
+          </div>
+          <h3 class="exp-role">Visual & Experience Designer</h3>
+          <p class="exp-org">Asthra Tech Fest</p>
+          <p class="exp-summary">
+            Shaped the visual identity and digital experience for a large-scale tech fest, designing cohesive
+            user-facing
+            materials across platforms.
+          </p>
+          <ul class="exp-bullets">
+            <li>Designed digital assets deployed across 10+ communication channels.</li>
+            <li>Contributed to a unified visual system supporting 500+ event participants.</li>
+            <li>Strengthened user engagement through structured visual storytelling and consistent branding.</li>
+          </ul>
+        </article>
+
+        <!-- Entry 4 -->
+        <article class="exp-card hidden">
+          <div class="exp-meta">
+            <span class="exp-badge">Certification</span>
+            <span class="exp-date">Certified &nbsp;·&nbsp; Online</span>
+          </div>
+          <h3 class="exp-role">UI/UX Design Certification</h3>
+          <p class="exp-org">Figma — Simplilearn</p>
+          <ul class="exp-bullets">
+            <li>Completed structured training in wireframing, prototyping, and interface design.</li>
+            <li>Developed interactive prototypes and component-based design systems.</li>
+            <li>Gained hands-on experience in user flows, layout hierarchy, and usability principles.</li>
+          </ul>
+        </article>
+      </div>
+
+      <button class="carousel-btn next" aria-label="Next Experience"><i data-lucide="chevron-right"></i></button>
+    </div>
+  </section>
+
+  <!-- Skills & Services -->
+  <section id="skills" aria-labelledby="skills-title">
+    <h2 id="skills-title" class="fade-in">Skills &amp; Services</h2>
+    <div class="skills-grid">
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="layout" class="skill-icon-svg"></i>
+          </div>
+          <h3>UI / UX Design</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>Figma</li>
+          <li>Wireframing</li>
+          <li>Prototyping</li>
+          <li>Design Systems</li>
+          <li>User Flows</li>
+          <li>Visual Hierarchy</li>
+        </ul>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="monitor" class="skill-icon-svg"></i>
+          </div>
+          <h3>Frontend Development</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>HTML5</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Responsive Design</li>
+          <li>REST API Integration</li>
+        </ul>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="server" class="skill-icon-svg"></i>
+          </div>
+          <h3>Backend Integration</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>PHP</li>
+          <li>MongoDB</li>
+        </ul>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="palette" class="skill-icon-svg"></i>
+          </div>
+          <h3>Creative Tools</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>Photoshop</li>
+          <li>After Effects</li>
+          <li>Premiere Pro</li>
+          <li>Canva</li>
+        </ul>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="terminal" class="skill-icon-svg"></i>
+          </div>
+          <h3>Development Tools</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>Git &amp; GitHub</li>
+          <li>VS Code</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" aria-labelledby="projects-title">
+    <h2 id="projects-title">Projects</h2>
+
+    <article class="card project interactive-card" id="project-collegego">
+      <div class="card-glow-cursor"></div>
+      <div class="thumb"></div>
+      <div class="project-info">
+        <p class="eyebrow">CASE STUDY</p>
+        <h3>CollegeGO – Smart Bus Pass System</h3>
+        <p>A web-based platform digitizing student movement requests and bus pass approvals through a structured
+          multi-level workflow. <span class="click-hint">Click to explore case study</span></p>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- UI Experiments & Interaction Concepts -->
+  <section id="experiments" aria-labelledby="experiments-title">
+    <h2 id="experiments-title">UI Experiments & Interaction Concepts</h2>
+
+    <div class="experiments-grid">
+      <article class="card project interactive-card" id="project-login">
+        <div class="card-glow-cursor"></div>
+        <div class="project-info">
+          <p class="eyebrow">UI Interaction Concept · Figma</p>
+          <h3>Modern Login Experience</h3>
+          <p>A clean, modern login interface designed with smooth transitions and structured hierarchy. <span
+              class="click-hint">Click to view concept animation</span></p>
+        </div>
+      </article>
+
+      <article class="card project interactive-card" id="project-sidebar">
+        <div class="card-glow-cursor"></div>
+        <div class="project-info">
+          <p class="eyebrow">UI Interaction Concept · Figma</p>
+          <h3>Adaptive Navigation Sidebar</h3>
+          <p>Explored collapsible sidebar navigation with focus on clarity, spatial awareness, and smooth transitions.
+            <span class="click-hint">Click to view concept animation</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="card project interactive-card" id="project-website">
+        <div class="card-glow-cursor"></div>
+        <div class="project-info">
+          <p class="eyebrow">Landing Page UI Concept</p>
+          <h3>Website Design Concept</h3>
+          <p>Designed a modern landing page layout emphasizing hero hierarchy, clean spacing, and structured content
+            flow.
+            <span class="click-hint">Click to view concept animation</span>
+          </p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Certificates -->
+  <section id="certificates" aria-labelledby="certificates-title">
+    <div style="text-align: center; padding: 40px 0;">
+      <h2 id="certificates-title" style="margin-bottom: 24px;">Certificates</h2>
+      <p style="color: var(--muted); margin-bottom: 32px;">View my professional certifications and workshop
+        accomplishments.</p>
+      <a href="certificates.html" class="btn btn-primary">View all Certificates</a>
+    </div>
+  </section>
+
+
+  <!-- Contact -->
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Contact</h2>
+
+    <div class="contact-card-container">
+      <div class="card contact-centered-card">
+
+        <div class="contact-section-group">
+          <h3 class="contact-group-title">Direct</h3>
+          <div class="contact-item">
+            <span class="contact-label">Email:</span>
+            <div class="contact-emails">
+              <a href="mailto:markjohnson2026@cs.sjcetpalai.ac.in">markjohnson2026@cs.sjcetpalai.ac.in</a>
+              <a href="mailto:mark.j.kalathara@gmail.com">mark.j.kalathara@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Phone:</span>
+            <a href="tel:+919746843121">+91 9746843121</a>
+          </div>
+        </div>
+
+        <div class="contact-section-group">
+          <h3 class="contact-group-title">Links</h3>
+          <div class="contact-social-links">
+            <a href="https://www.linkedin.com/in/mark-johnson-marcus077/" target="_blank"
+              rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/Markjohnson77" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.instagram.com/_marcus.j_/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+
+        <div class="contact-final-cta">
+          <a class="btn btn-primary resume-btn" href="resume.png" target="_blank" aria-label="View Resume">View
+            Resume</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-wrap">
+      <span>© <span id="year"></span> Mark Johnson</span>
+    </div>
+  </footer>
+
+  <!-- Project Overlay / Case Study Modal -->
+  <div id="case-study-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+
+      <div class="overlay-content">
+        <!-- Left: Visuals -->
+        <div class="overlay-visuals">
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337358.jpg" alt="CollegeGO Screen 1">
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337509.jpg" alt="CollegeGO Screen 2">
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337411.jpg" alt="CollegeGO Screen 3">
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337439.jpg" alt="CollegeGO Screen 4">
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337464.jpg" alt="CollegeGO Screen 5">
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337550.jpg" alt="CollegeGO Screen 6">
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337899.jpg" alt="CollegeGO Screen 7">
+          </div>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">FULL CASE STUDY</p>
+            <h1>CollegeGO – Smart Bus Pass & Movement Approval System</h1>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>CollegeGO is a web-based platform that digitizes student movement requests and bus pass approvals
+              through a structured multi-level workflow. It replaces manual paperwork with a secure, role-based
+              approval system.</p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Problem</h3>
+            <p>Bus pass approvals in colleges are often handled manually, leading to delayed approvals, lack of
+              transparency, and administrative overload. Students often face uncertainty regarding their request
+              status while administrators manage physical forms.</p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Solution</h3>
+            <p>A digital approval workflow: <strong>Student → HOD → Warden</strong>. Providing real-time tracking,
+              status-based dashboards, and paperless record management.</p>
+          </section>
+
+          <div class="overlay-split">
+            <section class="stagger-reveal">
+              <h3>My Role</h3>
+              <ul class="role-list">
+                <li>UI/UX Design</li>
+                <li>Frontend Development</li>
+                <li>Backend Integration</li>
+                <li>Database Design</li>
+              </ul>
+            </section>
+
+            <section class="stagger-reveal">
+              <h3>Key Features</h3>
+              <ul class="feature-bullets">
+                <li>Role-based Access</li>
+                <li>Multi-stage Approvals</li>
+                <li>Real-time Tracking</li>
+                <li>Responsive UI</li>
+              </ul>
+            </section>
+          </div>
+
+          <section class="stagger-reveal">
+            <h3>Tech Stack</h3>
+            <div class="tech-pills">
+              <span>HTML5 / CSS / JS</span>
+              <span>PHP</span>
+              <span>MongoDB</span>
+              <span>Figma</span>
+            </div>
+          </section>
+
+          <div style="height: 40px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Project Video Overlay -->
+  <div id="login-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <div class="overlay-content login-overlay-grid">
+        <!-- Left: Video Concept -->
+        <div class="overlay-visuals video-container">
+          <video class="overlay-video" src="VIDEOS/LOGIN PAGE.mp4" autoplay loop muted playsinline></video>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">UI/UX EXPERIMENT</p>
+            <h1>Modern Role-Based Login Experience</h1>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Concept Description</h3>
+            <p>Designed a clean and structured login interface with role selection and clear hierarchy. Focused on
+              usability, accessibility, and visual balance.</p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Interaction Highlights</h3>
+            <ul class="feature-bullets">
+              <li>Clear input grouping</li>
+              <li>Strong CTA hierarchy</li>
+              <li>Minimal distraction</li>
+              <li>Role-based interaction logic</li>
+              <li>Microinteraction-ready structure</li>
+            </ul>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Goal</h3>
+            <p>The goal was to create a friction-less authentication experience that feels professional yet modern,
+              ensuring users are guided clearly through the role selection process before entering the application.</p>
+          </section>
+
+          <div style="height: 40px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Project Video Overlay -->
+  <div id="login-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <div class="overlay-content login-overlay-grid">
+        <!-- Left: Video Concept -->
+        <div class="overlay-visuals video-container">
+          <video class="overlay-video" src="VIDEOS/LOGIN PAGE.mp4" autoplay loop muted playsinline></video>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">UI Interaction Concept · Figma</p>
+            <h1>Modern Login Experience</h1>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>A clean, modern login interface designed with smooth transitions and structured hierarchy. The focus was
+              on clarity, visual balance, and intuitive interaction flow.</p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Highlights</h3>
+            <ul class="feature-bullets">
+              <li>Clear input grouping and spacing</li>
+              <li>Smooth transition animations between states</li>
+              <li>Strong CTA hierarchy</li>
+              <li>Minimal, distraction-free layout</li>
+              <li>Focused on modern microinteraction feel</li>
+            </ul>
+          </section>
+
+          <div style="height: 40px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar Project Video Overlay -->
+  <div id="sidebar-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <div class="overlay-content login-overlay-grid">
+        <!-- Left: Video Concept -->
+        <div class="overlay-visuals video-container">
+          <video class="overlay-video" src="VIDEOS/SIDE BAR.mp4" autoplay loop muted playsinline></video>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">UI Interaction Concept · Figma</p>
+            <h1>Adaptive Navigation Sidebar</h1>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>Explored collapsible sidebar navigation with focus on clarity, spatial awareness, and smooth transitions.
+              This shows system thinking in interface design.</p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Highlights</h3>
+            <ul class="feature-bullets">
+              <li>Collapsible interaction</li>
+              <li>Active state indicators</li>
+              <li>Clean icon-text pairing</li>
+              <li>Responsive layout logic</li>
+            </ul>
+          </section>
+
+          <div style="height: 40px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Website Project Video Overlay -->
+  <div id="website-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <div class="overlay-content login-overlay-grid">
+        <!-- Left: Video Concept -->
+        <div class="overlay-visuals video-container">
+          <video class="overlay-video" src="VIDEOS/WEBSITE DESIGN.mp4" autoplay loop muted playsinline></video>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">Landing Page UI Concept</p>
+            <h1>Website Design Concept</h1>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>Designed a modern landing page layout emphasizing hero hierarchy, clean spacing, and structured content
+              flow.</p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Highlights</h3>
+            <ul class="feature-bullets">
+              <li>Visual hierarchy</li>
+              <li>Spacing system</li>
+              <li>CTA prominence</li>
+              <li>Layout grid alignment</li>
+            </ul>
+          </section>
+
+          <div style="height: 40px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+    // ===== Global cursor ambient glow (page-wide) =====
+    (function () {
+      const glow = document.getElementById('cursor-glow');
+      if (!glow) return;
+      let tx = window.innerWidth / 2, ty = window.innerHeight / 2;
+      let cx = tx, cy = ty;
+      let started = false;
+      const lerp = (a, b, t) => a + (b - a) * t;
+      function tick() {
+        cx = lerp(cx, tx, 0.07);
+        cy = lerp(cy, ty, 0.07);
+        glow.style.left = cx + 'px';
+        glow.style.top = cy + 'px';
+        requestAnimationFrame(tick);
+      }
+      document.addEventListener('mousemove', (e) => {
+        tx = e.clientX;
+        ty = e.clientY;
+        if (!started) {
+          started = true;
+          glow.classList.add('active');
+          tick();
+        }
+      });
+    })();
+
+    // Scroll reveal for sections
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal');
+          sectionObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('section').forEach(section => sectionObserver.observe(section));
+    document.querySelectorAll('.fade-in').forEach(el => sectionObserver.observe(el));
+
+    // About text — blur-fade-slide reveal (repeats every scroll)
+    const aboutText = document.querySelector('.about-text');
+    if (aboutText) {
+      const aboutObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('about-reveal');
+          } else {
+            entry.target.classList.remove('about-reveal');
+          }
+        });
+      }, { threshold: 0.2 });
+      aboutObserver.observe(aboutText);
+    }
+
+    // Design Focus items — staggered blur-fade-slide (repeats every scroll)
+    const focusObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('focus-reveal');
+        } else {
+          entry.target.classList.remove('focus-reveal');
+        }
+      });
+    }, { threshold: 0.25 });
+    document.querySelectorAll('.focus-item').forEach(item => focusObserver.observe(item));
+
+    // Scroll reveal for skill cards and title
+    const skillCards = document.querySelectorAll('.skill-card');
+    const skillTitle = document.getElementById('skills-title');
+    const skillObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (entry.target.classList.contains('skill-card')) {
+            const idx = Array.from(skillCards).indexOf(entry.target);
+            entry.target.style.transitionDelay = `${idx * 0.1}s`;
+          }
+          entry.target.classList.add('visible');
+          skillObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    if (skillTitle) skillObserver.observe(skillTitle);
+    skillCards.forEach(card => {
+      skillObserver.observe(card);
+
+      // Mouse-follow glow effect within each card
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        card.style.setProperty('--mouse-x', `${x}%`);
+        card.style.setProperty('--mouse-y', `${y}%`);
+      });
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Experience Carousel Logic
+    const expCards = document.querySelectorAll('.exp-card');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let activeIdx = 0;
+
+    function updateCarousel() {
+      expCards.forEach((card, i) => {
+        card.classList.remove('active', 'prev', 'next', 'hidden');
+
+        if (i === activeIdx) {
+          card.classList.add('active');
+        } else if (i === (activeIdx - 1 + expCards.length) % expCards.length) {
+          card.classList.add('prev');
+        } else if (i === (activeIdx + 1) % expCards.length) {
+          card.classList.add('next');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    if (prevBtn && nextBtn) {
+      prevBtn.addEventListener('click', () => {
+        activeIdx = (activeIdx - 1 + expCards.length) % expCards.length;
+        updateCarousel();
+      });
+
+      nextBtn.addEventListener('click', () => {
+        activeIdx = (activeIdx + 1) % expCards.length;
+        updateCarousel();
+      });
+    }
+
+    // Initialize carousel
+    if (expCards.length > 0) updateCarousel();
+
+    // --- Generic Project Overlay Logic (Click-to-Open & Glide-Away Close) ---
+    function initProjectOverlay(cardId, overlayId) {
+      const card = document.getElementById(cardId);
+      const backdrop = document.getElementById(overlayId);
+      if (!card || !backdrop) return;
+
+      const container = backdrop.querySelector('.overlay-container');
+      const content = backdrop.querySelector('.overlay-content');
+      let closeTimeout;
+
+      function open(e) {
+        if (e) e.stopPropagation();
+        clearTimeout(closeTimeout);
+        backdrop.classList.add('active');
+        backdrop.setAttribute('aria-hidden', 'false');
+        if (content) content.scrollTop = 0;
+      }
+
+      function close(immediate = false) {
+        clearTimeout(closeTimeout);
+        const delay = immediate ? 0 : 250;
+        closeTimeout = setTimeout(() => {
+          backdrop.classList.remove('active');
+          backdrop.setAttribute('aria-hidden', 'true');
+        }, delay);
+      }
+
+      // Card triggers
+      card.addEventListener('click', open);
+      card.addEventListener('mouseleave', () => close(false));
+
+      // Internal container tracking
+      if (container) {
+        container.addEventListener('mouseenter', () => clearTimeout(closeTimeout));
+        container.addEventListener('mouseleave', () => close(false));
+      }
+
+      // Backdrop click to close
+      backdrop.addEventListener('click', (e) => {
+        if (e.target === backdrop) close(true);
+      });
+
+      // Cursor glow inside the card (generic listener)
+      card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = ((e.clientX - rect.left) / rect.width) * 100;
+        const y = ((e.clientY - rect.top) / rect.height) * 100;
+        card.style.setProperty('--mouse-x', `${x}%`);
+        card.style.setProperty('--mouse-y', `${y}%`);
+      });
+
+      // Parallax Tilt for the container
+      if (container) {
+        backdrop.addEventListener('mousemove', (e) => {
+          if (!backdrop.classList.contains('active')) return;
+          const rect = container.getBoundingClientRect();
+          const centerX = rect.left + rect.width / 2;
+          const centerY = rect.top + rect.height / 2;
+          const mouseX = (e.clientX - centerX) / (window.innerWidth / 2);
+          const mouseY = (e.clientY - centerY) / (window.innerHeight / 2);
+          container.style.transform = `translateY(0) rotateX(${mouseY * -2}deg) rotateY(${mouseX * 2}deg)`;
+        });
+      }
+    }
+
+    // Initialize all interactive projects
+    initProjectOverlay('project-collegego', 'case-study-overlay');
+    initProjectOverlay('project-login', 'login-overlay');
+    initProjectOverlay('project-sidebar', 'sidebar-overlay');
+    initProjectOverlay('project-website', 'website-overlay');
+
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+
+</html>
