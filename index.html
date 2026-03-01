@@ -46,6 +46,12 @@
           <span class="last-name">Johnson</span>
         </span>
       </a>
+
+      <!-- Hamburger Menu Button -->
+      <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
       <div class="nav-links" role="navigation">
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
@@ -308,6 +314,17 @@
   <section id="projects" aria-labelledby="projects-title">
     <h2 id="projects-title">Projects</h2>
 
+    <article class="card project interactive-card" id="project-markflix">
+      <div class="card-glow-cursor"></div>
+      <div class="thumb"></div>
+      <div class="project-info">
+        <p class="eyebrow">FULL-STACK PROTOTYPE</p>
+        <h3>Interactive Streaming Platform Prototype (Netflix-Inspired)</h3>
+        <p>A high-performance streaming interface featuring hover previews, immersive transitions, and REST API
+          integration. <span class="click-hint">Click to explore prototype details</span></p>
+      </div>
+    </article>
+
     <article class="card project interactive-card" id="project-collegego">
       <div class="card-glow-cursor"></div>
       <div class="thumb"></div>
@@ -325,41 +342,99 @@
   <section id="experiments" aria-labelledby="experiments-title">
     <h2 id="experiments-title">UI Experiments & Interaction Concepts</h2>
 
-    <div class="experiments-grid">
-      <article class="card project interactive-card" id="project-login">
-        <div class="card-glow-cursor"></div>
-        <div class="project-info">
-          <p class="eyebrow">UI Interaction Concept · Figma</p>
-          <h3>Modern Login Experience</h3>
-          <p>A clean, modern login interface designed with smooth transitions and structured hierarchy. <span
-              class="click-hint">Click to view concept animation</span></p>
-        </div>
-      </article>
+    <div class="exp-carousel-container experiment-carousel">
+      <button class="carousel-btn prev-exp" aria-label="Previous Project"><i data-lucide="chevron-left"></i></button>
 
-      <article class="card project interactive-card" id="project-sidebar">
-        <div class="card-glow-cursor"></div>
-        <div class="project-info">
-          <p class="eyebrow">UI Interaction Concept · Figma</p>
-          <h3>Adaptive Navigation Sidebar</h3>
-          <p>Explored collapsible sidebar navigation with focus on clarity, spatial awareness, and smooth transitions.
-            <span class="click-hint">Click to view concept animation</span>
-          </p>
-        </div>
-      </article>
+      <div class="exp-carousel-track experiments-track">
+        <article class="card project interactive-card active" id="project-nova">
+          <div class="card-glow-cursor"></div>
+          <div class="project-info">
+            <p class="eyebrow">UI Interaction Concept · Figma</p>
+            <h3>NOVA AI – Motion-Driven UI Experiment</h3>
+            <p>An experimental AI SaaS landing page concept focused on interactive 3D elements, dynamic background
+              gradients, and modern enterprise UI aesthetics. <span class="click-hint">Click to explore prototype
+                details</span></p>
+          </div>
+        </article>
 
-      <article class="card project interactive-card" id="project-website">
-        <div class="card-glow-cursor"></div>
-        <div class="project-info">
-          <p class="eyebrow">Landing Page UI Concept</p>
-          <h3>Website Design Concept</h3>
-          <p>Designed a modern landing page layout emphasizing hero hierarchy, clean spacing, and structured content
-            flow.
-            <span class="click-hint">Click to view concept animation</span>
-          </p>
-        </div>
-      </article>
+        <article class="card project interactive-card next" id="project-login">
+          <div class="card-glow-cursor"></div>
+          <div class="project-info">
+            <p class="eyebrow">UI Interaction Concept · Figma</p>
+            <h3>Modern Login Experience</h3>
+            <p>A clean, modern login interface designed with smooth transitions and structured hierarchy. <span
+                class="click-hint">Click to explore prototype details</span></p>
+          </div>
+        </article>
+
+        <article class="card project interactive-card hidden" id="project-sidebar">
+          <div class="card-glow-cursor"></div>
+          <div class="project-info">
+            <p class="eyebrow">UI Interaction Concept · Figma</p>
+            <h3>Adaptive Navigation Sidebar</h3>
+            <p>Explored collapsible sidebar navigation with focus on clarity, spatial awareness, and smooth transitions.
+              <span class="click-hint">Click to explore prototype details</span>
+            </p>
+          </div>
+        </article>
+
+        <article class="card project interactive-card prev" id="project-website">
+          <div class="card-glow-cursor"></div>
+          <div class="project-info">
+            <p class="eyebrow">Landing Page UI Concept</p>
+            <h3>Website Design Concept</h3>
+            <p>Designed a modern landing page layout emphasizing hero hierarchy, clean spacing, and structured content
+              flow.
+              <span class="click-hint">Click to explore prototype details</span>
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <button class="carousel-btn next-exp" aria-label="Next Project"><i data-lucide="chevron-right"></i></button>
     </div>
   </section>
+
+  <!-- Nova AI Project Video Overlay -->
+  <div id="nova-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <div class="overlay-content login-overlay-grid">
+        <!-- Left: Video Concept -->
+        <div class="overlay-visuals video-container">
+          <video class="overlay-video" src="VIDEOS/NOVA HR.mp4" autoplay loop muted playsinline></video>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">UI Interaction Concept · Figma</p>
+            <h1>NOVA AI – Motion-Driven UI Experiment</h1>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>An experimental AI SaaS landing page concept focused on interactive 3D elements, dynamic background
+              gradients, and modern enterprise UI aesthetics. This project explores visual hierarchy, motion balance,
+              and immersive hero section design using subtle glow effects and depth layering.</p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Key Focus Areas</h3>
+            <ul class="feature-bullets">
+              <li>Interactive 3D hero model</li>
+              <li>Motion-driven gradient background</li>
+              <li>Dark-green AI branding system</li>
+              <li>Visual hierarchy & spacing refinement</li>
+              <li>CTA emphasis strategy</li>
+              <li>Ambient lighting & glow effects</li>
+            </ul>
+          </section>
+
+          <div style="height: 40px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Certificates -->
   <section id="certificates" aria-labelledby="certificates-title">
@@ -405,7 +480,9 @@
         </div>
 
         <div class="contact-final-cta">
-          <a class="btn btn-primary resume-btn" href="Mark Johnson 1.pdf" target="_blank" aria-label="View Resume">View
+          <a class="btn btn-primary resume-btn"
+            href="https://drive.google.com/file/d/1ohlK7qPtpY6sY_wElc52ky6HUuUx7zle/view?usp=drive_link" target="_blank"
+            aria-label="View Resume">View
             Resume</a>
         </div>
 
@@ -418,6 +495,82 @@
       <span>© <span id="year"></span> Mark Johnson</span>
     </div>
   </footer>
+
+  <!-- Netflix Project Overlay -->
+  <div id="markflix-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <div class="overlay-content login-overlay-grid">
+        <!-- Left: Video Concept -->
+        <div class="overlay-visuals video-container">
+          <video class="overlay-video" src="VIDEOS/Interactive Streaming Platform Prototype (Netflix-Inspired).mp4"
+            autoplay loop muted playsinline></video>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">FULL-STACK PROTOTYPE</p>
+            <h1>Interactive Streaming Platform Prototype (Netflix-Inspired)</h1>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>Designed and developed a full-stack Netflix-inspired streaming prototype featuring hover-based video
+              previews, full-screen playback transitions, and simulated streaming behavior. Built with a modern React +
+              Node.js architecture, optimized for performance, scalability, and clean component structure.</p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Key Features</h3>
+            <ul class="feature-bullets">
+              <li>Hover-based auto-playing video previews</li>
+              <li>Controlled single-instance video playback logic</li>
+              <li>Full-screen immersive player with dynamic UI controls</li>
+              <li>Stream simulation with loading states</li>
+              <li>Fully responsive grid layout</li>
+              <li>Clean, modular component architecture</li>
+              <li>REST API integration</li>
+            </ul>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Architecture</h3>
+            <div class="overlay-split">
+              <div>
+                <h4>Frontend</h4>
+                <div class="tech-pills">
+                  <span>React (v18.3.1)</span>
+                  <span>Vite</span>
+                  <span>Tailwind CSS</span>
+                  <span>Framer Motion</span>
+                  <span>Lucide React</span>
+                  <span>Axios</span>
+                </div>
+              </div>
+              <div style="margin-top: 16px;">
+                <h4>Backend</h4>
+                <div class="tech-pills">
+                  <span>Node.js</span>
+                  <span>Express</span>
+                  <span>CORS</span>
+                  <span>In-memory Data</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="stagger-reveal" style="margin-top: 24px;">
+            <a href="https://github.com/Markjohnson77/NETFLIXPROTO.git" target="_blank" class="btn btn-primary"
+              style="display: inline-flex; align-items: center; gap: 8px;">
+              <i data-lucide="github"></i> View Repository
+            </a>
+          </section>
+
+          <div style="height: 40px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Project Overlay / Case Study Modal -->
   <div id="case-study-overlay" class="overlay-backdrop" aria-hidden="true">
@@ -877,10 +1030,72 @@
     }
 
     // Initialize all interactive projects
+    initProjectOverlay('project-markflix', 'markflix-overlay');
     initProjectOverlay('project-collegego', 'case-study-overlay');
     initProjectOverlay('project-login', 'login-overlay');
     initProjectOverlay('project-sidebar', 'sidebar-overlay');
     initProjectOverlay('project-website', 'website-overlay');
+    initProjectOverlay('project-nova', 'nova-overlay');
+
+    // UI Experiments Carousel Logic
+    const expProjCards = document.querySelectorAll('.experiment-carousel .project.card');
+    const prevExpBtn = document.querySelector('.prev-exp');
+    const nextExpBtn = document.querySelector('.next-exp');
+    let activeExpIdx = 0;
+
+    function updateExpCarousel() {
+      expProjCards.forEach((card, i) => {
+        card.classList.remove('active', 'prev', 'next', 'hidden');
+
+        if (i === activeExpIdx) {
+          card.classList.add('active');
+        } else if (i === (activeExpIdx - 1 + expProjCards.length) % expProjCards.length) {
+          card.classList.add('prev');
+        } else if (i === (activeExpIdx + 1) % expProjCards.length) {
+          card.classList.add('next');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    if (prevExpBtn && nextExpBtn) {
+      prevExpBtn.addEventListener('click', () => {
+        activeExpIdx = (activeExpIdx - 1 + expProjCards.length) % expProjCards.length;
+        updateExpCarousel();
+      });
+
+      nextExpBtn.addEventListener('click', () => {
+        activeExpIdx = (activeExpIdx + 1) % expProjCards.length;
+        updateExpCarousel();
+      });
+    }
+
+    // Mobile Menu Toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const navLinksList = document.querySelectorAll('.nav-links a');
+
+    if (menuToggle && navLinks) {
+      menuToggle.addEventListener('click', () => {
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', !expanded);
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when a link is clicked
+      navLinksList.forEach(link => {
+        link.addEventListener('click', () => {
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+    }
+
+    // Initialize experiment carousel
+    if (expProjCards.length > 0) updateExpCarousel();
 
   </script>
 

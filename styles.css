@@ -28,11 +28,15 @@
 }
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
   background: radial-gradient(1200px 800px at 80% -20%, rgba(255, 186, 0, .18), transparent 50%),
     radial-gradient(1000px 700px at -10% 20%, rgba(13, 59, 46, .25), transparent 55%),
@@ -242,6 +246,99 @@ body {
 .nav-links a:hover {
   color: var(--text);
   background: rgba(255, 255, 255, 0.06)
+}
+
+/* Menu Toggle (Hamburger) */
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1001;
+  position: relative;
+  width: 44px;
+  height: 44px;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--accent-4);
+  position: relative;
+  transition: background 0.3s ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background: var(--accent-4);
+  left: 0;
+  transition: transform 0.3s ease, top 0.3s ease;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  top: 8px;
+}
+
+/* Menu Toggle Active State */
+.menu-toggle.active .hamburger {
+  background: transparent;
+}
+
+.menu-toggle.active .hamburger::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-toggle.active .hamburger::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(11, 11, 11, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    padding: 100px 30px;
+    gap: 20px;
+    transition: right 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 1000;
+    margin-left: 0;
+    border-left: 1px solid var(--border);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 12px 16px;
+  }
 }
 
 section {
@@ -502,7 +599,7 @@ section.reveal {
 
   .hero-visual {
     order: 1;
-    padding: 100px 32px 24px;
+    padding: 80px 20px 20px;
   }
 
   .hero-circle {
@@ -1030,23 +1127,36 @@ section.reveal {
   .exp-card {
     position: relative;
     width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     opacity: 1;
     pointer-events: all;
+    min-height: auto;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
 
   .carousel-btn {
     top: auto;
-    bottom: -80px;
+    bottom: -60px;
   }
 
   .carousel-btn.prev {
-    left: 30%;
+    left: 20%;
   }
 
   .carousel-btn.next {
-    right: 30%;
+    right: 20%;
+  }
+}
+
+@media (max-width: 480px) {
+  .exp-carousel-container {
+    margin: 30px auto 100px;
+  }
+
+  .exp-role {
+    font-size: 1.25rem;
   }
 }
 
@@ -1279,6 +1389,13 @@ footer {
   backdrop-filter: blur(25px) saturate(200%);
   border-radius: 32px;
   box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 640px) {
+  .contact-centered-card {
+    padding: 60px 20px;
+    border-radius: 24px;
+  }
 }
 
 .contact-section-group {
@@ -1795,19 +1912,25 @@ footer {
   #about>.about-grid {
     display: flex !important;
     flex-direction: column;
-    align-items: stretch;
-    gap: 20px;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
   }
 
   #about>.about-grid>.about-bio {
     max-width: 100%;
     flex: none;
+    order: 1;
   }
 
   #about>.about-grid>.education-timeline {
     max-width: 100%;
     flex: none;
-    margin-top: 8px;
+    margin-top: 20px;
+    order: 2;
+    text-align: left;
+    /* Keep timeline left-aligned for readability */
+    align-self: flex-start;
   }
 
   .education-timeline .timeline::before {
@@ -1992,6 +2115,14 @@ footer {
 }
 
 /* Project Section Enhancements */
+#projects {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  /* Increased distance between projects */
+  padding-bottom: 60px;
+}
+
 .project.interactive-card {
   cursor: pointer;
   transition: transform 0.4s cubic-bezier(0.2, 0.9, 0.2, 1),
@@ -2027,7 +2158,6 @@ footer {
 
 /* Project Card Thumbnail */
 .project .thumb {
-  background-image: url('IMAGES/college go design.png');
   background-size: cover;
   background-position: center;
   border-radius: 12px;
@@ -2040,6 +2170,15 @@ footer {
   transform: translateY(-2px);
 }
 
+/* Specific Thumbnails */
+#project-markflix .thumb {
+  background-image: url('IMAGES/MARKFLIX.png');
+}
+
+#project-collegego .thumb {
+  background-image: url('IMAGES/college go design.png');
+}
+
 /* UI Experiments Specifics */
 #experiments {
   padding-top: 60px;
@@ -2050,23 +2189,136 @@ footer {
   opacity: 0.9;
 }
 
-.experiments-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-top: 20px;
+/* UI Experiments Carousel Specifics */
+.experiment-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1500px;
+  overflow: visible;
 }
 
-#experiments .card.project {
-  flex-direction: column;
-  padding: 40px;
+.experiments-track {
+  position: relative;
+  width: 100%;
   height: 100%;
+  transform-style: preserve-3d;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 
+.experiment-carousel .project.card {
+  position: absolute;
+  width: 550px;
+  min-height: 300px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.035);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 28px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.3);
+  transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.experiment-carousel .project.card.active {
+  opacity: 1;
+  pointer-events: all;
+  transform: translate3d(0, 0, 0) scale(1);
+  z-index: 10;
+  filter: blur(0);
+}
+
+.experiment-carousel .project.card.prev {
+  opacity: 0.5;
+  pointer-events: all;
+  transform: translate3d(-105%, 0, -300px) rotateY(30deg);
+  z-index: 5;
+  filter: blur(4px);
+}
+
+.experiment-carousel .project.card.next {
+  opacity: 0.5;
+  pointer-events: all;
+  transform: translate3d(105%, 0, -300px) rotateY(-30deg);
+  z-index: 5;
+  filter: blur(4px);
+}
+
+.experiment-carousel .project.card.hidden {
+  opacity: 0;
+  transform: translate3d(0, 0, -500px) scale(0.8);
+  pointer-events: none;
+}
+
+.prev-exp {
+  left: 2%;
+}
+
+.next-exp {
+  right: 2%;
+}
+
+@media (max-width: 960px) {
+  .experiment-carousel {
+    height: 420px;
+  }
+
+  .experiment-carousel .project.card {
+    width: 85%;
+    padding: 30px;
+  }
+
+  .experiment-carousel .project.card.prev {
+    transform: translate3d(-60%, 0, -400px) rotateY(20deg);
+    opacity: 0.3;
+  }
+
+  .experiment-carousel .project.card.next {
+    transform: translate3d(60%, 0, -400px) rotateY(-20deg);
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 768px) {
+  .experiment-carousel {
+    display: none;
+    /* Hide 3D carousel on tablet/mobile for simplicity */
+  }
+
+  .experiments-track-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .experiment-carousel {
+    height: 380px;
+  }
+
+  .carousel-btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+/* Restored Click Hint Styles */
 .click-hint {
-  display: inline-block;
+  display: block;
   margin-top: 12px;
   color: var(--accent-4);
   font-weight: 700;
@@ -2076,24 +2328,13 @@ footer {
   border-bottom: 1px dashed var(--accent-4);
   padding-bottom: 2px;
   transition: var(--transition);
+  width: fit-content;
 }
 
-#experiments .card:hover .click-hint {
+.experiment-carousel .project.card:hover .click-hint {
   color: #fff;
   border-bottom-color: #fff;
   text-shadow: 0 0 10px var(--accent-glow);
-}
-
-@media (max-width: 960px) {
-  .experiments-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 640px) {
-  .experiments-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 /* Case Study Overlay Styles - Hover Pop-up Refinement */
@@ -2213,7 +2454,7 @@ footer {
 .overlay-video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform 0.6s cubic-bezier(0.2, 0.9, 0.2, 1);
 }
 
