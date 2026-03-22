@@ -499,6 +499,27 @@ section.reveal {
   box-shadow: 0 8px 24px rgba(255, 186, 0, 0.35);
 }
 
+.btn-demo {
+  background: linear-gradient(135deg, #FFBA00, #FF9100);
+  color: #0b0b0b;
+}
+
+.btn-demo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 186, 0, 0.35);
+  background: linear-gradient(135deg, #ffca00, #ffa000);
+}
+
+.btn-demo i {
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), fill 0.4s ease;
+  fill: transparent;
+}
+
+.btn-demo:hover i {
+  transform: rotate(360deg);
+  fill: currentColor;
+}
+
 .btn-ghost {
   background: transparent;
   color: rgba(232, 232, 232, 0.85);
