@@ -442,31 +442,48 @@
     </div>
   </div>
 
-  <!-- Certificates -->
-  <section id="certificates" aria-labelledby="certificates-title">
-    <div style="text-align: center; padding: 40px 0;">
-      <h2 id="certificates-title" style="margin-bottom: 24px;">Certificates</h2>
-      <p style="color: var(--muted); margin-bottom: 32px;">View my professional certifications and workshop
-        accomplishments.</p>
-      <a href="certificates.html" class="btn btn-primary">View all Certificates</a>
-    </div>
-  </section>
+  <!-- Certificates and Creative Works Grid -->
+  <section id="credentials-and-works" aria-label="Credentials and Works"
+    style="padding-top: 60px; padding-bottom: 60px;">
+    <div
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; align-items: stretch;">
 
-  <!-- Creative Works -->
-  <section id="creative-works" aria-labelledby="creative-works-title">
-    <div style="text-align: center; padding: 40px 0;">
-      <h2 id="creative-works-title" style="margin-bottom: 24px;">Creative Works</h2>
-      <p style="color: var(--muted); margin-bottom: 32px;">Explore my visual storytelling and media edits.</p>
-      <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
-        <a href="https://drive.google.com/drive/folders/17MhIr0RS5MGdv3quc7gk-BLyIxtjqSb5?usp=drive_link"
-          target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-          <i data-lucide="image"></i> Photo Editing
-        </a>
-        <a href="https://drive.google.com/drive/folders/1V6UIrUZWyU2SJltrcSSB6EgT0GLZuovF?usp=drive_link"
-          target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
-          <i data-lucide="video"></i> Video Editing
-        </a>
+      <!-- Certificates -->
+      <div id="certificates"
+        style="text-align: center; padding: 50px 30px; background: rgba(255, 255, 255, 0.02); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease;"
+        onmouseover="this.style.background='rgba(255, 255, 255, 0.04)'; this.style.borderColor='rgba(255, 193, 7, 0.2)';"
+        onmouseout="this.style.background='rgba(255, 255, 255, 0.02)'; this.style.borderColor='rgba(255, 255, 255, 0.05)';">
+        <div>
+          <h2 id="certificates-title" style="margin-bottom: 24px; margin-top: 0;">Certificates</h2>
+          <p style="color: var(--muted); margin-bottom: 32px;">View my professional certifications and workshop
+            accomplishments.</p>
+        </div>
+        <div>
+          <a href="certificates.html" class="btn btn-primary">View all Certificates</a>
+        </div>
       </div>
+
+      <!-- Creative Works -->
+      <div id="creative-works"
+        style="text-align: center; padding: 50px 30px; background: rgba(255, 255, 255, 0.02); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease;"
+        onmouseover="this.style.background='rgba(255, 255, 255, 0.04)'; this.style.borderColor='rgba(255, 193, 7, 0.2)';"
+        onmouseout="this.style.background='rgba(255, 255, 255, 0.02)'; this.style.borderColor='rgba(255, 255, 255, 0.05)';">
+        <div>
+          <h2 id="creative-works-title" style="margin-bottom: 24px; margin-top: 0;">Creative Works</h2>
+          <p style="color: var(--muted); margin-bottom: 32px;">Explore my visual storytelling and media edits.</p>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="https://drive.google.com/drive/folders/17MhIr0RS5MGdv3quc7gk-BLyIxtjqSb5?usp=drive_link"
+            target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+            <i data-lucide="image"></i> Photo Editing
+          </a>
+          <a href="https://drive.google.com/drive/folders/1V6UIrUZWyU2SJltrcSSB6EgT0GLZuovF?usp=drive_link"
+            target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+            <i data-lucide="video"></i> Video Editing
+          </a>
+        </div>
+      </div>
+
     </div>
   </section>
 
