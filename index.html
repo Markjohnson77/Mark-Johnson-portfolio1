@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
 
 <head>
@@ -25,11 +25,11 @@
 
   <link rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%230C3B2E'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='sans-serif' font-size='54' fill='%23FFBA00'%3EM%3C/text%3E%3C/svg%3E" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=2">
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 
 <body>
@@ -39,12 +39,23 @@
   <!-- Header -->
   <header class="site-header" aria-label="Main">
     <nav class="nav" aria-label="Primary">
-      <a class="brand" href="#home" aria-label="Mark Johnson home">
-        <div class="brand-mark"><span>MJ</span></div>
-        <span class="brand-name">
-          <span class="first-name">Mark</span>
-          <span class="last-name">Johnson</span>
-        </span>
+      <a class="brand animated-logo" href="#home" aria-label="Mark Johnson home">
+        <div class="sparkle sparkle-1">
+          <svg viewBox="0 0 24 24" class="sparkle-svg">
+            <path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z" />
+          </svg>
+        </div>
+        <div class="sparkle sparkle-2">
+          <svg viewBox="0 0 24 24" class="sparkle-svg">
+            <path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z" />
+          </svg>
+        </div>
+        <div class="sparkle sparkle-3">
+          <svg viewBox="0 0 24 24" class="sparkle-svg">
+            <path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z" />
+          </svg>
+        </div>
+        <h1 class="logo-text">MARK <span>JOHNSON</span></h1>
       </a>
 
       <!-- Hamburger Menu Button -->
@@ -65,14 +76,33 @@
 
   <!-- Hero -->
   <section id="home" class="hero" aria-labelledby="home-title">
-
     <!-- Left: Text -->
     <div class="hero-content">
       <p class="hero-label">UI/UX Designer &amp; Front-End Developer</p>
       <h1 id="home-title" class="hero-title">
-        Blending Technology<br>with <em class="hero-accent">Creativity.</em>
+        Blending Technology<br />with
+        <span class="animated-text-container">
+          <span class="sparkle sparkle-1">
+            <svg viewBox="0 0 24 24" class="sparkle-svg">
+              <path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z" />
+            </svg>
+          </span>
+          <span class="sparkle sparkle-2">
+            <svg viewBox="0 0 24 24" class="sparkle-svg">
+              <path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z" />
+            </svg>
+          </span>
+          <span class="sparkle sparkle-3">
+            <svg viewBox="0 0 24 24" class="sparkle-svg">
+              <path d="M12 0l2 8 8 2-8 2-2 8-2-8-8-2 8-2z" />
+            </svg>
+          </span>
+          <em class="hero-accent animated-text">Creativity.</em>
+        </span>
       </h1>
-      <p class="hero-sub">I design intuitive digital experiences<br>with clarity and purpose.</p>
+      <p class="hero-sub">
+        I design intuitive digital experiences<br />with clarity and purpose.
+      </p>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#projects">View Projects</a>
         <a class="btn btn-ghost" href="#contact">Contact Me</a>
@@ -86,7 +116,6 @@
         <img src="MJ1.jpeg" alt="Mark Johnson" class="hero-portrait" />
       </div>
     </div>
-
   </section>
 
   <!-- About -->
@@ -95,50 +124,53 @@
 
     <!-- Use a dedicated wrapper (no .grid class) -->
     <div class="about-grid">
-
       <!-- Left: Bio text, no card -->
-      <p class="about-text">I'm a UI/UX-focused Computer Science student passionate about designing intuitive digital
-        products.I combine structured design thinking with front-end development to create interfaces that are clean,
-        usable, and purposeful. My work centers around simplifying complex workflows and building experiences that feel
-        effortless for users.</p>
+      <p class="about-text">
+        I'm a UI/UX-focused Computer Science student passionate about
+        designing intuitive digital products.I combine structured design
+        thinking with front-end development to create interfaces that are
+        clean, usable, and purposeful. My work centers around simplifying
+        complex workflows and building experiences that feel effortless for
+        users.
+      </p>
 
       <!-- Right: Design Focus -->
       <aside class="design-focus">
         <h3 class="focus-heading">Design Focus</h3>
         <ul class="focus-list">
-          <li class="focus-item" style="--i:0">
+          <li class="focus-item" style="--i: 0">
             <span class="focus-icon"><i data-lucide="target"></i></span>
             <span class="focus-label">UX Strategy</span>
           </li>
-          <li class="focus-item" style="--i:1">
+          <li class="focus-item" style="--i: 1">
             <span class="focus-icon"><i data-lucide="layout-dashboard"></i></span>
             <span class="focus-label">Interface Design</span>
           </li>
-          <li class="focus-item" style="--i:2">
+          <li class="focus-item" style="--i: 2">
             <span class="focus-icon"><i data-lucide="code-2"></i></span>
             <span class="focus-label">Front-End Development</span>
           </li>
-          <li class="focus-item" style="--i:3">
+          <li class="focus-item" style="--i: 3">
             <span class="focus-icon"><i data-lucide="git-branch"></i></span>
             <span class="focus-label">Workflow Simplification</span>
           </li>
-          <li class="focus-item" style="--i:4">
+          <li class="focus-item" style="--i: 4">
             <span class="focus-icon"><i data-lucide="eye"></i></span>
             <span class="focus-label">Accessibility Awareness</span>
           </li>
         </ul>
       </aside>
-
     </div>
   </section>
-
 
   <!-- Experience -->
   <section id="experience" aria-labelledby="exp-title">
     <h2 id="exp-title">Experience</h2>
 
     <div class="exp-carousel-container">
-      <button class="carousel-btn prev" aria-label="Previous Experience"><i data-lucide="chevron-left"></i></button>
+      <button class="carousel-btn prev" aria-label="Previous Experience">
+        <i data-lucide="chevron-left"></i>
+      </button>
 
       <div class="exp-carousel-track">
         <!-- Entry 1 -->
@@ -150,14 +182,27 @@
           <h3 class="exp-role">UI-Focused Full-Stack Development Intern</h3>
           <p class="exp-org">SMEC Automation Pvt. Ltd.</p>
           <p class="exp-summary">
-            Contributed to internal automation tools with a strong focus on interface clarity, usability, and structured
-            frontend architecture within production environments.
+            Contributed to internal automation tools with a strong focus on
+            interface clarity, usability, and structured frontend architecture
+            within production environments.
           </p>
           <ul class="exp-bullets">
-            <li>Implemented responsive UI components aligned with backend automation workflows.</li>
-            <li>Improved interface structure and layout consistency across internal dashboards.</li>
-            <li>Collaborated with backend engineers to ensure accurate data visualization and logical user flows.</li>
-            <li>Reduced workflow friction by refining navigation patterns and simplifying feature interactions.</li>
+            <li>
+              Implemented responsive UI components aligned with backend
+              automation workflows.
+            </li>
+            <li>
+              Improved interface structure and layout consistency across
+              internal dashboards.
+            </li>
+            <li>
+              Collaborated with backend engineers to ensure accurate data
+              visualization and logical user flows.
+            </li>
+            <li>
+              Reduced workflow friction by refining navigation patterns and
+              simplifying feature interactions.
+            </li>
           </ul>
         </article>
 
@@ -170,16 +215,27 @@
           <h3 class="exp-role">Co-Lead, UI & Visual Design</h3>
           <p class="exp-org">Computer Society of India (CSI)</p>
           <p class="exp-summary">
-            Led interface and visual communication design for technical initiatives, ensuring structured layout systems
-            and
-            consistent digital branding across campus platforms.
+            Led interface and visual communication design for technical
+            initiatives, ensuring structured layout systems and consistent
+            digital branding across campus platforms.
           </p>
           <ul class="exp-bullets">
-            <li>Defined visual hierarchy and layout systems for event websites and digital promotions.</li>
-            <li>Collaborated with developers and event teams to align user experience goals with communication strategy.
+            <li>
+              Defined visual hierarchy and layout systems for event websites
+              and digital promotions.
             </li>
-            <li>Mentored junior designers on usability principles, spacing systems, and typography consistency.</li>
-            <li>Enhanced engagement through cohesive design language across multiple digital touchpoints.</li>
+            <li>
+              Collaborated with developers and event teams to align user
+              experience goals with communication strategy.
+            </li>
+            <li>
+              Mentored junior designers on usability principles, spacing
+              systems, and typography consistency.
+            </li>
+            <li>
+              Enhanced engagement through cohesive design language across
+              multiple digital touchpoints.
+            </li>
           </ul>
         </article>
 
@@ -192,14 +248,23 @@
           <h3 class="exp-role">Visual & Experience Designer</h3>
           <p class="exp-org">Asthra Tech Fest</p>
           <p class="exp-summary">
-            Shaped the visual identity and digital experience for a large-scale tech fest, designing cohesive
-            user-facing
-            materials across platforms.
+            Shaped the visual identity and digital experience for a
+            large-scale tech fest, designing cohesive user-facing materials
+            across platforms.
           </p>
           <ul class="exp-bullets">
-            <li>Designed digital assets deployed across 10+ communication channels.</li>
-            <li>Contributed to a unified visual system supporting 500+ event participants.</li>
-            <li>Strengthened user engagement through structured visual storytelling and consistent branding.</li>
+            <li>
+              Designed digital assets deployed across 10+ communication
+              channels.
+            </li>
+            <li>
+              Contributed to a unified visual system supporting 500+ event
+              participants.
+            </li>
+            <li>
+              Strengthened user engagement through structured visual
+              storytelling and consistent branding.
+            </li>
           </ul>
         </article>
 
@@ -212,14 +277,25 @@
           <h3 class="exp-role">UI/UX Design Certification</h3>
           <p class="exp-org">Figma — Simplilearn</p>
           <ul class="exp-bullets">
-            <li>Completed structured training in wireframing, prototyping, and interface design.</li>
-            <li>Developed interactive prototypes and component-based design systems.</li>
-            <li>Gained hands-on experience in user flows, layout hierarchy, and usability principles.</li>
+            <li>
+              Completed structured training in wireframing, prototyping, and
+              interface design.
+            </li>
+            <li>
+              Developed interactive prototypes and component-based design
+              systems.
+            </li>
+            <li>
+              Gained hands-on experience in user flows, layout hierarchy, and
+              usability principles.
+            </li>
           </ul>
         </article>
       </div>
 
-      <button class="carousel-btn next" aria-label="Next Experience"><i data-lucide="chevron-right"></i></button>
+      <button class="carousel-btn next" aria-label="Next Experience">
+        <i data-lucide="chevron-right"></i>
+      </button>
     </div>
   </section>
 
@@ -227,7 +303,6 @@
   <section id="skills" aria-labelledby="skills-title">
     <h2 id="skills-title" class="fade-in">Skills &amp; Services</h2>
     <div class="skills-grid">
-
       <article class="skill-card fade-in">
         <div class="card-glow-cursor"></div>
         <div class="skill-card-header">
@@ -306,7 +381,6 @@
           <li>VS Code</li>
         </ul>
       </article>
-
     </div>
   </section>
 
@@ -320,8 +394,11 @@
       <div class="project-info">
         <p class="eyebrow">FULL-STACK PROTOTYPE</p>
         <h3>Interactive Streaming Platform Prototype (Netflix-Inspired)</h3>
-        <p>A high-performance streaming interface featuring hover previews, immersive transitions, and REST API
-          integration. <span class="click-hint">Click to explore prototype details</span></p>
+        <p>
+          A high-performance streaming interface featuring hover previews,
+          immersive transitions, and REST API integration.
+          <span class="click-hint">Click to explore prototype details</span>
+        </p>
       </div>
     </article>
 
@@ -331,11 +408,27 @@
       <div class="project-info">
         <p class="eyebrow">CASE STUDY</p>
         <h3>CollegeGO – Smart Bus Pass System</h3>
-        <p>A web-based platform digitizing student movement requests and bus pass approvals through a structured
-          multi-level workflow. <span class="click-hint">Click to explore case study</span></p>
+        <p>
+          A web-based platform digitizing student movement requests and bus
+          pass approvals through a structured multi-level workflow.
+          <span class="click-hint">Click to explore case study</span>
+        </p>
       </div>
     </article>
 
+    <article class="card project interactive-card" id="project-novahr">
+      <div class="card-glow-cursor"></div>
+      <div class="thumb"></div>
+      <div class="project-info">
+        <p class="eyebrow">AI-POWERED WORKFORCE PLATFORM</p>
+        <h3>NOVA HR – Unified Workforce Management</h3>
+        <p>
+          An AI-driven platform streamlining HR operations, employee
+          performance tracking, and task management in one system.
+          <span class="click-hint">Click to explore project details</span>
+        </p>
+      </div>
+    </article>
   </section>
 
   <!-- UI Experiments & Interaction Concepts -->
@@ -343,7 +436,9 @@
     <h2 id="experiments-title">UI Experiments & Interaction Concepts</h2>
 
     <div class="exp-carousel-container experiment-carousel">
-      <button class="carousel-btn prev-exp" aria-label="Previous Project"><i data-lucide="chevron-left"></i></button>
+      <button class="carousel-btn prev-exp" aria-label="Previous Project">
+        <i data-lucide="chevron-left"></i>
+      </button>
 
       <div class="exp-carousel-track experiments-track">
         <article class="card project interactive-card active" id="project-nova">
@@ -351,9 +446,12 @@
           <div class="project-info">
             <p class="eyebrow">UI Interaction Concept · Figma</p>
             <h3>NOVA AI – Motion-Driven UI Experiment</h3>
-            <p>An experimental AI SaaS landing page concept focused on interactive 3D elements, dynamic background
-              gradients, and modern enterprise UI aesthetics. <span class="click-hint">Click to explore prototype
-                details</span></p>
+            <p>
+              An experimental AI SaaS landing page concept focused on
+              interactive 3D elements, dynamic background gradients, and
+              modern enterprise UI aesthetics.
+              <span class="click-hint">Click to explore prototype details</span>
+            </p>
           </div>
         </article>
 
@@ -362,8 +460,11 @@
           <div class="project-info">
             <p class="eyebrow">UI Interaction Concept · Figma</p>
             <h3>Modern Login Experience</h3>
-            <p>A clean, modern login interface designed with smooth transitions and structured hierarchy. <span
-                class="click-hint">Click to explore prototype details</span></p>
+            <p>
+              A clean, modern login interface designed with smooth transitions
+              and structured hierarchy.
+              <span class="click-hint">Click to explore prototype details</span>
+            </p>
           </div>
         </article>
 
@@ -372,7 +473,9 @@
           <div class="project-info">
             <p class="eyebrow">UI Interaction Concept · Figma</p>
             <h3>Adaptive Navigation Sidebar</h3>
-            <p>Explored collapsible sidebar navigation with focus on clarity, spatial awareness, and smooth transitions.
+            <p>
+              Explored collapsible sidebar navigation with focus on clarity,
+              spatial awareness, and smooth transitions.
               <span class="click-hint">Click to explore prototype details</span>
             </p>
           </div>
@@ -383,15 +486,18 @@
           <div class="project-info">
             <p class="eyebrow">Landing Page UI Concept</p>
             <h3>Website Design Concept</h3>
-            <p>Designed a modern landing page layout emphasizing hero hierarchy, clean spacing, and structured content
-              flow.
+            <p>
+              Designed a modern landing page layout emphasizing hero
+              hierarchy, clean spacing, and structured content flow.
               <span class="click-hint">Click to explore prototype details</span>
             </p>
           </div>
         </article>
       </div>
 
-      <button class="carousel-btn next-exp" aria-label="Next Project"><i data-lucide="chevron-right"></i></button>
+      <button class="carousel-btn next-exp" aria-label="Next Project">
+        <i data-lucide="chevron-right"></i>
+      </button>
     </div>
   </section>
 
@@ -401,27 +507,45 @@
       <button class="overlay-close-btn" aria-label="Close">
         <i data-lucide="x"></i>
       </button>
-      <div class="overlay-content" style="grid-template-columns: 1fr;">
+      <div class="overlay-content" style="grid-template-columns: 1fr">
         <!-- Right: Narrative -->
         <div class="overlay-narrative">
-          <header
-            style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 24px;">
+          <header style="
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 16px;
+                margin-bottom: 24px;
+              ">
             <div>
-              <p class="eyebrow" style="margin-bottom: 8px;">UI Interaction Concept · Figma</p>
-              <h1 style="margin: 0; line-height: 1.1;">NOVA AI – Motion-Driven UI Experiment</h1>
+              <p class="eyebrow" style="margin-bottom: 8px">
+                UI Interaction Concept · Figma
+              </p>
+              <h1 style="margin: 0; line-height: 1.1">
+                NOVA AI – Motion-Driven UI Experiment
+              </h1>
             </div>
             <a href="https://drive.google.com/drive/folders/1wqkTCaSaBM8-9kSESzawUmgJoIFZQ0Db?usp=drive_link"
-              target="_blank" class="btn btn-demo"
-              style="display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; margin-bottom: 4px;">
+              target="_blank" class="btn btn-demo" style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  flex-shrink: 0;
+                  margin-bottom: 4px;
+                ">
               <i data-lucide="play-circle"></i> Watch Demo
             </a>
           </header>
 
           <section class="stagger-reveal">
             <h3>Overview</h3>
-            <p>An experimental AI SaaS landing page concept focused on interactive 3D elements, dynamic background
-              gradients, and modern enterprise UI aesthetics. This project explores visual hierarchy, motion balance,
-              and immersive hero section design using subtle glow effects and depth layering.</p>
+            <p>
+              An experimental AI SaaS landing page concept focused on
+              interactive 3D elements, dynamic background gradients, and
+              modern enterprise UI aesthetics. This project explores visual
+              hierarchy, motion balance, and immersive hero section design
+              using subtle glow effects and depth layering.
+            </p>
           </section>
 
           <section class="stagger-reveal">
@@ -436,7 +560,7 @@
             </ul>
           </section>
 
-          <div style="height: 40px;"></div>
+          <div style="height: 40px"></div>
         </div>
       </div>
     </div>
@@ -444,19 +568,38 @@
 
   <!-- Certificates and Creative Works Grid -->
   <section id="credentials-and-works" aria-label="Credentials and Works"
-    style="padding-top: 60px; padding-bottom: 60px;">
-    <div
-      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; align-items: stretch;">
-
+    style="padding-top: 60px; padding-bottom: 60px">
+    <div style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 40px;
+          align-items: stretch;
+        ">
       <!-- Certificates -->
-      <div id="certificates"
-        style="text-align: center; padding: 50px 30px; background: rgba(255, 255, 255, 0.02); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease;"
-        onmouseover="this.style.background='rgba(255, 255, 255, 0.04)'; this.style.borderColor='rgba(255, 193, 7, 0.2)';"
-        onmouseout="this.style.background='rgba(255, 255, 255, 0.02)'; this.style.borderColor='rgba(255, 255, 255, 0.05)';">
+      <div id="certificates" style="
+            text-align: center;
+            padding: 50px 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+          " onmouseover="
+            this.style.background = 'rgba(255, 255, 255, 0.04)';
+            this.style.borderColor = 'rgba(255, 193, 7, 0.2)';
+          " onmouseout="
+            this.style.background = 'rgba(255, 255, 255, 0.02)';
+            this.style.borderColor = 'rgba(255, 255, 255, 0.05)';
+          ">
         <div>
-          <h2 id="certificates-title" style="margin-bottom: 24px; margin-top: 0;">Certificates</h2>
-          <p style="color: var(--muted); margin-bottom: 32px;">View my professional certifications and workshop
-            accomplishments.</p>
+          <h2 id="certificates-title" style="margin-bottom: 24px; margin-top: 0">
+            Certificates
+          </h2>
+          <p style="color: var(--muted); margin-bottom: 32px">
+            View my professional certifications and workshop accomplishments.
+          </p>
         </div>
         <div>
           <a href="certificates.html" class="btn btn-primary">View all Certificates</a>
@@ -464,29 +607,49 @@
       </div>
 
       <!-- Creative Works -->
-      <div id="creative-works"
-        style="text-align: center; padding: 50px 30px; background: rgba(255, 255, 255, 0.02); border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.05); display: flex; flex-direction: column; justify-content: space-between; transition: all 0.3s ease;"
-        onmouseover="this.style.background='rgba(255, 255, 255, 0.04)'; this.style.borderColor='rgba(255, 193, 7, 0.2)';"
-        onmouseout="this.style.background='rgba(255, 255, 255, 0.02)'; this.style.borderColor='rgba(255, 255, 255, 0.05)';">
+      <div id="creative-works" style="
+            text-align: center;
+            padding: 50px 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+          " onmouseover="
+            this.style.background = 'rgba(255, 255, 255, 0.04)';
+            this.style.borderColor = 'rgba(255, 193, 7, 0.2)';
+          " onmouseout="
+            this.style.background = 'rgba(255, 255, 255, 0.02)';
+            this.style.borderColor = 'rgba(255, 255, 255, 0.05)';
+          ">
         <div>
-          <h2 id="creative-works-title" style="margin-bottom: 24px; margin-top: 0;">Creative Works</h2>
-          <p style="color: var(--muted); margin-bottom: 32px;">Explore my visual storytelling and media edits.</p>
+          <h2 id="creative-works-title" style="margin-bottom: 24px; margin-top: 0">
+            Creative Works
+          </h2>
+          <p style="color: var(--muted); margin-bottom: 32px">
+            Explore my visual storytelling and media edits.
+          </p>
         </div>
-        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+        <div style="
+              display: flex;
+              justify-content: center;
+              gap: 16px;
+              flex-wrap: wrap;
+            ">
           <a href="https://drive.google.com/drive/folders/17MhIr0RS5MGdv3quc7gk-BLyIxtjqSb5?usp=drive_link"
-            target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+            target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px">
             <i data-lucide="image"></i> Photo Editing
           </a>
           <a href="https://drive.google.com/drive/folders/1V6UIrUZWyU2SJltrcSSB6EgT0GLZuovF?usp=drive_link"
-            target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px;">
+            target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px">
             <i data-lucide="video"></i> Video Editing
           </a>
         </div>
       </div>
-
     </div>
   </section>
-
 
   <!-- Contact -->
   <section id="contact" aria-labelledby="contact-title">
@@ -494,7 +657,6 @@
 
     <div class="contact-card-container">
       <div class="card contact-centered-card">
-
         <div class="contact-section-group">
           <h3 class="contact-group-title">Direct</h3>
           <div class="contact-item">
@@ -523,10 +685,8 @@
         <div class="contact-final-cta">
           <a class="btn btn-primary resume-btn"
             href="https://drive.google.com/file/d/1ohlK7qPtpY6sY_wElc52ky6HUuUx7zle/view?usp=drive_link" target="_blank"
-            aria-label="View Resume">View
-            Resume</a>
+            aria-label="View Resume">View Resume</a>
         </div>
-
       </div>
     </div>
   </section>
@@ -548,7 +708,7 @@
         <div class="overlay-visuals video-container">
           <a href="https://drive.google.com/file/d/1MWjpX6_kJSxpOrgHEd6JGd2JJblYJdec/view?usp=drive_link"
             target="_blank" class="video-link-wrapper">
-            <img src="IMAGES/MARKFLIX.png" alt="Markflix Prototype" class="overlay-video-placeholder">
+            <img src="IMAGES/MARKFLIX.png" alt="Markflix Prototype" class="overlay-video-placeholder" />
             <div class="play-overlay">
               <i data-lucide="play-circle"></i>
               <span>Watch Demo</span>
@@ -560,14 +720,20 @@
         <div class="overlay-narrative">
           <header>
             <p class="eyebrow">FULL-STACK PROTOTYPE</p>
-            <h1>Interactive Streaming Platform Prototype (Netflix-Inspired)</h1>
+            <h1>
+              Interactive Streaming Platform Prototype (Netflix-Inspired)
+            </h1>
           </header>
 
           <section class="stagger-reveal">
             <h3>Overview</h3>
-            <p>Designed and developed a full-stack Netflix-inspired streaming prototype featuring hover-based video
-              previews, full-screen playback transitions, and simulated streaming behavior. Built with a modern React +
-              Node.js architecture, optimized for performance, scalability, and clean component structure.</p>
+            <p>
+              Designed and developed a full-stack Netflix-inspired streaming
+              prototype featuring hover-based video previews, full-screen
+              playback transitions, and simulated streaming behavior. Built
+              with a modern React + Node.js architecture, optimized for
+              performance, scalability, and clean component structure.
+            </p>
           </section>
 
           <section class="stagger-reveal">
@@ -597,7 +763,7 @@
                   <span>Axios</span>
                 </div>
               </div>
-              <div style="margin-top: 16px;">
+              <div style="margin-top: 16px">
                 <h4>Backend</h4>
                 <div class="tech-pills">
                   <span>Node.js</span>
@@ -609,14 +775,14 @@
             </div>
           </section>
 
-          <section class="stagger-reveal" style="margin-top: 24px;">
+          <section class="stagger-reveal" style="margin-top: 24px">
             <a href="https://github.com/Markjohnson77/NETFLIXPROTO.git" target="_blank" class="btn btn-primary"
-              style="display: inline-flex; align-items: center; gap: 8px;">
+              style="display: inline-flex; align-items: center; gap: 8px">
               <i data-lucide="github"></i> View Repository
             </a>
           </section>
 
-          <div style="height: 40px;"></div>
+          <div style="height: 40px"></div>
         </div>
       </div>
     </div>
@@ -633,25 +799,25 @@
         <!-- Left: Visuals -->
         <div class="overlay-visuals">
           <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337358.jpg" alt="CollegeGO Screen 1">
+            <img src="COLLEGE GO/1752385337358.jpg" alt="CollegeGO Screen 1" />
           </div>
           <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337509.jpg" alt="CollegeGO Screen 2">
+            <img src="COLLEGE GO/1752385337509.jpg" alt="CollegeGO Screen 2" />
           </div>
           <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337411.jpg" alt="CollegeGO Screen 3">
+            <img src="COLLEGE GO/1752385337411.jpg" alt="CollegeGO Screen 3" />
           </div>
           <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337439.jpg" alt="CollegeGO Screen 4">
+            <img src="COLLEGE GO/1752385337439.jpg" alt="CollegeGO Screen 4" />
           </div>
           <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337464.jpg" alt="CollegeGO Screen 5">
+            <img src="COLLEGE GO/1752385337464.jpg" alt="CollegeGO Screen 5" />
           </div>
           <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337550.jpg" alt="CollegeGO Screen 6">
+            <img src="COLLEGE GO/1752385337550.jpg" alt="CollegeGO Screen 6" />
           </div>
           <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337899.jpg" alt="CollegeGO Screen 7">
+            <img src="COLLEGE GO/1752385337899.jpg" alt="CollegeGO Screen 7" />
           </div>
         </div>
 
@@ -664,22 +830,33 @@
 
           <section class="stagger-reveal">
             <h3>Overview</h3>
-            <p>CollegeGO is a web-based platform that digitizes student movement requests and bus pass approvals
-              through a structured multi-level workflow. It replaces manual paperwork with a secure, role-based
-              approval system.</p>
+            <p>
+              CollegeGO is a web-based platform that digitizes student
+              movement requests and bus pass approvals through a structured
+              multi-level workflow. It replaces manual paperwork with a
+              secure, role-based approval system.
+            </p>
           </section>
 
           <section class="stagger-reveal">
             <h3>The Problem</h3>
-            <p>Bus pass approvals in colleges are often handled manually, leading to delayed approvals, lack of
-              transparency, and administrative overload. Students often face uncertainty regarding their request
-              status while administrators manage physical forms.</p>
+            <p>
+              Bus pass approvals in colleges are often handled manually,
+              leading to delayed approvals, lack of transparency, and
+              administrative overload. Students often face uncertainty
+              regarding their request status while administrators manage
+              physical forms.
+            </p>
           </section>
 
           <section class="stagger-reveal">
             <h3>The Solution</h3>
-            <p>A digital approval workflow: <strong>Student → HOD → Warden</strong>. Providing real-time tracking,
-              status-based dashboards, and paperless record management.</p>
+            <p>
+              A digital approval workflow:
+              <strong>Student → HOD → Warden</strong>. Providing real-time
+              tracking, status-based dashboards, and paperless record
+              management.
+            </p>
           </section>
 
           <div class="overlay-split">
@@ -714,12 +891,11 @@
             </div>
           </section>
 
-          <div style="height: 40px;"></div>
+          <div style="height: 40px"></div>
         </div>
       </div>
     </div>
   </div>
-
 
   <!-- Login Project Video Overlay -->
   <div id="login-overlay" class="overlay-backdrop" aria-hidden="true">
@@ -727,26 +903,43 @@
       <button class="overlay-close-btn" aria-label="Close">
         <i data-lucide="x"></i>
       </button>
-      <div class="overlay-content" style="grid-template-columns: 1fr;">
+      <div class="overlay-content" style="grid-template-columns: 1fr">
         <!-- Right: Narrative -->
         <div class="overlay-narrative">
-          <header
-            style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 24px;">
+          <header style="
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 16px;
+                margin-bottom: 24px;
+              ">
             <div>
-              <p class="eyebrow" style="margin-bottom: 8px;">UI Interaction Concept · Figma</p>
-              <h1 style="margin: 0; line-height: 1.1;">Modern Login Experience</h1>
+              <p class="eyebrow" style="margin-bottom: 8px">
+                UI Interaction Concept · Figma
+              </p>
+              <h1 style="margin: 0; line-height: 1.1">
+                Modern Login Experience
+              </h1>
             </div>
             <a href="https://drive.google.com/drive/folders/1wqkTCaSaBM8-9kSESzawUmgJoIFZQ0Db?usp=drive_link"
-              target="_blank" class="btn btn-demo"
-              style="display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; margin-bottom: 4px;">
+              target="_blank" class="btn btn-demo" style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  flex-shrink: 0;
+                  margin-bottom: 4px;
+                ">
               <i data-lucide="play-circle"></i> Watch Demo
             </a>
           </header>
 
           <section class="stagger-reveal">
             <h3>Overview</h3>
-            <p>A clean, modern login interface designed with smooth transitions and structured hierarchy. The focus was
-              on clarity, visual balance, and intuitive interaction flow.</p>
+            <p>
+              A clean, modern login interface designed with smooth transitions
+              and structured hierarchy. The focus was on clarity, visual
+              balance, and intuitive interaction flow.
+            </p>
           </section>
 
           <section class="stagger-reveal">
@@ -760,7 +953,7 @@
             </ul>
           </section>
 
-          <div style="height: 40px;"></div>
+          <div style="height: 40px"></div>
         </div>
       </div>
     </div>
@@ -772,26 +965,43 @@
       <button class="overlay-close-btn" aria-label="Close">
         <i data-lucide="x"></i>
       </button>
-      <div class="overlay-content" style="grid-template-columns: 1fr;">
+      <div class="overlay-content" style="grid-template-columns: 1fr">
         <!-- Right: Narrative -->
         <div class="overlay-narrative">
-          <header
-            style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 24px;">
+          <header style="
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 16px;
+                margin-bottom: 24px;
+              ">
             <div>
-              <p class="eyebrow" style="margin-bottom: 8px;">UI Interaction Concept · Figma</p>
-              <h1 style="margin: 0; line-height: 1.1;">Adaptive Navigation Sidebar</h1>
+              <p class="eyebrow" style="margin-bottom: 8px">
+                UI Interaction Concept · Figma
+              </p>
+              <h1 style="margin: 0; line-height: 1.1">
+                Adaptive Navigation Sidebar
+              </h1>
             </div>
             <a href="https://drive.google.com/drive/folders/1wqkTCaSaBM8-9kSESzawUmgJoIFZQ0Db?usp=drive_link"
-              target="_blank" class="btn btn-demo"
-              style="display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; margin-bottom: 4px;">
+              target="_blank" class="btn btn-demo" style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  flex-shrink: 0;
+                  margin-bottom: 4px;
+                ">
               <i data-lucide="play-circle"></i> Watch Demo
             </a>
           </header>
 
           <section class="stagger-reveal">
             <h3>Overview</h3>
-            <p>Explored collapsible sidebar navigation with focus on clarity, spatial awareness, and smooth transitions.
-              This shows system thinking in interface design.</p>
+            <p>
+              Explored collapsible sidebar navigation with focus on clarity,
+              spatial awareness, and smooth transitions. This shows system
+              thinking in interface design.
+            </p>
           </section>
 
           <section class="stagger-reveal">
@@ -804,7 +1014,7 @@
             </ul>
           </section>
 
-          <div style="height: 40px;"></div>
+          <div style="height: 40px"></div>
         </div>
       </div>
     </div>
@@ -816,26 +1026,42 @@
       <button class="overlay-close-btn" aria-label="Close">
         <i data-lucide="x"></i>
       </button>
-      <div class="overlay-content" style="grid-template-columns: 1fr;">
+      <div class="overlay-content" style="grid-template-columns: 1fr">
         <!-- Right: Narrative -->
         <div class="overlay-narrative">
-          <header
-            style="display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; margin-bottom: 24px;">
+          <header style="
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 16px;
+                margin-bottom: 24px;
+              ">
             <div>
-              <p class="eyebrow" style="margin-bottom: 8px;">Landing Page UI Concept</p>
-              <h1 style="margin: 0; line-height: 1.1;">Website Design Concept</h1>
+              <p class="eyebrow" style="margin-bottom: 8px">
+                Landing Page UI Concept
+              </p>
+              <h1 style="margin: 0; line-height: 1.1">
+                Website Design Concept
+              </h1>
             </div>
             <a href="https://drive.google.com/drive/folders/1wqkTCaSaBM8-9kSESzawUmgJoIFZQ0Db?usp=drive_link"
-              target="_blank" class="btn btn-demo"
-              style="display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; margin-bottom: 4px;">
+              target="_blank" class="btn btn-demo" style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  flex-shrink: 0;
+                  margin-bottom: 4px;
+                ">
               <i data-lucide="play-circle"></i> Watch Demo
             </a>
           </header>
 
           <section class="stagger-reveal">
             <h3>Overview</h3>
-            <p>Designed a modern landing page layout emphasizing hero hierarchy, clean spacing, and structured content
-              flow.</p>
+            <p>
+              Designed a modern landing page layout emphasizing hero
+              hierarchy, clean spacing, and structured content flow.
+            </p>
           </section>
 
           <section class="stagger-reveal">
@@ -848,141 +1074,311 @@
             </ul>
           </section>
 
-          <div style="height: 40px;"></div>
+          <div style="height: 40px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOVA HR Project Overlay -->
+  <div id="nova-hr-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <button class="overlay-close-btn" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="overlay-content">
+        <!-- Left: Visuals -->
+        <div class="overlay-visuals">
+          <div class="overlay-main-img stagger-reveal">
+            <img src="NOVA HR/Screenshot 2026-04-04 102513.png" alt="NOVA HR Dashboard" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="NOVA HR/Screenshot 2026-04-04 102603.png" alt="NOVA HR View 2" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="NOVA HR/Screenshot 2026-04-04 102610.png" alt="NOVA HR View 3" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="NOVA HR/Screenshot 2026-04-04 102620.png" alt="NOVA HR View 4" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="NOVA HR/Screenshot 2026-04-04 102644.png" alt="NOVA HR View 5" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="NOVA HR/Screenshot 2026-04-04 102651.png" alt="NOVA HR View 6" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="NOVA HR/Screenshot 2026-04-04 102701.png" alt="NOVA HR View 7" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="NOVA HR/Screenshot 2026-04-04 102713.png" alt="NOVA HR View 8" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="NOVA HR/Screenshot 2026-04-04 102748.png" alt="NOVA HR View 9" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="NOVA HR/Screenshot 2026-04-04 102820.png" alt="NOVA HR View 10" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="NOVA HR/Screenshot 2026-04-04 102835.png" alt="NOVA HR View 11" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="NOVA HR/Screenshot 2026-04-04 102843.png" alt="NOVA HR View 12" />
+          </div>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">AI-POWERED WORKFORCE PLATFORM</p>
+            <h1>NOVA HR – Intelligent Workforce Management System</h1>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>
+              NOVA HR is an AI-powered workforce management platform that
+              streamlines HR operations, employee management, and performance
+              tracking in a single unified system.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Problem</h3>
+            <p>
+              Traditional HR systems are fragmented, manual, and inefficient,
+              leading to delayed workflows, lack of transparency, and poor
+              employee experience with no real-time insights.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Solution</h3>
+            <p>
+              A centralized, role-based HR platform that automates workflows,
+              provides real-time dashboards, enables data-driven decisions,
+              and improves employee self-service.
+            </p>
+          </section>
+
+          <div class="overlay-split">
+            <section class="stagger-reveal">
+              <h3>My Role</h3>
+              <ul class="role-list">
+                <li>UI/UX Design (Figma)</li>
+                <li>Frontend Development</li>
+                <li>Backend Integration</li>
+                <li>Database Design</li>
+              </ul>
+            </section>
+
+            <section class="stagger-reveal">
+              <h3>Key Features</h3>
+              <ul class="feature-bullets">
+                <li>Role-based Access (HR & Employee)</li>
+                <li>Operations Board (Task Tracking)</li>
+                <li>Performance Analytics (KPI)</li>
+                <li>Employee Management</li>
+                <li>Attendance & Leave System</li>
+                <li>Recruitment Module</li>
+                <li>Growth & Learning System</li>
+              </ul>
+            </section>
+          </div>
+
+          <section class="stagger-reveal">
+            <h3>Design Approach</h3>
+            <p>
+              Dashboard-first UX for quick insights, featuring a clean,
+              minimal UI with strong hierarchy and a color-coded system for
+              clarity and reduced cognitive load.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Tech Stack</h3>
+            <div class="tech-pills">
+              <span>HTML5 / CSS3 / JavaScript</span>
+              <span>PHP</span>
+              <span>MongoDB</span>
+              <span>Figma</span>
+            </div>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Impact & Learnings</h3>
+            <p>
+              Achieved faster HR workflows and improved transparency. Key
+              learnings included the criticality of role-based UX and that
+              data presentation matters more than quantity.
+            </p>
+          </section>
+
+          <section class="stagger-reveal" style="margin-top: 40px">
+            <a href="https://github.com/ashwinps0977/NOVAAA" target="_blank" class="btn btn-demo"
+              style="display: inline-flex; align-items: center; gap: 8px">
+              <i data-lucide="github"></i> View Repository
+            </a>
+          </section>
+
+          <div style="height: 40px"></div>
         </div>
       </div>
     </div>
   </div>
 
   <script>
-
     // ===== Global cursor ambient glow (page-wide) =====
     (function () {
-      const glow = document.getElementById('cursor-glow');
+      const glow = document.getElementById("cursor-glow");
       if (!glow) return;
-      let tx = window.innerWidth / 2, ty = window.innerHeight / 2;
-      let cx = tx, cy = ty;
+      let tx = window.innerWidth / 2,
+        ty = window.innerHeight / 2;
+      let cx = tx,
+        cy = ty;
       let started = false;
       const lerp = (a, b, t) => a + (b - a) * t;
       function tick() {
         cx = lerp(cx, tx, 0.07);
         cy = lerp(cy, ty, 0.07);
-        glow.style.left = cx + 'px';
-        glow.style.top = cy + 'px';
+        glow.style.left = cx + "px";
+        glow.style.top = cy + "px";
         requestAnimationFrame(tick);
       }
-      document.addEventListener('mousemove', (e) => {
+      document.addEventListener("mousemove", (e) => {
         tx = e.clientX;
         ty = e.clientY;
         if (!started) {
           started = true;
-          glow.classList.add('active');
+          glow.classList.add("active");
           tick();
         }
       });
     })();
 
     // Scroll reveal for sections
-    const sectionObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('reveal');
-          sectionObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    document.querySelectorAll('section').forEach(section => sectionObserver.observe(section));
-    document.querySelectorAll('.fade-in').forEach(el => sectionObserver.observe(el));
-
-    // About text — blur-fade-slide reveal (repeats every scroll)
-    const aboutText = document.querySelector('.about-text');
-    if (aboutText) {
-      const aboutObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    const sectionObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('about-reveal');
-          } else {
-            entry.target.classList.remove('about-reveal');
+            entry.target.classList.add("reveal");
+            sectionObserver.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.2 });
+      },
+      { threshold: 0.15 },
+    );
+
+    document
+      .querySelectorAll("section")
+      .forEach((section) => sectionObserver.observe(section));
+    document
+      .querySelectorAll(".fade-in")
+      .forEach((el) => sectionObserver.observe(el));
+
+    // About text — blur-fade-slide reveal (repeats every scroll)
+    const aboutText = document.querySelector(".about-text");
+    if (aboutText) {
+      const aboutObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("about-reveal");
+            } else {
+              entry.target.classList.remove("about-reveal");
+            }
+          });
+        },
+        { threshold: 0.2 },
+      );
       aboutObserver.observe(aboutText);
     }
 
     // Design Focus items — staggered blur-fade-slide (repeats every scroll)
-    const focusObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('focus-reveal');
-        } else {
-          entry.target.classList.remove('focus-reveal');
-        }
-      });
-    }, { threshold: 0.25 });
-    document.querySelectorAll('.focus-item').forEach(item => focusObserver.observe(item));
+    const focusObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("focus-reveal");
+          } else {
+            entry.target.classList.remove("focus-reveal");
+          }
+        });
+      },
+      { threshold: 0.25 },
+    );
+    document
+      .querySelectorAll(".focus-item")
+      .forEach((item) => focusObserver.observe(item));
 
     // Scroll reveal for skill cards and title
-    const skillCards = document.querySelectorAll('.skill-card');
-    const skillTitle = document.getElementById('skills-title');
-    const skillObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (entry.target.classList.contains('skill-card')) {
-            const idx = Array.from(skillCards).indexOf(entry.target);
-            entry.target.style.transitionDelay = `${idx * 0.1}s`;
+    const skillCards = document.querySelectorAll(".skill-card");
+    const skillTitle = document.getElementById("skills-title");
+    const skillObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.target.classList.contains("skill-card")) {
+              const idx = Array.from(skillCards).indexOf(entry.target);
+              entry.target.style.transitionDelay = `${idx * 0.1}s`;
+            }
+            entry.target.classList.add("visible");
+            skillObserver.unobserve(entry.target);
           }
-          entry.target.classList.add('visible');
-          skillObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15 });
+        });
+      },
+      { threshold: 0.15 },
+    );
 
     if (skillTitle) skillObserver.observe(skillTitle);
-    skillCards.forEach(card => {
+    skillCards.forEach((card) => {
       skillObserver.observe(card);
 
       // Mouse-follow glow effect within each card
-      card.addEventListener('mousemove', (e) => {
+      card.addEventListener("mousemove", (e) => {
         const rect = card.getBoundingClientRect();
         const x = ((e.clientX - rect.left) / rect.width) * 100;
         const y = ((e.clientY - rect.top) / rect.height) * 100;
-        card.style.setProperty('--mouse-x', `${x}%`);
-        card.style.setProperty('--mouse-y', `${y}%`);
+        card.style.setProperty("--mouse-x", `${x}%`);
+        card.style.setProperty("--mouse-y", `${y}%`);
       });
     });
 
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
     // Experience Carousel Logic
-    const expCards = document.querySelectorAll('.exp-card');
-    const prevBtn = document.querySelector('.carousel-btn.prev');
-    const nextBtn = document.querySelector('.carousel-btn.next');
+    const expCards = document.querySelectorAll(".exp-card");
+    const prevBtn = document.querySelector(".carousel-btn.prev");
+    const nextBtn = document.querySelector(".carousel-btn.next");
     let activeIdx = 0;
 
     function updateCarousel() {
       expCards.forEach((card, i) => {
-        card.classList.remove('active', 'prev', 'next', 'hidden');
+        card.classList.remove("active", "prev", "next", "hidden");
 
         if (i === activeIdx) {
-          card.classList.add('active');
-        } else if (i === (activeIdx - 1 + expCards.length) % expCards.length) {
-          card.classList.add('prev');
+          card.classList.add("active");
+        } else if (
+          i ===
+          (activeIdx - 1 + expCards.length) % expCards.length
+        ) {
+          card.classList.add("prev");
         } else if (i === (activeIdx + 1) % expCards.length) {
-          card.classList.add('next');
+          card.classList.add("next");
         } else {
-          card.classList.add('hidden');
+          card.classList.add("hidden");
         }
       });
     }
 
     if (prevBtn && nextBtn) {
-      prevBtn.addEventListener('click', () => {
+      prevBtn.addEventListener("click", () => {
         activeIdx = (activeIdx - 1 + expCards.length) % expCards.length;
         updateCarousel();
       });
 
-      nextBtn.addEventListener('click', () => {
+      nextBtn.addEventListener("click", () => {
         activeIdx = (activeIdx + 1) % expCards.length;
         updateCarousel();
       });
@@ -997,15 +1393,15 @@
       const backdrop = document.getElementById(overlayId);
       if (!card || !backdrop) return;
 
-      const container = backdrop.querySelector('.overlay-container');
-      const content = backdrop.querySelector('.overlay-content');
+      const container = backdrop.querySelector(".overlay-container");
+      const content = backdrop.querySelector(".overlay-content");
       let closeTimeout;
 
       function open(e) {
         if (e) e.stopPropagation();
         clearTimeout(closeTimeout);
-        backdrop.classList.add('active');
-        backdrop.setAttribute('aria-hidden', 'false');
+        backdrop.classList.add("active");
+        backdrop.setAttribute("aria-hidden", "false");
         if (content) content.scrollTop = 0;
       }
 
@@ -1013,46 +1409,48 @@
         clearTimeout(closeTimeout);
         const delay = immediate ? 0 : 250;
         closeTimeout = setTimeout(() => {
-          backdrop.classList.remove('active');
-          backdrop.setAttribute('aria-hidden', 'true');
+          backdrop.classList.remove("active");
+          backdrop.setAttribute("aria-hidden", "true");
         }, delay);
       }
 
       // Card triggers
-      card.addEventListener('click', open);
+      card.addEventListener("click", open);
 
       // Internal container tracking
       if (container) {
-        container.addEventListener('mouseenter', () => clearTimeout(closeTimeout));
+        container.addEventListener("mouseenter", () =>
+          clearTimeout(closeTimeout),
+        );
       }
 
       // Backdrop click to close
-      backdrop.addEventListener('click', (e) => {
+      backdrop.addEventListener("click", (e) => {
         if (e.target === backdrop) close(true);
       });
 
       // Close button logic
-      const closeBtn = backdrop.querySelector('.overlay-close-btn');
+      const closeBtn = backdrop.querySelector(".overlay-close-btn");
       if (closeBtn) {
-        closeBtn.addEventListener('click', (e) => {
+        closeBtn.addEventListener("click", (e) => {
           e.stopPropagation();
           close(true);
         });
       }
 
       // Cursor glow inside the card (generic listener)
-      card.addEventListener('mousemove', (e) => {
+      card.addEventListener("mousemove", (e) => {
         const rect = card.getBoundingClientRect();
         const x = ((e.clientX - rect.left) / rect.width) * 100;
         const y = ((e.clientY - rect.top) / rect.height) * 100;
-        card.style.setProperty('--mouse-x', `${x}%`);
-        card.style.setProperty('--mouse-y', `${y}%`);
+        card.style.setProperty("--mouse-x", `${x}%`);
+        card.style.setProperty("--mouse-y", `${y}%`);
       });
 
       // Parallax Tilt for the container
       if (container) {
-        backdrop.addEventListener('mousemove', (e) => {
-          if (!backdrop.classList.contains('active')) return;
+        backdrop.addEventListener("mousemove", (e) => {
+          if (!backdrop.classList.contains("active")) return;
           const rect = container.getBoundingClientRect();
           const centerX = rect.left + rect.width / 2;
           const centerY = rect.top + rect.height / 2;
@@ -1064,73 +1462,79 @@
     }
 
     // Initialize all interactive projects
-    initProjectOverlay('project-markflix', 'markflix-overlay');
-    initProjectOverlay('project-collegego', 'case-study-overlay');
-    initProjectOverlay('project-login', 'login-overlay');
-    initProjectOverlay('project-sidebar', 'sidebar-overlay');
-    initProjectOverlay('project-website', 'website-overlay');
-    initProjectOverlay('project-nova', 'nova-overlay');
+    initProjectOverlay("project-markflix", "markflix-overlay");
+    initProjectOverlay("project-collegego", "case-study-overlay");
+    initProjectOverlay("project-login", "login-overlay");
+    initProjectOverlay("project-sidebar", "sidebar-overlay");
+    initProjectOverlay("project-website", "website-overlay");
+    initProjectOverlay("project-nova", "nova-overlay");
+    initProjectOverlay("project-novahr", "nova-hr-overlay");
 
     // UI Experiments Carousel Logic
-    const expProjCards = document.querySelectorAll('.experiment-carousel .project.card');
-    const prevExpBtn = document.querySelector('.prev-exp');
-    const nextExpBtn = document.querySelector('.next-exp');
+    const expProjCards = document.querySelectorAll(
+      ".experiment-carousel .project.card",
+    );
+    const prevExpBtn = document.querySelector(".prev-exp");
+    const nextExpBtn = document.querySelector(".next-exp");
     let activeExpIdx = 0;
 
     function updateExpCarousel() {
       expProjCards.forEach((card, i) => {
-        card.classList.remove('active', 'prev', 'next', 'hidden');
+        card.classList.remove("active", "prev", "next", "hidden");
 
         if (i === activeExpIdx) {
-          card.classList.add('active');
-        } else if (i === (activeExpIdx - 1 + expProjCards.length) % expProjCards.length) {
-          card.classList.add('prev');
+          card.classList.add("active");
+        } else if (
+          i ===
+          (activeExpIdx - 1 + expProjCards.length) % expProjCards.length
+        ) {
+          card.classList.add("prev");
         } else if (i === (activeExpIdx + 1) % expProjCards.length) {
-          card.classList.add('next');
+          card.classList.add("next");
         } else {
-          card.classList.add('hidden');
+          card.classList.add("hidden");
         }
       });
     }
 
     if (prevExpBtn && nextExpBtn) {
-      prevExpBtn.addEventListener('click', () => {
-        activeExpIdx = (activeExpIdx - 1 + expProjCards.length) % expProjCards.length;
+      prevExpBtn.addEventListener("click", () => {
+        activeExpIdx =
+          (activeExpIdx - 1 + expProjCards.length) % expProjCards.length;
         updateExpCarousel();
       });
 
-      nextExpBtn.addEventListener('click', () => {
+      nextExpBtn.addEventListener("click", () => {
         activeExpIdx = (activeExpIdx + 1) % expProjCards.length;
         updateExpCarousel();
       });
     }
 
     // Mobile Menu Toggle
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    const navLinksList = document.querySelectorAll('.nav-links a');
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+    const navLinksList = document.querySelectorAll(".nav-links a");
 
     if (menuToggle && navLinks) {
-      menuToggle.addEventListener('click', () => {
-        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-        menuToggle.setAttribute('aria-expanded', !expanded);
-        menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
+      menuToggle.addEventListener("click", () => {
+        const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", !expanded);
+        menuToggle.classList.toggle("active");
+        navLinks.classList.toggle("active");
       });
 
       // Close menu when a link is clicked
-      navLinksList.forEach(link => {
-        link.addEventListener('click', () => {
-          menuToggle.setAttribute('aria-expanded', 'false');
-          menuToggle.classList.remove('active');
-          navLinks.classList.remove('active');
+      navLinksList.forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.classList.remove("active");
+          navLinks.classList.remove("active");
         });
       });
     }
 
     // Initialize experiment carousel
     if (expProjCards.length > 0) updateExpCarousel();
-
   </script>
 
   <!-- Lucide Icons -->
@@ -1138,7 +1542,6 @@
   <script>
     lucide.createIcons();
   </script>
-
 </body>
 
 </html>
