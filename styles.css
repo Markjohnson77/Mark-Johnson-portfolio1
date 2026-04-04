@@ -1,6 +1,6 @@
 ﻿@font-face {
   font-family: "Grand Canyon Free";
-  src: url("grand-canyon-free/Grand Canyon Free.ttf") format("truetype");
+  src: url("grand-canyon-free/grand-canyon-free.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -2325,15 +2325,15 @@ footer {
 
 /* Specific Thumbnails */
 #project-markflix .thumb {
-  background-image: url("IMAGES/MARKFLIX.png");
+  background-image: url("IMAGES/markflix.png");
 }
 
 #project-collegego .thumb {
-  background-image: url("IMAGES/college go design.png");
+  background-image: url("IMAGES/college-go-design.png");
 }
 
 #project-novahr .thumb {
-  background-image: url("NOVA HR/Screenshot 2026-04-04 102513.png");
+  background-image: url("nova-hr/screenshot-1.png");
 }
 
 /* UI Experiments Specifics */
