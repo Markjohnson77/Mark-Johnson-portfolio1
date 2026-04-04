@@ -1234,18 +1234,36 @@ section.reveal {
   .exp-carousel-container {
     height: auto;
     perspective: none;
+    overflow: visible;
+    display: block;
+    padding: 0 15px;
+  }
+
+  .exp-carousel-track {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+    width: 100%;
+    transform: none !important;
   }
 
   .exp-card.prev,
-  .exp-card.next {
-    display: none;
+  .exp-card.next,
+  .exp-card.hidden {
+    display: block !important;
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+    transform: none !important;
+    filter: none !important;
   }
 
   .exp-card {
     position: relative;
     width: 100%;
     max-width: 100%;
-    margin: 0;
+    margin: 0 auto;
     opacity: 1;
     pointer-events: all;
     min-height: auto;
@@ -2451,14 +2469,46 @@ footer {
 
 @media (max-width: 768px) {
   .experiment-carousel {
-    display: none;
-    /* Hide 3D carousel on tablet/mobile for simplicity */
+    height: auto;
+    perspective: none;
+    display: block;
+    padding: 0 15px;
+  }
+
+  .experiments-track {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+    width: 100%;
+    transform: none !important;
+  }
+
+  .experiment-carousel .project.card.prev,
+  .experiment-carousel .project.card.next,
+  .experiment-carousel .project.card.hidden {
+    display: flex !important;
+    position: relative;
+    opacity: 1;
+    pointer-events: all;
+    transform: none !important;
+    filter: none !important;
+  }
+
+  .experiment-carousel .project.card {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    opacity: 1;
+    pointer-events: all;
+    min-height: auto;
+    padding: 30px;
+    z-index: 1;
   }
 
   .experiments-track-mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    display: none;
   }
 }
 
