@@ -2325,11 +2325,11 @@ footer {
 
 /* Specific Thumbnails */
 #project-markflix .thumb {
-  background-image: url("IMAGES/markflix.png");
+  background: url("images/markflix-thumb.png") center/cover no-repeat !important;
 }
 
 #project-collegego .thumb {
-  background-image: url("IMAGES/college-go-design.png");
+  background-image: url("images/college-go-design.png");
 }
 
 #project-novahr .thumb {
