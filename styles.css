@@ -1261,14 +1261,15 @@ section.reveal {
     height: auto !important;
     transform: none !important;
     position: relative;
+    margin: 0 auto !important;
   }
 
   .exp-card {
     display: none !important;
     position: relative !important;
-    width: 92% !important;
-    max-width: 480px !important;
-    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
     opacity: 1 !important;
     pointer-events: all !important;
     transform: none !important;
@@ -2513,14 +2514,15 @@ footer {
     height: auto !important;
     transform: none !important;
     position: relative;
+    margin: 0 auto !important;
   }
 
   .experiment-carousel .project.card {
     display: none !important;
     position: relative !important;
-    width: 92% !important;
-    max-width: 480px !important;
-    margin: 0 auto !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
     opacity: 1 !important;
     pointer-events: all !important;
     transform: none !important;
