@@ -96,7 +96,7 @@ body {
 /* ===== Global Buttons ===== */
 .btn {
   display: inline-block;
-  padding: 14px 32px;
+  padding: 12px 28px;
   border-radius: 99px;
   font-family: "Avieka", sans-serif;
   font-weight: 700;
@@ -473,7 +473,8 @@ section.reveal {
   padding: 0 16px 0 240px;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
+  /* Reduced base gap for tighter alignment */
   align-items: flex-start;
   animation: heroTextIn 0.9s 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -520,23 +521,67 @@ section.reveal {
   vertical-align: baseline;
 }
 
-/* Subheading */
+/* Subheading Wrapper for Typing */
+.hero-sub-wrapper {
+  display: flex;
+  align-items: center;
+  height: 2.2em;
+  /* Fixed height to prevent layout shift */
+  margin: 4px 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 .hero-sub {
   margin: 0;
-  font-family: "Grand Canyon Free", sans-serif;
-  font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+  font-family: 'Fira Code', monospace;
+  font-size: clamp(0.95rem, 1.2vw, 1.15rem);
   font-weight: 400;
   line-height: 1.8;
-  color: rgba(200, 200, 200, 0.6);
-  letter-spacing: 0.06em;
+  color: var(--accent-3);
+  letter-spacing: -0.02em;
+  transition: opacity 0.3s ease;
+}
+
+/* Typing Cursor */
+.typing-cursor {
+  font-size: clamp(1rem, 1.3vw, 1.2rem);
+  color: var(--accent-4);
+  font-weight: 400;
+  margin-left: 2px;
+  animation: blink 0.8s step-end infinite;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@keyframes blink {
+
+  from,
+  to {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .hero-sub-wrapper {
+    justify-content: center;
+    height: 3em;
+    /* Slightly more height for mobile balance */
+    white-space: nowrap;
+  }
 }
 
 /* CTA row */
 .hero-cta {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   flex-wrap: wrap;
-  margin-top: 4px;
+  margin-top: 12px;
+  /* Push buttons down slightly more for hierarchy */
 }
 
 /* â”€â”€â”€ Buttons â”€â”€â”€ */
@@ -549,7 +594,7 @@ section.reveal {
   font-weight: 600;
   letter-spacing: 0.05em;
   border-radius: 99px;
-  padding: 16px 32px 14px;
+  padding: 12px 28px;
   cursor: pointer;
   text-decoration: none;
   border: none;
@@ -608,6 +653,88 @@ section.reveal {
   background: rgba(255, 186, 0, 0.08);
   transform: translateY(-3px) scale(1.02);
   color: var(--accent-4);
+}
+
+/* ===== Tilted Card Effect Styles ===== */
+.tilted-card-figure {
+  position: relative;
+  width: auto;
+  height: auto;
+  perspective: 1000px;
+  /* Increased perspective for better depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.tilted-card-mobile-alert {
+  position: absolute;
+  top: -2rem;
+  /* Move up slightly */
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--accent-4);
+  display: none;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 4px 12px;
+  border-radius: 99px;
+  backdrop-filter: blur(4px);
+}
+
+@media (max-width: 960px) {
+  .tilted-card-mobile-alert {
+    display: block;
+  }
+
+  .tilted-card-caption {
+    display: none !important;
+  }
+}
+
+.tilted-card-inner {
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.1s ease-out;
+  /* Smooth tracking */
+  will-change: transform;
+}
+
+.tilted-card-img-wrapper {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.tilted-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  will-change: transform;
+  transform: translateZ(40px);
+}
+
+.tilted-card-caption {
+  pointer-events: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 6px;
+  background-color: var(--accent-4);
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #000;
+  opacity: 0;
+  z-index: 100;
+  transform: translate(-50%, -50%) translateZ(60px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease;
+  white-space: nowrap;
 }
 
 /* â”€â”€â”€ Right column: Visual â”€â”€â”€ */
@@ -1630,7 +1757,7 @@ footer {
 }
 
 .resume-btn {
-  padding: 16px 48px;
+  padding: 12px 28px;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.05em;
@@ -2876,9 +3003,9 @@ footer {
 }
 
 .login-overlay-grid {
-  grid-template-columns: 1.3fr 0.7fr;
+  grid-template-columns: 0.9fr 1.1fr;
+  /* Matches main project list ratio */
   overflow: hidden !important;
-  /* Fixed base for internal scrolling */
 }
 
 @media (max-width: 960px) {
@@ -2968,9 +3095,99 @@ footer {
 }
 
 .tech-pills {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 10px;
+  align-items: center;
+}
+
+.tech-pills span {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+/* ===== Premium Tech Stack Layout ===== */
+.tech-stack-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.tech-stack-col {
+  padding: 20px 24px;
+}
+
+.tech-stack-col:first-child {
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.tech-stack-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-4);
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.85;
+}
+
+.tech-stack-label i {
+  color: var(--accent-4);
+}
+
+.tech-stack-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tech-stack-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  transition: color 0.2s ease;
+}
+
+.tech-stack-list li:hover {
+  color: #fff;
+}
+
+.tech-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-4);
+  flex-shrink: 0;
+  opacity: 0.7;
+  box-shadow: 0 0 6px rgba(255, 186, 0, 0.35);
+}
+
+.tech-version {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 186, 0, 0.55);
+  background: rgba(255, 186, 0, 0.08);
+  border: 1px solid rgba(255, 186, 0, 0.15);
+  border-radius: 99px;
+  padding: 1px 7px;
+  margin-left: 2px;
 }
 
 .tech-pills span {
@@ -3038,6 +3255,7 @@ footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 22px;
+  perspective: 1000px;
 }
 
 .skill-card {
@@ -3055,9 +3273,11 @@ footer {
   /* Initial state for Scroll Reveal */
   opacity: 0;
   transform: translateY(20px);
+  transform-style: preserve-3d;
+  will-change: transform;
   transition:
     opacity 0.7s ease-out,
-    transform 0.7s ease-out,
+    transform 0.5s cubic-bezier(0.23, 1, 0.32, 1),
     border-color 0.4s ease,
     background 0.4s ease,
     box-shadow 0.4s ease;
@@ -3089,12 +3309,11 @@ footer {
   opacity: 1;
 }
 
-/* Premium Hover lifting */
+/* Premium Hover lifting - updated for Tilt effect logic in JS */
 .skill-card:hover {
-  transform: translateY(-5px) scale(1.015);
   background: rgba(255, 255, 255, 0.06);
   border-color: rgba(255, 193, 7, 0.2);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
 }
 
 .skill-card-header {

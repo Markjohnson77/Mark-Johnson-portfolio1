@@ -27,7 +27,9 @@
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%230C3B2E'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='sans-serif' font-size='54' fill='%23FFBA00'%3EM%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=13" />
 </head>
 
@@ -68,9 +70,9 @@
         Blending Technology<br />with
         <span class="hero-accent">Creativity.</span>
       </h1>
-      <p class="hero-sub">
-        I design intuitive digital experiences<br />with clarity and purpose.
-      </p>
+      <div class="hero-sub-wrapper">
+        <p class="hero-sub typing-text" id="typing-text"></p><span class="typing-cursor">|</span>
+      </div>
       <div class="hero-cta">
         <a class="btn btn-primary" href="#projects">View Projects</a>
         <div id="contact-glow" class="border-glow-card">
@@ -85,15 +87,20 @@
     <!-- Right: Portrait -->
     <div class="hero-visual">
       <div class="hero-glow" aria-hidden="true"></div>
-      <div class="hero-circle">
-        <img src="MJ1.jpeg" alt="Mark Johnson" class="hero-portrait" />
-      </div>
+      <figure class="tilted-card-figure" id="hero-tilt-card">
+        <div class="tilted-card-mobile-alert">Check on desktop for 3D effect</div>
+        <div class="tilted-card-inner">
+          <div class="hero-circle tilted-card-img-wrapper">
+            <img src="MJ1.jpeg" alt="Mark Johnson" class="hero-portrait" />
+          </div>
+        </div>
+      </figure>
     </div>
   </section>
 
   <!-- About -->
   <section id="about" aria-labelledby="about-title">
-    <h2 id="about-title">About</h2>
+    <h2 id="about-title">ABOUT</h2>
 
     <!-- Use a dedicated wrapper (no .grid class) -->
     <div class="about-grid">
@@ -138,7 +145,7 @@
 
   <!-- Experience -->
   <section id="experience" aria-labelledby="exp-title">
-    <h2 id="exp-title">Experience</h2>
+    <h2 id="exp-title">EXPERIENCE</h2>
 
     <div class="exp-carousel-container">
       <button class="carousel-btn prev" aria-label="Previous Experience">
@@ -274,7 +281,7 @@
 
   <!-- Skills & Services -->
   <section id="skills" aria-labelledby="skills-title">
-    <h2 id="skills-title" class="fade-in">Skills &amp; Services</h2>
+    <h2 id="skills-title" class="fade-in">SKILLS &amp; SERVICES</h2>
     <div class="skills-grid">
       <article class="skill-card fade-in">
         <div class="card-glow-cursor"></div>
@@ -359,7 +366,7 @@
 
   <!-- Projects -->
   <section id="projects" aria-labelledby="projects-title">
-    <h2 id="projects-title">Projects</h2>
+    <h2 id="projects-title">PROJECTS</h2>
 
     <article class="card project interactive-card" id="project-markflix">
       <div class="card-glow-cursor"></div>
@@ -406,7 +413,7 @@
 
   <!-- UI Experiments & Interaction Concepts -->
   <section id="experiments" aria-labelledby="experiments-title">
-    <h2 id="experiments-title" class="section-title">UI Experiments & Interaction Concepts</h2>
+    <h2 id="experiments-title" class="section-title">UI EXPERIMENTS &amp; INTERACTION CONCEPTS</h2>
 
     <div class="exp-carousel-container experiment-carousel">
       <button class="carousel-btn prev-exp" aria-label="Previous Project">
@@ -772,26 +779,30 @@
 
           <section class="stagger-reveal">
             <h3>Architecture</h3>
-            <div class="overlay-split">
-              <div>
-                <h4>Frontend</h4>
-                <div class="tech-pills">
-                  <span>React (v18.3.1)</span>
-                  <span>Vite</span>
-                  <span>Tailwind CSS</span>
-                  <span>Framer Motion</span>
-                  <span>Lucide React</span>
-                  <span>Axios</span>
-                </div>
+            <div class="tech-stack-grid">
+              <!-- Frontend Column -->
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="monitor"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Frontend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>React <span class="tech-version">v18.3.1</span></li>
+                  <li><span class="tech-dot"></span>Vite</li>
+                  <li><span class="tech-dot"></span>Tailwind CSS</li>
+                  <li><span class="tech-dot"></span>Framer Motion</li>
+                  <li><span class="tech-dot"></span>Lucide React</li>
+                  <li><span class="tech-dot"></span>Axios</li>
+                </ul>
               </div>
-              <div style="margin-top: 16px">
-                <h4>Backend</h4>
-                <div class="tech-pills">
-                  <span>Node.js</span>
-                  <span>Express</span>
-                  <span>CORS</span>
-                  <span>In-memory Data</span>
-                </div>
+              <!-- Backend Column -->
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="server"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Backend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>Node.js</li>
+                  <li><span class="tech-dot"></span>Express</li>
+                  <li><span class="tech-dot"></span>CORS</li>
+                  <li><span class="tech-dot"></span>In-memory Data</li>
+                </ul>
               </div>
             </div>
           </section>
@@ -904,11 +915,24 @@
 
           <section class="stagger-reveal">
             <h3>Tech Stack</h3>
-            <div class="tech-pills">
-              <span>HTML5 / CSS / JS</span>
-              <span>PHP</span>
-              <span>MongoDB</span>
-              <span>Figma</span>
+            <div class="tech-stack-grid">
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="monitor"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Frontend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>HTML5 / CSS3</li>
+                  <li><span class="tech-dot"></span>JavaScript</li>
+                  <li><span class="tech-dot"></span>Figma</li>
+                </ul>
+              </div>
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="server"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Backend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>PHP</li>
+                  <li><span class="tech-dot"></span>MongoDB</li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -974,6 +998,22 @@
             </ul>
           </section>
 
+          <section class="stagger-reveal">
+            <h3>Tech Stack</h3>
+            <div class="tech-stack-grid" style="grid-template-columns: 1fr">
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="pen-tool"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Design Tools</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>Figma</li>
+                  <li><span class="tech-dot"></span>Auto Layout</li>
+                  <li><span class="tech-dot"></span>Component Library</li>
+                  <li><span class="tech-dot"></span>Prototyping</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
           <div style="height: 40px"></div>
         </div>
       </div>
@@ -1035,6 +1075,22 @@
             </ul>
           </section>
 
+          <section class="stagger-reveal">
+            <h3>Tech Stack</h3>
+            <div class="tech-stack-grid" style="grid-template-columns: 1fr">
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="pen-tool"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Design Tools</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>Figma</li>
+                  <li><span class="tech-dot"></span>Component System</li>
+                  <li><span class="tech-dot"></span>Interaction Design</li>
+                  <li><span class="tech-dot"></span>Prototyping</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
           <div style="height: 40px"></div>
         </div>
       </div>
@@ -1093,6 +1149,22 @@
               <li>CTA prominence</li>
               <li>Layout grid alignment</li>
             </ul>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Tech Stack</h3>
+            <div class="tech-stack-grid" style="grid-template-columns: 1fr">
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="pen-tool"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Design Tools</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>Figma</li>
+                  <li><span class="tech-dot"></span>Grid System</li>
+                  <li><span class="tech-dot"></span>Visual Hierarchy</li>
+                  <li><span class="tech-dot"></span>Responsive Layout</li>
+                </ul>
+              </div>
+            </div>
           </section>
 
           <div style="height: 40px"></div>
@@ -1219,11 +1291,24 @@
 
           <section class="stagger-reveal">
             <h3>Tech Stack</h3>
-            <div class="tech-pills">
-              <span>HTML5 / CSS3 / JavaScript</span>
-              <span>PHP</span>
-              <span>MongoDB</span>
-              <span>Figma</span>
+            <div class="tech-stack-grid">
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="monitor"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Frontend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>HTML5 / CSS3</li>
+                  <li><span class="tech-dot"></span>JavaScript</li>
+                  <li><span class="tech-dot"></span>Figma</li>
+                </ul>
+              </div>
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="server"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Backend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>PHP</li>
+                  <li><span class="tech-dot"></span>MongoDB</li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -1356,13 +1441,36 @@
     skillCards.forEach((card) => {
       skillObserver.observe(card);
 
-      // Mouse-follow glow effect within each card
+      const rotateAmplitude = 20; // Increased for better visibility
+      const scaleOnHover = 1.08;
+
       card.addEventListener("mousemove", (e) => {
         const rect = card.getBoundingClientRect();
-        const x = ((e.clientX - rect.left) / rect.width) * 100;
-        const y = ((e.clientY - rect.top) / rect.height) * 100;
-        card.style.setProperty("--mouse-x", `${x}%`);
-        card.style.setProperty("--mouse-y", `${y}%`);
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        // Glow effect variables
+        card.style.setProperty("--mouse-x", `${(x / rect.width) * 100}%`);
+        card.style.setProperty("--mouse-y", `${(y / rect.height) * 100}%`);
+
+        // Tilt math
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        const offsetX = x - centerX;
+        const offsetY = y - centerY;
+
+        const rotationX = (offsetY / centerY) * -rotateAmplitude;
+        const rotationY = (offsetX / centerX) * rotateAmplitude;
+
+        // Apply fast tracking (removing transition during move for snappiness)
+        card.style.transition = "none";
+        card.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg) scale(${scaleOnHover})`;
+      });
+
+      card.addEventListener("mouseleave", () => {
+        // Smooth return transition
+        card.style.transition = "transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.4s ease, background 0.4s ease";
+        card.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
       });
     });
 
@@ -1788,15 +1896,91 @@
     }
 
     window.addEventListener('load', () => {
-      const container = document.getElementById('home-title');
-      if (container) {
-        new VariableProximity(container, {
+      const titleContainer = document.getElementById('home-title');
+      if (titleContainer) {
+        new VariableProximity(titleContainer, {
           radius: 100,
           fromSettings: "'wght' 400, 'opsz' 9",
           toSettings: "'wght' 1000, 'opsz' 40",
           falloff: 'linear'
         });
       }
+
+      // --- Typewriter Logic ---
+      const typingContainer = document.getElementById('typing-text');
+      const phrases = [
+        "Designing experiences that feel effortless.",
+        "Building interfaces that perform.",
+        "Turning ideas into real products.",
+        "Where creativity meets clean code."
+      ];
+
+      let phraseIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let typingSpeed = 40;
+
+      function type() {
+        const fullText = phrases[phraseIndex];
+
+        if (isDeleting) {
+          typingContainer.textContent = fullText.substring(0, charIndex - 1);
+          charIndex--;
+          typingSpeed = 20;
+        } else {
+          typingContainer.textContent = fullText.substring(0, charIndex + 1);
+          charIndex++;
+          typingSpeed = 40;
+        }
+
+        if (!isDeleting && charIndex === fullText.length) {
+          isDeleting = true;
+          typingSpeed = 1500; // Pause at end of sentence
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          phraseIndex = (phraseIndex + 1) % phrases.length;
+          typingSpeed = 300; // Pause before next sentence
+        }
+
+        setTimeout(type, typingSpeed);
+      }
+
+      if (typingContainer) {
+        setTimeout(type, 1000); // Initial delay
+      }
+
+      // --- Tilted Card Logic ---
+      const tiltedCard = document.getElementById('hero-tilt-card');
+      const inner = tiltedCard.querySelector('.tilted-card-inner');
+
+      let targetX = 0, targetY = 0, currentX = 0, currentY = 0;
+      let rotateAmplitude = 6;
+      let lerpFactor = 0.1;
+
+      tiltedCard.addEventListener('mousemove', (e) => {
+        const rect = tiltedCard.getBoundingClientRect();
+        const offsetX = e.clientX - rect.left - rect.width / 2;
+        const offsetY = e.clientY - rect.top - rect.height / 2;
+
+        targetX = (offsetY / (rect.height / 2)) * -rotateAmplitude;
+        targetY = (offsetX / (rect.width / 2)) * rotateAmplitude;
+      });
+
+      tiltedCard.addEventListener('mouseleave', () => {
+        targetX = 0;
+        targetY = 0;
+      });
+
+      function animateTilt() {
+        currentX += (targetX - currentX) * lerpFactor;
+        currentY += (targetY - currentY) * lerpFactor;
+
+        const activeScale = tiltedCard.matches(':hover') ? 1.05 : 1;
+        inner.style.transform = `rotateX(${currentX}deg) rotateY(${currentY}deg) scale(${activeScale})`;
+
+        requestAnimationFrame(animateTilt);
+      }
+      animateTilt();
     });
   </script>
 
