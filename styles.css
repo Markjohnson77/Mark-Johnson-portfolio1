@@ -112,16 +112,21 @@ body {
 
 .btn-primary,
 .btn.primary {
-  background: linear-gradient(180deg, #ffd500, #ff7b00);
-  color: #0c0c0c;
-  box-shadow: 0 8px 20px rgba(255, 186, 0, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover,
 .btn.primary:hover {
-  background: linear-gradient(180deg, #ffd500, #e08a00);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(255, 186, 0, 0.45);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
 .btn-ghost,
@@ -607,14 +612,20 @@ section.reveal {
 }
 
 .btn-primary {
-  background: #ffba00;
-  color: #0b0b0b;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(180deg, #ffd500, #e08a00);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(255, 186, 0, 0.22);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
 .btn-demo {
@@ -1473,7 +1484,7 @@ section.reveal {
   aspect-ratio: 16/10;
   border-radius: 18px;
   background: linear-gradient(135deg,
-      rgba(255, 186, 0, 0.15),
+      rgba(255, 255, 255, 0.15),
       rgba(12, 59, 46, 0.25));
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
