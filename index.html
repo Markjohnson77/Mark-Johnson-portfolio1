@@ -1981,8 +1981,178 @@
         requestAnimationFrame(animateTilt);
       }
       animateTilt();
+
+      // --- Vertical Scroll Sidebar Visibility & ScrollSpy ---
+      const scrollNav = document.getElementById('scroll-nav');
+      const navLinks = document.querySelectorAll('.scroll-nav-link');
+      const sections = document.querySelectorAll('section[id]');
+      const trigger = document.getElementById('side-nav-trigger');
+
+      let isMouseNearEdge = false;
+      let isMouseOverNav = false;
+      let isNavLocked = false;
+      let closingTimeout;
+
+      function updateNavVisibility() {
+        // Show if mouse is near edge OR over the nav OR locked
+        if (isMouseNearEdge || isMouseOverNav || isNavLocked) {
+          if (closingTimeout) clearTimeout(closingTimeout);
+          scrollNav.classList.add('visible');
+          trigger.classList.add('sidebar-open');
+        } else {
+          // Delayed close only when completely clear
+          if (closingTimeout) clearTimeout(closingTimeout);
+          closingTimeout = setTimeout(() => {
+            if (!isMouseNearEdge && !isMouseOverNav && !isNavLocked) {
+              scrollNav.classList.remove('visible');
+              trigger.classList.remove('sidebar-open');
+            }
+          }, 1000); // 1 second delay
+        }
+      }
+
+      const navCheckbox = document.getElementById('nav-lock-checkbox');
+
+      // Track mouse over switch (peek behavior)
+      trigger.addEventListener('mouseenter', () => {
+        isMouseNearEdge = true;
+        updateNavVisibility();
+      });
+
+      trigger.addEventListener('mouseleave', () => {
+        isMouseNearEdge = false;
+        updateNavVisibility();
+      });
+
+      // Toggle lock via Switch
+      navCheckbox.addEventListener('change', () => {
+        isNavLocked = navCheckbox.checked;
+        updateNavVisibility();
+      });
+
+      // Track mouse over sidebar specifically
+      scrollNav.addEventListener('mouseenter', () => {
+        isMouseOverNav = true;
+        updateNavVisibility();
+      });
+
+      scrollNav.addEventListener('mouseleave', () => {
+        isMouseOverNav = false;
+        updateNavVisibility();
+      });
+
+      // Force Immediate Dismissal when clicking anywhere outside
+      document.addEventListener('click', (e) => {
+        const isClickInsideNav = scrollNav.contains(e.target);
+        const isClickOnTrigger = trigger.contains(e.target);
+
+        if (!isClickInsideNav && !isClickOnTrigger) {
+          isNavLocked = false;
+          isMouseNearEdge = false;
+          isMouseOverNav = false;
+
+          if (navCheckbox) navCheckbox.checked = false; // Sync UI
+
+          if (closingTimeout) clearTimeout(closingTimeout);
+
+          scrollNav.classList.remove('visible');
+        }
+      });
+
+
+      const handleScroll = () => {
+        // Landing Page Visibility & Auto-Dismiss
+        if (window.scrollY < 600) {
+          isNavLocked = false;
+          isMouseNearEdge = false;
+          isMouseOverNav = false;
+          if (navCheckbox) navCheckbox.checked = false;
+          trigger.classList.add('hidden-trigger');
+          scrollNav.classList.remove('visible');
+          return; // Skip ScrollSpy on landing for performance
+        } else {
+          trigger.classList.remove('hidden-trigger');
+        }
+
+        let currentSectionId = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          if (window.scrollY >= sectionTop - 250) {
+            currentSectionId = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${currentSectionId}`) {
+            link.classList.add('active');
+          }
+        });
+      };
+
+      window.addEventListener('scroll', handleScroll);
+      handleScroll(); // Run on load
+
+      updateNavVisibility();
     });
   </script>
+
+  <!-- Grid Switch Navigation Trigger -->
+  <div class="side-nav-trigger hidden-trigger" id="side-nav-trigger" title="Toggle and Lock Menu">
+    <label class="switch">
+      <input type="checkbox" id="nav-lock-checkbox" />
+      <span class="wrapper">
+        <span class="row">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+        <span class="row row-bottom">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+        <span class="row-vertical">
+          <span class="dot"></span>
+          <span class="dot middle-dot"></span>
+          <span class="dot"></span>
+        </span>
+        <span class="row-horizontal">
+          <span class="dot"></span>
+          <span class="dot middle-dot-horizontal"></span>
+          <span class="dot"></span>
+        </span>
+      </span>
+    </label>
+  </div>
+
+  <!-- Vertical Scroll Navigation -->
+  <nav id="scroll-nav" class="scroll-nav" aria-label="Scroll Navigation">
+    <div class="scroll-nav-inner">
+      <a href="#about" class="scroll-nav-link" aria-label="About">
+        <i data-lucide="user"></i>
+        <span class="nav-tooltip">About</span>
+      </a>
+      <a href="#experience" class="scroll-nav-link" aria-label="Experience">
+        <i data-lucide="briefcase"></i>
+        <span class="nav-tooltip">Experience</span>
+      </a>
+      <a href="#skills" class="scroll-nav-link" aria-label="Skills & Services">
+        <i data-lucide="cpu"></i>
+        <span class="nav-tooltip">Skills</span>
+      </a>
+      <a href="#projects" class="scroll-nav-link" aria-label="Projects">
+        <i data-lucide="layout-grid"></i>
+        <span class="nav-tooltip">Projects</span>
+      </a>
+      <a href="#certificates" class="scroll-nav-link" aria-label="Certificates">
+        <i data-lucide="award"></i>
+        <span class="nav-tooltip">Certificates</span>
+      </a>
+      <a href="#contact" class="scroll-nav-link" aria-label="Contact">
+        <i data-lucide="mail"></i>
+        <span class="nav-tooltip">Contact</span>
+      </a>
+    </div>
+  </nav>
 
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
