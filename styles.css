@@ -516,6 +516,9 @@ section.reveal {
   letter-spacing: -0.04em;
   color: #ffffff;
   font-style: normal;
+  /* Remove inherited/container animations */
+  animation: none !important;
+  opacity: 1;
 }
 
 /* "Creativity." — inline alignment and color */
