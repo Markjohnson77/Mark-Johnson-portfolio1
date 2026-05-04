@@ -63,6 +63,13 @@
 
   <!-- Hero -->
   <section id="home" class="hero" aria-labelledby="home-title">
+    <!-- Coded Animated Background -->
+    <div class="hero-bg-coded" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
     <!-- Left: Text -->
     <div class="hero-content">
       <p class="hero-label">UI/UX Designer &amp; Front-End Developer</p>
@@ -373,6 +380,20 @@
   <section id="projects" aria-labelledby="projects-title">
     <h2 id="projects-title">PROJECTS</h2>
 
+    <article class="card project interactive-card" id="project-algomox">
+      <div class="card-glow-cursor"></div>
+      <div class="thumb" style="background: url('Algomox/1.png') center/cover;"></div>
+      <div class="project-info">
+        <p class="eyebrow">AI-POWERED IT OPERATIONS PLATFORM</p>
+        <h3>Algomox – Product Experience Redesign</h3>
+        <p>
+          A modern product-led landing page redesign clearly showcasing Algomox’s ecosystem through interactive
+          dashboard previews and visualizations.
+          <span class="click-hint">Click to explore project details</span>
+        </p>
+      </div>
+    </article>
+
     <article class="card project interactive-card" id="project-markflix">
       <div class="card-glow-cursor"></div>
       <div class="thumb"></div>
@@ -387,20 +408,6 @@
       </div>
     </article>
 
-    <article class="card project interactive-card" id="project-collegego">
-      <div class="card-glow-cursor"></div>
-      <div class="thumb"></div>
-      <div class="project-info">
-        <p class="eyebrow">CASE STUDY</p>
-        <h3>CollegeGO – Smart Bus Pass System</h3>
-        <p>
-          A web-based platform digitizing student movement requests and bus
-          pass approvals through a structured multi-level workflow.
-          <span class="click-hint">Click to explore case study</span>
-        </p>
-      </div>
-    </article>
-
     <article class="card project interactive-card" id="project-novahr">
       <div class="card-glow-cursor"></div>
       <div class="thumb"></div>
@@ -411,6 +418,20 @@
           An AI-driven platform streamlining HR operations, employee
           performance tracking, and task management in one system.
           <span class="click-hint">Click to explore project details</span>
+        </p>
+      </div>
+    </article>
+
+    <article class="card project interactive-card" id="project-collegego">
+      <div class="card-glow-cursor"></div>
+      <div class="thumb"></div>
+      <div class="project-info">
+        <p class="eyebrow">CASE STUDY</p>
+        <h3>CollegeGO – Smart Bus Pass System</h3>
+        <p>
+          A web-based platform digitizing student movement requests and bus
+          pass approvals through a structured multi-level workflow.
+          <span class="click-hint">Click to explore case study</span>
         </p>
       </div>
     </article>
@@ -505,7 +526,6 @@
             <div>
               <p class="eyebrow" style="margin-bottom: 8px">
                 UI Interaction Concept · Figma
-              </p>
               <h1 style="margin: 0; line-height: 1.1">
                 NOVA AI – Motion-Driven UI Experiment
               </h1>
@@ -730,23 +750,187 @@
     </div>
   </footer>
 
+  <!-- Algomox Project Overlay -->
+  <div id="algomox-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <button class="overlay-close-btn" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="overlay-content">
+        <!-- Left: Visuals -->
+        <div class="overlay-visuals">
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Algomox/1.png" alt="Algomox UI Screen 1" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Algomox/2.png" alt="Algomox UI Screen 2" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Algomox/3.png" alt="Algomox UI Screen 3" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Algomox/4.png" alt="Algomox UI Screen 4" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Algomox/5.png" alt="Algomox UI Screen 5" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Algomox/last.png" alt="Algomox UI Screen Final" />
+          </div>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">AI-POWERED IT OPERATIONS PLATFORM</p>
+            <h1>Algomox – Product Experience Redesign</h1>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px;">
+              <a href="https://github.com/Markjohnson77/Algomoxlandingpg.git" target="_blank" class="repo-button"
+                style="text-decoration: none; width: max-content;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
+                    fill="#ffba00"></path>
+                </svg>
+                <p class="text" style="margin:0; padding:0;">View Repository</p>
+              </a>
+              <a href="https://markjohnson77.github.io/Algomoxlandingpg/" target="_blank" class="repo-button"
+                style="text-decoration: none; width: max-content;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14ZM19 19H5V5H12V3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19Z"
+                    fill="#ffba00"></path>
+                </svg>
+                <p class="text" style="margin:0; padding:0;">Live Link Demo</p>
+              </a>
+            </div>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>
+              Algomox is an enterprise AI-powered IT operations platform that helps organizations monitor
+              infrastructure, automate operations, reduce downtime, and optimize operational efficiency through products
+              like ITMox, Nora, and Algomox.Cloud.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Problem</h3>
+            <p>
+              The existing website communicated Algomox’s offerings well, but the product experience felt text-heavy,
+              visually fragmented, and lacked strong product storytelling. Core products like ITMox, Nora, and
+              Algomox.Cloud were not immediately understandable to first-time visitors.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Solution</h3>
+            <p>
+              A modern product-led landing page redesign that clearly showcases Algomox’s ecosystem through interactive
+              dashboard previews, AI assistant interfaces, platform visualizations, and modular content sections.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Key Features</h3>
+            <ul class="feature-bullets">
+              <li>Hero Section with product-first storytelling</li>
+              <li>ITMox Dashboard Preview with KPI cards</li>
+              <li>Nora AI Assistant Interface</li>
+              <li>Algomox.Cloud Control Plane Visualization</li>
+              <li>Interactive Product Modules &amp; Animated Counters</li>
+              <li>Dark / Light Mode &amp; Responsive Design</li>
+            </ul>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Design Approach</h3>
+            <p>
+              Focused on dashboard-first storytelling, enterprise-grade visual hierarchy, clean spacing, modular
+              card-based layouts, and Algomox-inspired blue/cyan branding. Designed to make complex IT products easy to
+              understand at first glance.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Impact &amp; Learnings</h3>
+            <p>
+              Improved product clarity, stronger visual storytelling, and a more modern SaaS experience. Key learning
+              was understanding enterprise product ecosystems and designing interfaces that simplify complex operational
+              workflows.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Tech Stack &amp; Tools</h3>
+            <div class="tech-stack-grid">
+              <!-- Frontend Column -->
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="monitor"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Frontend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>HTML5</li>
+                  <li><span class="tech-dot"></span>CSS3</li>
+                  <li><span class="tech-dot"></span>JavaScript</li>
+                </ul>
+              </div>
+              <!-- Design Column -->
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="palette"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Design</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>Figma</li>
+                  <li><span class="tech-dot"></span>Adobe Illustrator</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="stagger-reveal" style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="https://markjohnson77.github.io/Algomoxlandingpg/" target="_blank" class="btn btn-primary"
+              style="display: inline-flex; align-items: center; gap: 8px">
+              <i data-lucide="external-link"></i> Live Project
+            </a>
+          </section>
+
+          <div style="height: 40px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Netflix Project Overlay -->
   <div id="markflix-overlay" class="overlay-backdrop" aria-hidden="true">
     <div class="overlay-container">
       <button class="overlay-close-btn" aria-label="Close">
         <i data-lucide="x"></i>
       </button>
-      <div class="overlay-content login-overlay-grid">
-        <!-- Left: Video Concept -->
-        <div class="overlay-visuals video-container">
-          <a href="https://drive.google.com/file/d/1MWjpX6_kJSxpOrgHEd6JGd2JJblYJdec/view?usp=drive_link"
-            target="_blank" class="video-link-wrapper">
-            <img src="images/markflix-thumb.png" alt="Markflix Prototype" class="overlay-video-placeholder" />
-            <div class="play-overlay">
-              <i data-lucide="play-circle"></i>
-              <span>Watch Demo</span>
-            </div>
-          </a>
+      <div class="overlay-content">
+        <!-- Left: Visuals -->
+        <div class="overlay-visuals">
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Markflix/Screenshot%202026-05-04%20215314.png" alt="Markflix Screen 1" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Markflix/Screenshot%202026-05-04%20215337.png" alt="Markflix Screen 2" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Markflix/Screenshot%202026-05-04%20215347.png" alt="Markflix Screen 3" />
+          </div>
+
+          <!-- Video Concept (Last) -->
+          <div class="overlay-main-img stagger-reveal video-container">
+            <a href="https://drive.google.com/file/d/1MWjpX6_kJSxpOrgHEd6JGd2JJblYJdec/view?usp=drive_link"
+              target="_blank" class="video-link-wrapper">
+              <img src="images/markflix-thumb.png" alt="Markflix Prototype" class="overlay-video-placeholder" />
+              <div class="play-overlay">
+                <i data-lucide="play-circle"></i>
+                <span>Watch Demo</span>
+              </div>
+            </a>
+          </div>
         </div>
 
         <!-- Right: Narrative -->
@@ -756,6 +940,26 @@
             <h1>
               Interactive Streaming Platform Prototype (Netflix-Inspired)
             </h1>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px;">
+              <a href="https://github.com/Markjohnson77/NETFLIXPROTO.git" target="_blank" class="repo-button"
+                style="text-decoration: none; width: max-content;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
+                    fill="#ffba00"></path>
+                </svg>
+                <p class="text" style="margin:0; padding:0;">View Repository</p>
+              </a>
+              <a href="https://drive.google.com/file/d/1MWjpX6_kJSxpOrgHEd6JGd2JJblYJdec/view?usp=sharing"
+                target="_blank" class="repo-button" style="text-decoration: none; width: max-content;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z"
+                    fill="#ffba00"></path>
+                </svg>
+                <p class="text" style="margin:0; padding:0;">Watch Demo</p>
+              </a>
+            </div>
           </header>
 
           <section class="stagger-reveal">
@@ -812,12 +1016,7 @@
             </div>
           </section>
 
-          <section class="stagger-reveal" style="margin-top: 24px">
-            <a href="https://github.com/Markjohnson77/NETFLIXPROTO.git" target="_blank" class="btn btn-primary"
-              style="display: inline-flex; align-items: center; gap: 8px">
-              <i data-lucide="github"></i> View Repository
-            </a>
-          </section>
+
 
           <div style="height: 40px"></div>
         </div>
@@ -825,127 +1024,7 @@
     </div>
   </div>
 
-  <!-- Project Overlay / Case Study Modal -->
-  <div id="case-study-overlay" class="overlay-backdrop" aria-hidden="true">
-    <div class="overlay-container">
-      <button class="overlay-close-btn" aria-label="Close">
-        <i data-lucide="x"></i>
-      </button>
 
-      <div class="overlay-content">
-        <!-- Left: Visuals -->
-        <div class="overlay-visuals">
-          <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337358.jpg" alt="CollegeGO Screen 1" />
-          </div>
-          <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337509.jpg" alt="CollegeGO Screen 2" />
-          </div>
-          <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337411.jpg" alt="CollegeGO Screen 3" />
-          </div>
-          <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337439.jpg" alt="CollegeGO Screen 4" />
-          </div>
-          <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337464.jpg" alt="CollegeGO Screen 5" />
-          </div>
-          <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337550.jpg" alt="CollegeGO Screen 6" />
-          </div>
-          <div class="overlay-main-img stagger-reveal">
-            <img src="COLLEGE GO/1752385337899.jpg" alt="CollegeGO Screen 7" />
-          </div>
-        </div>
-
-        <!-- Right: Narrative -->
-        <div class="overlay-narrative">
-          <header>
-            <p class="eyebrow">FULL CASE STUDY</p>
-            <h1>CollegeGO – Smart Bus Pass & Movement Approval System</h1>
-          </header>
-
-          <section class="stagger-reveal">
-            <h3>Overview</h3>
-            <p>
-              CollegeGO is a web-based platform that digitizes student
-              movement requests and bus pass approvals through a structured
-              multi-level workflow. It replaces manual paperwork with a
-              secure, role-based approval system.
-            </p>
-          </section>
-
-          <section class="stagger-reveal">
-            <h3>The Problem</h3>
-            <p>
-              Bus pass approvals in colleges are often handled manually,
-              leading to delayed approvals, lack of transparency, and
-              administrative overload. Students often face uncertainty
-              regarding their request status while administrators manage
-              physical forms.
-            </p>
-          </section>
-
-          <section class="stagger-reveal">
-            <h3>The Solution</h3>
-            <p>
-              A digital approval workflow:
-              <strong>Student → HOD → Warden</strong>. Providing real-time
-              tracking, status-based dashboards, and paperless record
-              management.
-            </p>
-          </section>
-
-          <div class="overlay-split">
-            <section class="stagger-reveal">
-              <h3>My Role</h3>
-              <ul class="role-list">
-                <li>UI/UX Design</li>
-                <li>Frontend Development</li>
-                <li>Backend Integration</li>
-                <li>Database Design</li>
-              </ul>
-            </section>
-
-            <section class="stagger-reveal">
-              <h3>Key Features</h3>
-              <ul class="feature-bullets">
-                <li>Role-based Access</li>
-                <li>Multi-stage Approvals</li>
-                <li>Real-time Tracking</li>
-                <li>Responsive UI</li>
-              </ul>
-            </section>
-          </div>
-
-          <section class="stagger-reveal">
-            <h3>Tech Stack</h3>
-            <div class="tech-stack-grid">
-              <div class="tech-stack-col">
-                <p class="tech-stack-label"><i data-lucide="monitor"
-                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Frontend</p>
-                <ul class="tech-stack-list">
-                  <li><span class="tech-dot"></span>HTML5 / CSS3</li>
-                  <li><span class="tech-dot"></span>JavaScript</li>
-                  <li><span class="tech-dot"></span>Figma</li>
-                </ul>
-              </div>
-              <div class="tech-stack-col">
-                <p class="tech-stack-label"><i data-lucide="server"
-                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Backend</p>
-                <ul class="tech-stack-list">
-                  <li><span class="tech-dot"></span>PHP</li>
-                  <li><span class="tech-dot"></span>MongoDB</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-          <div style="height: 40px"></div>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- Login Project Video Overlay -->
   <div id="login-overlay" class="overlay-backdrop" aria-hidden="true">
@@ -1126,16 +1205,17 @@
                 Website Design Concept
               </h1>
             </div>
-            <a href="https://drive.google.com/drive/folders/1wqkTCaSaBM8-9kSESzawUmgJoIFZQ0Db?usp=drive_link"
-              target="_blank" class="btn btn-demo" style="
-                  display: inline-flex;
-                  align-items: center;
-                  gap: 8px;
-                  flex-shrink: 0;
-                  margin-bottom: 4px;
-                ">
-              <i data-lucide="play-circle"></i> Watch Demo
-            </a>
+            <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
+              <a href="https://drive.google.com/drive/folders/1wqkTCaSaBM8-9kSESzawUmgJoIFZQ0Db?usp=drive_link"
+                target="_blank" class="btn btn-demo" style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    flex-shrink: 0;
+                  ">
+                <i data-lucide="play-circle"></i> Watch Demo
+              </a>
+            </div>
           </header>
 
           <section class="stagger-reveal">
@@ -1231,6 +1311,15 @@
           <header>
             <p class="eyebrow">AI-POWERED WORKFORCE PLATFORM</p>
             <h1>NOVA HR – Intelligent Workforce Management System</h1>
+            <a href="https://github.com/ashwinps0977/NOVAAA" target="_blank" class="repo-button"
+              style="text-decoration: none; width: max-content; margin-top: 16px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
+                  fill="#ffba00"></path>
+              </svg>
+              <p class="text" style="margin:0; padding:0;">View Repository</p>
+            </a>
           </header>
 
           <section class="stagger-reveal">
@@ -1338,6 +1427,130 @@
       </div>
     </div>
   </div>
+
+  <!-- Project Overlay / Case Study Modal -->
+  <div id="case-study-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <button class="overlay-close-btn" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="overlay-content">
+        <!-- Left: Visuals -->
+        <div class="overlay-visuals">
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337358.jpg" alt="CollegeGO Screen 1" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337509.jpg" alt="CollegeGO Screen 2" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337411.jpg" alt="CollegeGO Screen 3" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337439.jpg" alt="CollegeGO Screen 4" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337464.jpg" alt="CollegeGO Screen 5" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337550.jpg" alt="CollegeGO Screen 6" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337899.jpg" alt="CollegeGO Screen 7" />
+          </div>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">FULL CASE STUDY</p>
+            <h1>CollegeGO – Smart Bus Pass & Movement Approval System</h1>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>
+              CollegeGO is a web-based platform that digitizes student
+              movement requests and bus pass approvals through a structured
+              multi-level workflow. It replaces manual paperwork with a
+              secure, role-based approval system.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Problem</h3>
+            <p>
+              Bus pass approvals in colleges are often handled manually,
+              leading to delayed approvals, lack of transparency, and
+              administrative overload. Students often face uncertainty
+              regarding their request status while administrators manage
+              physical forms.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Solution</h3>
+            <p>
+              A digital approval workflow:
+              <strong>Student → HOD → Warden</strong>. Providing real-time
+              tracking, status-based dashboards, and paperless record
+              management.
+            </p>
+          </section>
+
+          <div class="overlay-split">
+            <section class="stagger-reveal">
+              <h3>My Role</h3>
+              <ul class="role-list">
+                <li>UI/UX Design</li>
+                <li>Frontend Development</li>
+                <li>Backend Integration</li>
+                <li>Database Design</li>
+              </ul>
+            </section>
+
+            <section class="stagger-reveal">
+              <h3>Key Features</h3>
+              <ul class="feature-bullets">
+                <li>Role-based Access</li>
+                <li>Multi-stage Approvals</li>
+                <li>Real-time Tracking</li>
+                <li>Responsive UI</li>
+              </ul>
+            </section>
+          </div>
+
+          <section class="stagger-reveal">
+            <h3>Tech Stack</h3>
+            <div class="tech-stack-grid">
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="monitor"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Frontend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>HTML5 / CSS3</li>
+                  <li><span class="tech-dot"></span>JavaScript</li>
+                  <li><span class="tech-dot"></span>Figma</li>
+                </ul>
+              </div>
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="server"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Backend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>PHP</li>
+                  <li><span class="tech-dot"></span>MongoDB</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <div style="height: 40px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   <script>
     // ===== Global cursor ambient glow (page-wide) =====
@@ -1596,6 +1809,7 @@
     }
 
     // Initialize all interactive projects
+    initProjectOverlay("project-algomox", "algomox-overlay");
     initProjectOverlay("project-markflix", "markflix-overlay");
     initProjectOverlay("project-collegego", "case-study-overlay");
     initProjectOverlay("project-login", "login-overlay");
@@ -1773,11 +1987,11 @@
       const contactBtn = document.getElementById('contact-glow');
       if (contactBtn) {
         new BorderGlow(contactBtn, {
-          edgeSensitivity: 15,
+          edgeSensitivity: 5,
           glowColor: "271 95 75",
           backgroundColor: "#060010",
-          glowRadius: 40,
-          glowIntensity: 1,
+          glowRadius: 100,
+          glowIntensity: 1.6,
           coneSpread: 25,
           colors: ['#c084fc', '#f472b6', '#38bdf8']
         });
@@ -1786,11 +2000,11 @@
       const projectsBtn = document.getElementById('projects-glow');
       if (projectsBtn) {
         new BorderGlow(projectsBtn, {
-          edgeSensitivity: 15,
+          edgeSensitivity: 5,
           glowColor: "40 95 60",
           backgroundColor: "#060010",
-          glowRadius: 40,
-          glowIntensity: 1,
+          glowRadius: 100,
+          glowIntensity: 1.6,
           coneSpread: 25,
           colors: ['#ffba00', '#ffd500', '#e08a00']
         });
@@ -2094,6 +2308,16 @@
 
 
       const handleScroll = () => {
+        // --- Animated Background Fading ---
+        const bgCoded = document.querySelector('.hero-bg-coded');
+        const aboutSection = document.getElementById('about');
+        if (bgCoded && aboutSection) {
+          const scrollPos = window.scrollY;
+          const targetScroll = aboutSection.offsetTop || window.innerHeight;
+          const fadeProgress = Math.max(0, Math.min(scrollPos / targetScroll, 1));
+          bgCoded.style.opacity = (0.5 * (1 - fadeProgress)).toFixed(3);
+        }
+
         // Landing Page Visibility & Auto-Dismiss
         if (window.scrollY < 600) {
           isNavLocked = false;
