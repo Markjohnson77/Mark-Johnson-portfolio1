@@ -1987,11 +1987,11 @@
       const contactBtn = document.getElementById('contact-glow');
       if (contactBtn) {
         new BorderGlow(contactBtn, {
-          edgeSensitivity: 5,
+          edgeSensitivity: 2,
           glowColor: "271 95 75",
           backgroundColor: "#060010",
-          glowRadius: 100,
-          glowIntensity: 1.6,
+          glowRadius: 140,
+          glowIntensity: 2.2,
           coneSpread: 25,
           colors: ['#c084fc', '#f472b6', '#38bdf8']
         });
@@ -2000,11 +2000,11 @@
       const projectsBtn = document.getElementById('projects-glow');
       if (projectsBtn) {
         new BorderGlow(projectsBtn, {
-          edgeSensitivity: 5,
+          edgeSensitivity: 2,
           glowColor: "40 95 60",
           backgroundColor: "#060010",
-          glowRadius: 100,
-          glowIntensity: 1.6,
+          glowRadius: 140,
+          glowIntensity: 2.2,
           coneSpread: 25,
           colors: ['#ffba00', '#ffd500', '#e08a00']
         });
@@ -2130,6 +2130,7 @@
     window.addEventListener('load', () => {
       const titleContainer = document.getElementById('home-title');
       if (titleContainer) {
+        titleContainer.style.opacity = '1';
         new VariableProximity(titleContainer, {
           radius: 100,
           fromSettings: "'wght' 400, 'opsz' 9",

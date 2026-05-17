@@ -653,7 +653,7 @@ section.reveal {
   font-style: normal;
   /* Remove inherited/container animations */
   animation: none !important;
-  opacity: 1;
+  opacity: 0;
 }
 
 /* "Creativity." — inline alignment and color */
