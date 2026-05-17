@@ -263,7 +263,7 @@ body {
 
 .vp-letter {
   display: inline-block;
-  will-change: font-variation-settings;
+  will-change: font-variation-settings, opacity, transform;
 }
 
 @keyframes pulse-sparkle {
@@ -505,12 +505,14 @@ section.reveal {
   pointer-events: none;
   opacity: 0.5;
   mix-blend-mode: screen;
+  contain: strict;
 }
 
 .hero-bg-coded .blob {
   position: absolute;
   filter: blur(80px);
   border-radius: 50%;
+  will-change: transform;
 }
 
 .hero-bg-coded .blob-1 {
