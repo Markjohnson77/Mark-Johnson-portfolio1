@@ -458,6 +458,8 @@ section.reveal {
 #home.hero {
   opacity: 1 !important;
   transform: none !important;
+  max-width: 100% !important;
+  width: 100%;
 }
 
 .hero {
@@ -610,7 +612,8 @@ section.reveal {
 .hero-content {
   position: relative;
   z-index: 1;
-  padding: 80px 20px;
+  /* Align text with the header logo (1200px centered container) */
+  padding: 80px 20px 80px max(20px, calc((100% - 1200px) / 2 + 20px));
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1142,6 +1145,8 @@ section.reveal {
 .hero-visual {
   position: relative;
   z-index: 1;
+  /* Align portrait with the header right-edge (1200px centered) */
+  padding: 80px max(20px, calc((100% - 1200px) / 2 + 20px)) 80px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
