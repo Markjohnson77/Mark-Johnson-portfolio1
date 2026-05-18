@@ -27,6 +27,30 @@
     });
 })();
 
+// ===== Interactive DotGrid Background =====
+const initDotGrid = () => {
+    const container = document.getElementById("dot-grid-container");
+    if (container && window.DotGrid) {
+        new DotGrid("#dot-grid-container", {
+            dotSize: 2,
+            gap: 25,
+            baseColor: "#2F293A",
+            activeColor: "#EAB308",
+            proximity: 100,
+            shockRadius: 250,
+            shockStrength: 3,
+            resistance: 1100,
+            returnDuration: 1.5
+        });
+    }
+};
+// Initialize when DOM is ready
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initDotGrid);
+} else {
+    initDotGrid();
+}
+
 // Scroll reveal for sections
 const sectionObserver = new IntersectionObserver(
     (entries) => {
