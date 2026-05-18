@@ -494,23 +494,18 @@ section.reveal {
 }
 
 /* â”€â”€â”€ Coded Background Animation â”€â”€â”€ */
-/* --- Interactive DotGrid Background --- */
-.dot-grid-bg {
-  position: absolute;
+.hero-bg-coded {
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-  /* TEMPORARY: Move to top to see if it works */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
   pointer-events: none;
-}
-
-.dot-grid__canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
+  opacity: 0.5;
+  mix-blend-mode: screen;
+  contain: strict;
 }
 
 .hero-bg-coded .blob {
