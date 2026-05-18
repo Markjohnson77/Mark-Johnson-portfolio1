@@ -487,7 +487,7 @@ section.reveal {
   z-index: 1;
   padding: 0 20px;
   /* Shift content up for better optical centering */
-  transform: translateY(-60px);
+  transform: translateY(-100px);
 }
 
 /* Subtle background gradient depth behind the right column */
