@@ -464,9 +464,9 @@ section.reveal {
 
 .hero {
   min-height: 100dvh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
+  justify-content: center;
   position: relative;
   overflow: hidden;
   font-family:
@@ -475,6 +475,17 @@ section.reveal {
     BlinkMacSystemFont,
     "Segoe UI",
     sans-serif;
+}
+
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  z-index: 1;
+  padding: 0 20px;
 }
 
 /* Subtle background gradient depth behind the right column */
@@ -612,8 +623,7 @@ section.reveal {
 .hero-content {
   position: relative;
   z-index: 1;
-  /* Align text with the header logo (1200px centered container) */
-  padding: 80px 20px 80px max(20px, calc((100% - 1200px) / 2 + 20px));
+  padding: 40px 20px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -1145,8 +1155,7 @@ section.reveal {
 .hero-visual {
   position: relative;
   z-index: 1;
-  /* Align portrait with the header right-edge (1200px centered) */
-  padding: 80px max(20px, calc((100% - 1200px) / 2 + 20px)) 80px 20px;
+  padding: 40px 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1205,9 +1214,14 @@ section.reveal {
 /* â”€â”€â”€ Responsive â”€â”€â”€ */
 @media (max-width: 960px) {
   .hero {
-    grid-template-columns: 1fr;
     min-height: auto;
     text-align: center;
+  }
+
+  .hero-inner {
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 40px;
   }
 
   .hero-content {
