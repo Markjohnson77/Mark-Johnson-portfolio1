@@ -455,143 +455,179 @@ window.addEventListener('load', () => {
     }
 });
 
-// Variable Proximity Effect
+// Variable Proximity Effect Logic (Ported from React)
 class VariableProximity {
-    constructor(container, options = {}) {
-        this.container = container;
+    constructor(element, options = {}) {
+        this.container = element;
         this.radius = options.radius || 100;
-        this.fromSettings = options.fromSettings || "'wght' 400, 'opsz' 9";
-        this.toSettings = options.toSettings || "'wght' 1000, 'opsz' 40";
+        this.fromSettings = options.fromSettings || "'wght' 400";
+        this.toSettings = options.toSettings || "'wght' 1000";
         this.falloff = options.falloff || 'linear';
+        this.className = options.className || '';
 
         this.letterRefs = [];
-        this.parsedSettings = this.parseSettings(this.fromSettings, this.toSettings);
-        this.mousePos = { x: -2000, y: -2000 };
+        this.mousePos = { x: 0, y: 0 };
+        this.lastPosition = { x: null, y: null };
 
+        this.parsedSettings = this.parseSettings(this.fromSettings, this.toSettings);
         this.splitText();
         this.init();
     }
 
-    parseSettings(from, to) {
-        const parse = (s) => {
-            const map = new Map();
-            s.split(',').forEach(v => {
-                const parts = v.trim().split(' ');
-                const name = parts[0].replace(/['"]/g, '');
-                const val = parseFloat(parts[1]);
-                map.set(name, val);
-            });
-            return map;
-        };
-        const fMap = parse(from);
-        const tMap = parse(to);
-        const allKeys = new Set([...fMap.keys(), ...tMap.keys()]);
-        return Array.from(allKeys).map(axis => ({
+    parseSettings(fromStr, toStr) {
+        const parse = s =>
+            new Map(
+                s.split(',')
+                    .map(v => v.trim())
+                    .filter(v => v)
+                    .map(v => {
+                        const parts = v.split(' ');
+                        const value = parseFloat(parts.pop());
+                        const name = parts.join(' ').replace(/['"]/g, '');
+                        return [name, value];
+                    })
+            );
+
+        const fromMap = parse(fromStr);
+        const toMap = parse(toStr);
+
+        return Array.from(fromMap.entries()).map(([axis, fromValue]) => ({
             axis,
-            fromValue: fMap.get(axis) ?? 400,
-            toValue: tMap.get(axis) ?? 400
+            fromValue,
+            toValue: toMap.get(axis) ?? fromValue
         }));
     }
 
     splitText() {
-        const walker = document.createTreeWalker(this.container, NodeFilter.SHOW_TEXT, null, false);
-        const nodes = [];
-        let node;
-        while (node = walker.nextNode()) nodes.push(node);
+        const processNode = (node) => {
+            if (node.nodeType === Node.TEXT_NODE) {
+                const text = node.nodeValue;
+                const parent = node.parentElement;
+                const isAccent = parent && parent.classList.contains('hero-accent');
+                const fragment = document.createDocumentFragment();
 
-        nodes.forEach(textNode => {
-            const text = textNode.nodeValue;
-            const fragment = document.createDocumentFragment();
-            const words = text.split(/(\s+)/);
-
-            words.forEach(word => {
-                if (word.trim() === '') {
-                    fragment.appendChild(document.createTextNode(word));
-                    return;
-                }
-                const wordSpan = document.createElement('span');
-                wordSpan.style.display = 'inline-block';
-                wordSpan.style.whiteSpace = 'nowrap';
-
-                word.split('').forEach(char => {
-                    const charSpan = document.createElement('span');
-                    charSpan.textContent = char;
-                    charSpan.className = 'vp-letter';
-                    if (textNode.parentElement.classList.contains('hero-accent') || textNode.parentElement.tagName === 'EM') {
-                        charSpan.classList.add('hero-accent');
+                const words = text.split(/(\s+)/);
+                words.forEach(word => {
+                    if (word === '') return;
+                    if (word.trim() === '') {
+                        fragment.appendChild(document.createTextNode(word));
+                        return;
                     }
-                    wordSpan.appendChild(charSpan);
-                    this.letterRefs.push(charSpan);
+
+                    const wordSpan = document.createElement('span');
+                    wordSpan.style.display = 'inline-block';
+                    wordSpan.style.whiteSpace = 'nowrap';
+
+                    word.split('').forEach(char => {
+                        const charSpan = document.createElement('span');
+                        charSpan.textContent = char;
+                        charSpan.className = `vp-letter ${this.className}`;
+                        if (isAccent) charSpan.classList.add('hero-accent');
+                        charSpan.style.display = 'inline-block';
+                        wordSpan.appendChild(charSpan);
+                        this.letterRefs.push(charSpan);
+                    });
+                    fragment.appendChild(wordSpan);
                 });
-                fragment.appendChild(wordSpan);
-            });
-            textNode.parentNode.replaceChild(fragment, textNode);
+                return fragment;
+            } else if (node.nodeType === Node.ELEMENT_NODE) {
+                if (node.tagName === 'BR') {
+                    return document.createElement('br');
+                }
+                const newElement = node.cloneNode(false);
+                Array.from(node.childNodes).forEach(child => {
+                    const result = processNode(child);
+                    if (result) newElement.appendChild(result);
+                });
+                return newElement;
+            }
+            return null;
+        };
+
+        const originalContent = Array.from(this.container.childNodes);
+        const originalText = this.container.innerText;
+        this.container.innerHTML = '';
+
+        originalContent.forEach(child => {
+            const result = processNode(child);
+            if (result) this.container.appendChild(result);
         });
+
+        // Accessibility hidden label
+        const srOnly = document.createElement('span');
+        srOnly.className = 'sr-only';
+        srOnly.textContent = originalText;
+        this.container.appendChild(srOnly);
     }
 
     init() {
-        const handleMove = (e) => {
-            this.mousePos.x = e.type.startsWith('touch') ? e.touches[0].clientX : e.clientX;
-            this.mousePos.y = e.type.startsWith('touch') ? e.touches[0].clientY : e.clientY;
+        const updatePosition = (clientX, clientY) => {
+            const rect = this.container.getBoundingClientRect();
+            this.mousePos.x = clientX - rect.left;
+            this.mousePos.y = clientY - rect.top;
         };
 
-        window.addEventListener('mousemove', handleMove);
-        window.addEventListener('touchmove', handleMove);
+        window.addEventListener('mousemove', e => updatePosition(e.clientX, e.clientY));
+        window.addEventListener('touchmove', e => updatePosition(e.touches[0].clientX, e.touches[0].clientY));
 
-        const tick = () => {
+        const loop = () => {
             this.update();
-            requestAnimationFrame(tick);
+            requestAnimationFrame(loop);
         };
-        requestAnimationFrame(tick);
+        requestAnimationFrame(loop);
+    }
+
+    calculateFalloff(distance) {
+        const norm = Math.min(Math.max(1 - distance / this.radius, 0), 1);
+        switch (this.falloff) {
+            case 'exponential': return Math.pow(norm, 2);
+            case 'gaussian': return Math.exp(-((distance / (this.radius / 2)) ** 2) / 2);
+            case 'linear':
+            default: return norm;
+        }
     }
 
     update() {
-        this.letterRefs.forEach(letter => {
-            const lRect = letter.getBoundingClientRect();
-            const charX = lRect.left + lRect.width / 2;
-            const charY = lRect.top + lRect.height / 2;
+        const { x, y } = this.mousePos;
+        if (this.lastPosition.x === x && this.lastPosition.y === y) return;
+        this.lastPosition = { x, y };
 
-            const distance = Math.sqrt((this.mousePos.x - charX) ** 2 + (this.mousePos.y - charY) ** 2);
+        const containerRect = this.container.getBoundingClientRect();
+
+        this.letterRefs.forEach(letter => {
+            const rect = letter.getBoundingClientRect();
+            const letterCenterX = rect.left + rect.width / 2 - containerRect.left;
+            const letterCenterY = rect.top + rect.height / 2 - containerRect.top;
+
+            const distance = Math.sqrt((x - letterCenterX) ** 2 + (y - letterCenterY) ** 2);
 
             if (distance >= this.radius) {
                 letter.style.fontVariationSettings = this.fromSettings;
-            } else {
-                let fall = 1 - (distance / this.radius);
-                if (this.falloff === 'exponential') fall = Math.pow(fall, 2);
-
-                const settings = this.parsedSettings.map(({ axis, fromValue, toValue }) => {
-                    const val = fromValue + (toValue - fromValue) * fall;
-                    return `'${axis}' ${val}`;
-                }).join(', ');
-                letter.style.fontVariationSettings = settings;
+                return;
             }
+
+            const falloffValue = this.calculateFalloff(distance);
+            const settings = this.parsedSettings.map(({ axis, fromValue, toValue }) => {
+                const val = fromValue + (toValue - fromValue) * falloffValue;
+                return `'${axis}' ${val}`;
+            }).join(', ');
+
+            letter.style.fontVariationSettings = settings;
         });
     }
 }
 
 window.addEventListener('load', () => {
-    const titleContainer = document.getElementById('home-title');
-    if (titleContainer) {
-        new VariableProximity(titleContainer, {
-            radius: 100,
+    console.log("VariableProximity: Page Load Triggered");
+    // Initialize hero title proximity
+    const heroTitle = document.getElementById('home-title');
+    if (heroTitle) {
+        console.log("VariableProximity: Found #home-title, initializing...");
+        new VariableProximity(heroTitle, {
+            radius: 120,
             fromSettings: "'wght' 400, 'opsz' 9",
             toSettings: "'wght' 1000, 'opsz' 40",
             falloff: 'linear'
-        });
-
-        // SplitText-style Staggered Entrance Animation
-        const letters = titleContainer.querySelectorAll('.vp-letter');
-        letters.forEach((letter, i) => {
-            letter.style.display = 'inline-block';
-            letter.style.opacity = '0';
-            letter.style.transform = 'translateY(40px)';
-            letter.style.willChange = 'opacity, transform';
-
-            setTimeout(() => {
-                letter.style.transition = 'opacity 1.25s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.25s cubic-bezier(0.215, 0.61, 0.355, 1)';
-                letter.style.opacity = '1';
-                letter.style.transform = 'translateY(0)';
-            }, 300 + (50 * i)); // Initial 300ms delay + 50ms stagger
         });
     }
 
@@ -607,7 +643,7 @@ window.addEventListener('load', () => {
     let phraseIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    let typingSpeed = 40;
+    let typingSpeed = 30; // Faster typing speed (was 40)
 
     function type() {
         const fullText = phrases[phraseIndex];
@@ -615,27 +651,27 @@ window.addEventListener('load', () => {
         if (isDeleting) {
             typingContainer.textContent = fullText.substring(0, charIndex - 1);
             charIndex--;
-            typingSpeed = 20;
+            typingSpeed = 15; // Faster deleting speed (was 20)
         } else {
             typingContainer.textContent = fullText.substring(0, charIndex + 1);
             charIndex++;
-            typingSpeed = 40;
+            typingSpeed = 30; // Faster typing speed
         }
 
         if (!isDeleting && charIndex === fullText.length) {
             isDeleting = true;
-            typingSpeed = 1500; // Pause at end of sentence
+            typingSpeed = 2000; // Pause at end of sentence
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
             phraseIndex = (phraseIndex + 1) % phrases.length;
-            typingSpeed = 300; // Pause before next sentence
+            typingSpeed = 400; // Pause before next sentence
         }
 
         setTimeout(type, typingSpeed);
     }
 
     if (typingContainer) {
-        setTimeout(type, 3800); // Initial delay (waits for SplitText animation to complete)
+        setTimeout(type, 800); // Starts almost immediately (reduced from 3800)
     }
 
     // --- Tilted Card Logic ---
