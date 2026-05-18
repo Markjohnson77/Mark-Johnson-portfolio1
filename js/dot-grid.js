@@ -40,6 +40,10 @@ class DotGrid {
         this.baseRgb = this.hexToRgb(this.baseColor);
         this.activeRgb = this.hexToRgb(this.activeColor);
 
+        this.dotPath = new Path2D();
+        this.dotPath.arc(0, 0, this.dotSize / 2, 0, Math.PI * 2);
+
+        console.log("DotGrid instance created on:", this.container);
         this.init();
     }
 
@@ -237,10 +241,11 @@ class DotGrid {
                 fillStyle = `rgb(${r},${g},${b})`;
             }
 
-            this.ctx.beginPath();
-            this.ctx.arc(ox, oy, this.dotSize / 2, 0, Math.PI * 2);
+            this.ctx.save();
+            this.ctx.translate(ox, oy);
             this.ctx.fillStyle = fillStyle;
-            this.ctx.fill();
+            this.ctx.fill(this.dotPath);
+            this.ctx.restore();
         }
     }
 }

@@ -32,11 +32,11 @@ const initDotGrid = () => {
     const container = document.getElementById("dot-grid-container");
     if (container && window.DotGrid) {
         new DotGrid("#dot-grid-container", {
-            dotSize: 2,
+            dotSize: 4,
             gap: 25,
-            baseColor: "#2F293A",
+            baseColor: "#FFFFFF",
             activeColor: "#EAB308",
-            proximity: 100,
+            proximity: 120,
             shockRadius: 250,
             shockStrength: 3,
             resistance: 1100,
