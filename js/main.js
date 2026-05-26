@@ -865,7 +865,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 scrollTrigger: {
                     trigger: el,
                     start: 'top 80%',
-                    end: 'center 70%', // Finish sooner
+                    end: 'center 75%', // Finish sooner
                     scrub: 1, // Smooth scrub
                 },
                 opacity: 1,
