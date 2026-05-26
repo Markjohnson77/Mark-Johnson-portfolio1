@@ -189,13 +189,15 @@
         background: rgba(255, 255, 255, 0.15);
       }
 
-      .av2-left h2 {
+      .av2-left h2,
+      .styled-heading {
         font-size: clamp(2rem, 3.5vw, 3rem);
         font-weight: 700;
         line-height: 1.1;
-        margin: 20px 0;
+        margin: 20px 0 40px 0;
         letter-spacing: -0.02em;
         color: white;
+        text-align: left;
       }
 
       .av2-text-neon {
@@ -534,7 +536,11 @@
 
   <!-- Experience -->
   <section id="experience" aria-labelledby="exp-title">
-    <h2 id="exp-title">EXPERIENCE</h2>
+    <div class="av2-eyebrow" style="margin-bottom: 8px;">
+      <span>MY JOURNEY</span>
+      <div class="av2-eyebrow-line"></div>
+    </div>
+    <h2 id="exp-title" class="styled-heading">Professional <span class="av2-text-neon">Experience.</span></h2>
 
     <div class="exp-carousel-container">
       <button class="carousel-btn prev" aria-label="Previous Experience">
@@ -670,8 +676,93 @@
 
   <!-- Skills & Services -->
   <section id="skills" aria-labelledby="skills-title">
-    <h2 id="skills-title" class="fade-in">SKILLS &amp; SERVICES</h2>
+    <div class="av2-eyebrow" style="margin-bottom: 8px;">
+      <span>EXPERTISE</span>
+      <div class="av2-eyebrow-line"></div>
+    </div>
+    <h2 id="skills-title" class="fade-in styled-heading">Skills &amp; <span class="av2-text-neon">Services.</span></h2>
 
+    <div class="skills-grid">
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="layout" class="skill-icon-svg"></i>
+          </div>
+          <h3>UI / UX Design</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>Figma</li>
+          <li>Wireframing</li>
+          <li>Prototyping</li>
+          <li>Design Systems</li>
+          <li>User Flows</li>
+          <li>Visual Hierarchy</li>
+          <li>Responsive Design</li>
+        </ul>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="monitor" class="skill-icon-svg"></i>
+          </div>
+          <h3>Frontend Development</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>HTML5</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>REACT</li>
+          <li>REST API Integration</li>
+        </ul>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="server" class="skill-icon-svg"></i>
+          </div>
+          <h3>Backend Integration</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>PHP</li>
+          <li>MongoDB</li>
+        </ul>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="palette" class="skill-icon-svg"></i>
+          </div>
+          <h3>Creative Tools</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>Photoshop</li>
+          <li>After Effects</li>
+          <li>Premiere Pro</li>
+          <li>Canva</li>
+        </ul>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="terminal" class="skill-icon-svg"></i>
+          </div>
+          <h3>Development Tools</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>Git &amp; GitHub</li>
+          <li>VS Code</li>
+        </ul>
+      </article>
+    </div>
     <!-- Logo Marquee Loop -->
     <style>
       .marquee-wrapper {
@@ -782,93 +873,12 @@
         track.appendChild(item);
       });
     </script>
-    <div class="skills-grid">
-      <article class="skill-card fade-in">
-        <div class="card-glow-cursor"></div>
-        <div class="skill-card-header">
-          <div class="skill-icon-wrapper">
-            <i data-lucide="layout" class="skill-icon-svg"></i>
-          </div>
-          <h3>UI / UX Design</h3>
-        </div>
-        <ul class="skill-tags">
-          <li>Figma</li>
-          <li>Wireframing</li>
-          <li>Prototyping</li>
-          <li>Design Systems</li>
-          <li>User Flows</li>
-          <li>Visual Hierarchy</li>
-          <li>Responsive Design</li>
-        </ul>
-      </article>
-
-      <article class="skill-card fade-in">
-        <div class="card-glow-cursor"></div>
-        <div class="skill-card-header">
-          <div class="skill-icon-wrapper">
-            <i data-lucide="monitor" class="skill-icon-svg"></i>
-          </div>
-          <h3>Frontend Development</h3>
-        </div>
-        <ul class="skill-tags">
-          <li>HTML5</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>REACT</li>
-          <li>REST API Integration</li>
-        </ul>
-      </article>
-
-      <article class="skill-card fade-in">
-        <div class="card-glow-cursor"></div>
-        <div class="skill-card-header">
-          <div class="skill-icon-wrapper">
-            <i data-lucide="server" class="skill-icon-svg"></i>
-          </div>
-          <h3>Backend Integration</h3>
-        </div>
-        <ul class="skill-tags">
-          <li>PHP</li>
-          <li>MongoDB</li>
-        </ul>
-      </article>
-
-      <article class="skill-card fade-in">
-        <div class="card-glow-cursor"></div>
-        <div class="skill-card-header">
-          <div class="skill-icon-wrapper">
-            <i data-lucide="palette" class="skill-icon-svg"></i>
-          </div>
-          <h3>Creative Tools</h3>
-        </div>
-        <ul class="skill-tags">
-          <li>Photoshop</li>
-          <li>After Effects</li>
-          <li>Premiere Pro</li>
-          <li>Canva</li>
-        </ul>
-      </article>
-
-      <article class="skill-card fade-in">
-        <div class="card-glow-cursor"></div>
-        <div class="skill-card-header">
-          <div class="skill-icon-wrapper">
-            <i data-lucide="terminal" class="skill-icon-svg"></i>
-          </div>
-          <h3>Development Tools</h3>
-        </div>
-        <ul class="skill-tags">
-          <li>Git &amp; GitHub</li>
-          <li>VS Code</li>
-        </ul>
-      </article>
-    </div>
   </section>
 
 
   <!-- Projects -->
   <section id="projects" aria-labelledby="projects-title">
-    <h2 id="projects-title">PROJECTS</h2>
+    <h2 id="projects-title" class="styled-heading">Featured <span class="av2-text-neon">Projects.</span></h2>
 
     <article class="card project interactive-card" id="project-algomox">
       <div class="card-glow-cursor"></div>
@@ -929,7 +939,8 @@
 
   <!-- UI Experiments & Interaction Concepts -->
   <section id="experiments" aria-labelledby="experiments-title">
-    <h2 id="experiments-title" class="section-title">UI EXPERIMENTS &amp; INTERACTION CONCEPTS</h2>
+    <h2 id="experiments-title" class="styled-heading">UI Experiments &amp; <span class="av2-text-neon">Interaction
+        Concepts.</span></h2>
 
     <div class="exp-carousel-container experiment-carousel">
       <button class="carousel-btn prev-exp" aria-label="Previous Project">

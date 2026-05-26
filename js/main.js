@@ -785,47 +785,72 @@ window.addEventListener('load', () => {
     });
 
 
+    const bgCoded = document.querySelector('.hero-bg-coded');
+    const aboutSection = document.getElementById('about');
+    let aboutOffsetTop = aboutSection ? aboutSection.offsetTop : window.innerHeight;
+
+    // Cache section offsets for scrollspy to prevent constant layout reflow
+    let sectionOffsets = [];
+    function calculateSectionOffsets() {
+        if (aboutSection) aboutOffsetTop = aboutSection.offsetTop || window.innerHeight;
+        sectionOffsets = Array.from(sections).map(section => ({
+            id: section.getAttribute('id'),
+            top: section.offsetTop
+        }));
+    }
+    calculateSectionOffsets();
+    window.addEventListener('resize', calculateSectionOffsets, { passive: true });
+
+    let scrollTicking = false;
+
     const handleScroll = () => {
+        const scrollPos = window.scrollY;
+
         // --- Animated Background Fading ---
-        const bgCoded = document.querySelector('.hero-bg-coded');
-        const aboutSection = document.getElementById('about');
-        if (bgCoded && aboutSection) {
-            const scrollPos = window.scrollY;
-            const targetScroll = aboutSection.offsetTop || window.innerHeight;
-            const fadeProgress = Math.max(0, Math.min(scrollPos / targetScroll, 1));
+        if (bgCoded) {
+            const fadeProgress = Math.max(0, Math.min(scrollPos / aboutOffsetTop, 1));
             bgCoded.style.opacity = (0.5 * (1 - fadeProgress)).toFixed(3);
         }
 
         // Landing Page Visibility & Auto-Dismiss
-        if (window.scrollY < 600) {
+        if (scrollPos < 600) {
             isNavLocked = false;
             isMouseNearEdge = false;
             isMouseOverNav = false;
             if (navCheckbox) navCheckbox.checked = false;
             trigger.classList.add('hidden-trigger');
             scrollNav.classList.remove('visible');
+            scrollTicking = false;
             return; // Skip ScrollSpy on landing for performance
         } else {
             trigger.classList.remove('hidden-trigger');
         }
 
         let currentSectionId = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (window.scrollY >= sectionTop - 250) {
-                currentSectionId = section.getAttribute('id');
+        sectionOffsets.forEach(sec => {
+            if (scrollPos >= sec.top - 250) {
+                currentSectionId = sec.id;
             }
         });
 
         navLinks.forEach(link => {
-            link.classList.remove('active');
             if (link.getAttribute('href') === `#${currentSectionId}`) {
-                link.classList.add('active');
+                if (!link.classList.contains('active')) link.classList.add('active');
+            } else {
+                if (link.classList.contains('active')) link.classList.remove('active');
             }
         });
+
+        scrollTicking = false;
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', () => {
+        if (!scrollTicking) {
+            window.requestAnimationFrame(handleScroll);
+            scrollTicking = true;
+        }
+    }, { passive: true });
+
     handleScroll(); // Run on load
 
     updateNavVisibility();
