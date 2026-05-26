@@ -1,0 +1,2112 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mark Johnson — Computer Science student & Creative Developer</title>
+  <meta name="description"
+    content="Portfolio of Mark Johnson, a Computer Science student blending technology with creativity. Focused on UI/UX, Web Dev, and Creative Media." />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://markjohnson.dev/" />
+  <meta property="og:title" content="Mark Johnson — Computer Science & Creative Developer" />
+  <meta property="og:description"
+    content="Blending technology with creativity through UI/UX, web development, and digital media." />
+  <meta property="og:image" content="MJ.jpg" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content="Mark Johnson — Computer Science & Creative Developer" />
+  <meta property="twitter:description"
+    content="Blending technology with creativity through UI/UX, web development, and digital media." />
+  <meta property="twitter:image" content="MJ.jpg" />
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%230C3B2E'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='sans-serif' font-size='54' fill='%23FFBA00'%3EM%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Montserrat:wght@400;700&family=Playfair+Display:ital,wght@0,400;1,400&family=Fira+Code:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=14" />
+
+  <!-- Critical Resource Preload -->
+  <link rel="preload" href="MJ1.jpeg" as="image" />
+  <link rel="preload" href="https://unpkg.com/lucide@latest" as="script" />
+</head>
+
+<body>
+  <!-- Global cursor ambient glow (page-wide, fixed) -->
+  <div id="cursor-glow" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" aria-label="Main">
+    <nav class="nav" aria-label="Primary">
+      <a class="brand animated-logo" href="#home" aria-label="Mark Johnson home">
+
+        <h1 class="logo-text">MARK <span>JOHNSON</span></h1>
+      </a>
+
+      <!-- Hamburger Menu Button -->
+      <button class="menu-toggle" aria-label="Toggle Navigation" aria-expanded="false">
+        <span class="hamburger"></span>
+      </button>
+
+      <div class="nav-links" role="navigation">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills & Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero" aria-labelledby="home-title">
+    <!-- Coded Animated Background -->
+    <div class="hero-bg-coded" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Inner Constraint Wrapper -->
+    <div class="hero-inner">
+      <!-- Left: Text -->
+      <div class="hero-content">
+        <p class="hero-label">UI/UX Designer &amp; Front-End Developer</p>
+        <h1 id="home-title" class="hero-title vp-container">
+          Blending<br />
+          Technology<br />
+          with <span class="hero-accent">Creativity.</span>
+        </h1>
+        <div class="hero-sub-wrapper">
+          <p class="hero-sub typing-text" id="typing-text"></p>
+        </div>
+        <div class="hero-cta">
+          <a class="hero-btn" id="btn-projects" href="#projects">
+            <span class="hero-btn-svg folderContainer">
+              <svg class="fileBack" width="146" height="113" viewBox="0 0 146 113" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 4C0 1.79086 1.79086 0 4 0H50.3802C51.8285 0 53.2056 0.627965 54.1553 1.72142L64.3303 13.4371C65.2799 14.5306 66.657 15.1585 68.1053 15.1585H141.509C143.718 15.1585 145.509 16.9494 145.509 19.1585V109C145.509 111.209 143.718 113 141.509 113H3.99999C1.79085 113 0 111.209 0 109V4Z"
+                  fill="url(#folderBack)" />
+                <defs>
+                  <linearGradient id="folderBack" x1="0" y1="0" x2="72.93" y2="95.48" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#c9a227" />
+                    <stop offset="1" stop-color="#8a6e14" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <svg class="filePage" width="88" height="99" viewBox="0 0 88 99" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <rect width="88" height="99" fill="url(#filePage1)" />
+                <defs>
+                  <linearGradient id="filePage1" x1="0" y1="0" x2="81" y2="160.5" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="white" />
+                    <stop offset="1" stop-color="#686868" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <svg class="fileFront" width="160" height="79" viewBox="0 0 160 79" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0.29306 12.2478C0.133905 9.38186 2.41499 6.97059 5.28537 6.97059H30.419H58.1902C59.5751 6.97059 60.9288 6.55982 62.0802 5.79025L68.977 1.18034C70.1283 0.410771 71.482 0 72.8669 0H77H155.462C157.87 0 159.733 2.1129 159.43 4.50232L150.443 75.5023C150.19 77.5013 148.489 79 146.474 79H7.78403C5.66106 79 3.9079 77.3415 3.79019 75.2218L0.29306 12.2478Z"
+                  fill="url(#folderFront)" />
+                <defs>
+                  <linearGradient id="folderFront" x1="38.76" y1="8.71" x2="66.91" y2="82.83"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#ffe082" />
+                    <stop offset="1" stop-color="#8a6e14" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </span>
+            <span class="hero-btn-label">View Projects</span>
+          </a>
+          <a class="hero-btn" id="btn-contact" href="#contact">
+            <span class="hero-btn-svg">
+              <div class="loader-wrapper">
+                <div class="loader"></div>
+              </div>
+            </span>
+            <span class="hero-btn-label">Contact Me</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Portrait -->
+      <div class="hero-visual">
+        <div class="hero-glow" aria-hidden="true"></div>
+        <figure class="tilted-card-figure" id="hero-tilt-card">
+          <div class="tilted-card-mobile-alert">Check on desktop for 3D effect</div>
+          <div class="tilted-card-inner">
+            <div class="hero-circle tilted-card-img-wrapper">
+              <img src="MJ1.jpeg" alt="Mark Johnson" class="hero-portrait" fetchpriority="high" decoding="async" />
+            </div>
+          </div>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" aria-labelledby="about-title">
+    <style>
+      .about-v2-container {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        color: #ffffff;
+      }
+
+      .av2-top-row {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+
+      .av2-eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        color: #ffba00;
+      }
+
+      .av2-eyebrow-line {
+        width: 60px;
+        flex: none;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .av2-left h2 {
+        font-size: clamp(2rem, 3.5vw, 3rem);
+        font-weight: 700;
+        line-height: 1.1;
+        margin: 20px 0;
+        letter-spacing: -0.02em;
+        color: white;
+      }
+
+      .av2-text-neon {
+        color: #ffba00;
+      }
+
+      .av2-left p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        color: rgba(210, 210, 210, 0.85);
+        margin-bottom: 20px;
+      }
+
+      .av2-right {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .av2-focus-card {
+        background: #111;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 12px;
+        padding: 14px 18px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+      }
+
+      .av2-focus-card:hover {
+        transform: translateX(-4px);
+        border-color: rgba(255, 186, 0, 0.2);
+        background: rgba(255, 255, 255, 0.02);
+      }
+
+      .av2-focus-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        background: rgba(255, 186, 0, 0.04);
+        border: 1px solid rgba(255, 186, 0, 0.15);
+        color: #ffba00;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .av2-focus-text h4 {
+        margin: 0 0 4px 0;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .av2-focus-text p {
+        margin: 0;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.4;
+      }
+
+      .av2-stats-row {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background: #111;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 16px;
+        padding: 30px;
+        gap: 20px;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .av2-stat {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+      }
+
+      .av2-stat:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        right: -10px;
+        top: 10%;
+        bottom: 10%;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .av2-stat-icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 12px;
+        background: rgba(255, 186, 0, 0.04);
+        border: 1px solid rgba(255, 186, 0, 0.15);
+        color: #ffba00;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .av2-stat-icon i {
+        width: 24px;
+        height: 24px;
+      }
+
+      .av2-stat-text {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .av2-stat-text span:first-child {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.2;
+        color: white;
+      }
+
+      .av2-stat-text.stack-list span {
+        font-size: 0.85rem;
+        font-weight: 700;
+        line-height: 1.3;
+        color: white;
+      }
+
+      .av2-stat-text span:nth-child(2):not(.stack-item) {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: #ffba00;
+        margin: 2px 0;
+      }
+
+      .av2-stat-text span:last-child {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .av2-quote-row {
+        background: #111;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        border-radius: 16px;
+        padding: 36px 40px;
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        gap: 60px;
+        align-items: center;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .av2-quote-left {
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .av2-quote-icon {
+        color: #ffba00;
+        font-size: 4rem;
+        font-family: serif;
+        line-height: 0.6;
+        margin-top: 10px;
+      }
+
+      .av2-quote-text {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .av2-quote-divider {
+        width: 1px;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.08);
+        position: relative;
+        min-height: 60px;
+      }
+
+      .av2-quote-divider::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 4px;
+        height: 4px;
+        background: #ffba00;
+        border-radius: 50%;
+        box-shadow: 0 0 12px 3px rgba(255, 186, 0, 0.4);
+      }
+
+      .av2-quote-right {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      @media (max-width: 1024px) {
+        .av2-top-row {
+          grid-template-columns: 1fr;
+          text-align: center;
+        }
+
+        .av2-eyebrow {
+          justify-content: center;
+        }
+
+        .av2-stats-row {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .av2-stat:not(:last-child)::after {
+          display: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .av2-stats-row {
+          grid-template-columns: 1fr;
+        }
+
+        .av2-quote-row {
+          grid-template-columns: 1fr;
+          gap: 30px;
+        }
+
+        .av2-quote-divider {
+          width: 100%;
+          height: 1px;
+          min-height: 1px;
+        }
+      }
+    </style>
+
+    <div class="about-v2-container">
+      <!-- Top Row -->
+      <div class="av2-top-row">
+
+        <!-- Left: Bio -->
+        <div class="av2-left">
+          <div class="av2-eyebrow">
+            <span>ABOUT ME</span>
+            <div class="av2-eyebrow-line"></div>
+          </div>
+          <h2>Designing intuitive<br /><span class="av2-text-neon">digital experiences.</span></h2>
+          <p class="cinematic-reveal">I’m a UI/UX Designer and Frontend Developer focused on crafting clean, modern, and
+            user-centered digital
+            experiences. With a Computer Science background, I combine design thinking and frontend development to build
+            responsive, visually engaging, and functional interfaces that prioritize usability and seamless interaction.
+          </p>
+          <p class="cinematic-reveal">My expertise spans UI/UX design, web development, branding, poster design,
+            photography, and video editing —
+            allowing me to blend technical precision with creative vision. I enjoy simplifying complex workflows,
+            creating intuitive user journeys, and transforming ideas into polished digital products that deliver
+            meaningful user experiences.</p>
+        </div>
+
+        <!-- Right: Focus -->
+        <div class="av2-right">
+          <div class="av2-eyebrow">
+            <div class="av2-eyebrow-line" style="background: transparent;"></div>
+            <span>DESIGN FOCUS</span>
+            <div class="av2-eyebrow-line"></div>
+          </div>
+
+          <div class="av2-focus-card">
+            <div class="av2-focus-icon"><i data-lucide="target"></i></div>
+            <div class="av2-focus-text">
+              <h4>UX Strategy</h4>
+              <p>Research, user insights &amp; problem framing</p>
+            </div>
+          </div>
+
+          <div class="av2-focus-card">
+            <div class="av2-focus-icon"><i data-lucide="layout-dashboard"></i></div>
+            <div class="av2-focus-text">
+              <h4>Interface Design</h4>
+              <p>Clean, modern &amp; consistent UI design</p>
+            </div>
+          </div>
+
+          <div class="av2-focus-card">
+            <div class="av2-focus-icon"><i data-lucide="code-2"></i></div>
+            <div class="av2-focus-text">
+              <h4>Front-End Development</h4>
+              <p>Bringing designs to life with code</p>
+            </div>
+          </div>
+
+          <div class="av2-focus-card">
+            <div class="av2-focus-icon"><i data-lucide="git-branch"></i></div>
+            <div class="av2-focus-text">
+              <h4>Workflow Simplification</h4>
+              <p>Designing simple, efficient user flows</p>
+            </div>
+          </div>
+
+          <div class="av2-focus-card">
+            <div class="av2-focus-icon"><i data-lucide="eye"></i></div>
+            <div class="av2-focus-text">
+              <h4>Accessibility Awareness</h4>
+              <p>Inclusive designs for real-world impact</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <!-- Bottom Row: Quote -->
+      <div class="av2-quote-row">
+        <div class="av2-quote-left">
+          <div class="av2-quote-icon">“</div>
+          <div class="av2-quote-text">
+            Good design is not just what it looks like,<br />
+            but how it works and how it makes users feel.
+          </div>
+        </div>
+
+        <div class="av2-quote-divider"></div>
+
+        <div class="av2-quote-right">
+          I aim to create digital experiences<br />
+          that are <span class="av2-text-neon">beautiful, functional</span>, and <span
+            class="av2-text-neon">meaningful</span>.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Experience -->
+  <section id="experience" aria-labelledby="exp-title">
+    <h2 id="exp-title">EXPERIENCE</h2>
+
+    <div class="exp-carousel-container">
+      <button class="carousel-btn prev" aria-label="Previous Experience">
+        <i data-lucide="chevron-left"></i>
+      </button>
+
+      <div class="exp-carousel-track">
+        <!-- Entry 1 -->
+        <article class="exp-card active">
+          <div class="exp-meta">
+            <span class="exp-badge">Internship</span>
+            <span class="exp-date">June 2024 · Infopark, Kochi</span>
+          </div>
+          <h3 class="exp-role">UI-Focused Full-Stack Development Intern</h3>
+          <p class="exp-org">SMEC Automation Pvt. Ltd.</p>
+          <p class="exp-summary">
+            Contributed to internal automation tools with a strong focus on
+            interface clarity, usability, and structured frontend architecture
+            within production environments.
+          </p>
+          <ul class="exp-bullets">
+            <li>
+              Implemented responsive UI components aligned with backend
+              automation workflows.
+            </li>
+            <li>
+              Improved interface structure and layout consistency across
+              internal dashboards.
+            </li>
+            <li>
+              Collaborated with backend engineers to ensure accurate data
+              visualization and logical user flows.
+            </li>
+            <li>
+              Reduced workflow friction by refining navigation patterns and
+              simplifying feature interactions.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Entry 2 -->
+        <article class="exp-card next">
+          <div class="exp-meta">
+            <span class="exp-badge">Design Leadership</span>
+            <span class="exp-date">2023 – Present · Campus</span>
+          </div>
+          <h3 class="exp-role">Co-Lead, UI & Visual Design</h3>
+          <p class="exp-org">Computer Society of India (CSI)</p>
+          <p class="exp-summary">
+            Led interface and visual communication design for technical
+            initiatives, ensuring structured layout systems and consistent
+            digital branding across campus platforms.
+          </p>
+          <ul class="exp-bullets">
+            <li>
+              Defined visual hierarchy and layout systems for event websites
+              and digital promotions.
+            </li>
+            <li>
+              Collaborated with developers and event teams to align user
+              experience goals with communication strategy.
+            </li>
+            <li>
+              Mentored junior designers on usability principles, spacing
+              systems, and typography consistency.
+            </li>
+            <li>
+              Enhanced engagement through cohesive design language across
+              multiple digital touchpoints.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Entry 3 -->
+        <article class="exp-card hidden">
+          <div class="exp-meta">
+            <span class="exp-badge">Product Branding & UX Contribution</span>
+            <span class="exp-date">2023 · SJCET</span>
+          </div>
+          <h3 class="exp-role">Visual & Experience Designer</h3>
+          <p class="exp-org">Asthra Tech Fest</p>
+          <p class="exp-summary">
+            Shaped the visual identity and digital experience for a
+            large-scale tech fest, designing cohesive user-facing materials
+            across platforms.
+          </p>
+          <ul class="exp-bullets">
+            <li>
+              Designed digital assets deployed across 10+ communication
+              channels.
+            </li>
+            <li>
+              Contributed to a unified visual system supporting 500+ event
+              participants.
+            </li>
+            <li>
+              Strengthened user engagement through structured visual
+              storytelling and consistent branding.
+            </li>
+          </ul>
+        </article>
+
+        <!-- Entry 4 -->
+        <article class="exp-card hidden">
+          <div class="exp-meta">
+            <span class="exp-badge">Certification</span>
+            <span class="exp-date">Certified &nbsp;·&nbsp; Online</span>
+          </div>
+          <h3 class="exp-role">UI/UX Design Certification</h3>
+          <p class="exp-org">Figma — Simplilearn</p>
+          <ul class="exp-bullets">
+            <li>
+              Completed structured training in wireframing, prototyping, and
+              interface design.
+            </li>
+            <li>
+              Developed interactive prototypes and component-based design
+              systems.
+            </li>
+            <li>
+              Gained hands-on experience in user flows, layout hierarchy, and
+              usability principles.
+            </li>
+          </ul>
+        </article>
+      </div>
+
+      <button class="carousel-btn next" aria-label="Next Experience">
+        <i data-lucide="chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- Skills & Services -->
+  <section id="skills" aria-labelledby="skills-title">
+    <h2 id="skills-title" class="fade-in">SKILLS &amp; SERVICES</h2>
+
+    <!-- Logo Marquee Loop -->
+    <style>
+      .marquee-wrapper {
+        overflow: hidden;
+        width: 100%;
+        /* control central width */
+        margin: 0 auto;
+        /* centers it */
+        padding: 80px 0;
+
+        -webkit-mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 8%,
+            black 92%,
+            transparent 100%);
+
+        mask-image: linear-gradient(to right,
+            transparent 0%,
+            black 8%,
+            black 92%,
+            transparent 100%);
+      }
+
+      .marquee-track {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        width: max-content;
+        animation: marquee 30s linear infinite;
+      }
+
+      .marquee-wrapper:hover .marquee-track {
+        animation-play-state: paused;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .logo-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+      }
+
+      .logo-item img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+        filter: grayscale(90%) brightness(0.75) contrast(1.2) opacity(0.8);
+        transition: filter 0.35s ease, transform 0.35s ease;
+      }
+
+      .logo-item:hover img {
+        filter: grayscale(0%) brightness(1);
+        transform: scale(1.18);
+      }
+
+      .logo-item span {
+        font-size: 10px;
+        font-weight: 500;
+        color: #888;
+        opacity: 0.45;
+        white-space: nowrap;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        transition: opacity 0.35s;
+      }
+
+      .logo-item:hover span {
+        opacity: 1;
+      }
+    </style>
+
+    <div class="marquee-wrapper">
+      <div class="marquee-track" id="marquee-track"></div>
+    </div>
+
+    <script>
+      const logos = [
+        { name: "Figma", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" },
+        { name: "HTML5", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+        { name: "CSS3", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
+        { name: "JavaScript", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+        { name: "MongoDB", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+        { name: "Photoshop", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" },
+        { name: "After Effects", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/aftereffects/aftereffects-original.svg" },
+        { name: "Premiere Pro", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/premierepro/premierepro-original.svg" },
+        { name: "Canva", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" },
+        { name: "Git", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
+        { name: "GitHub", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" },
+        { name: "React", src: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+      ];
+
+      const track = document.getElementById('marquee-track');
+      [...logos, ...logos].forEach(logo => {
+        const item = document.createElement('div');
+        item.className = 'logo-item';
+        item.innerHTML = `<img src="${logo.src}" alt="${logo.name}"><span>${logo.name}</span>`;
+        track.appendChild(item);
+      });
+    </script>
+    <div class="skills-grid">
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="layout" class="skill-icon-svg"></i>
+          </div>
+          <h3>UI / UX Design</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>Figma</li>
+          <li>Wireframing</li>
+          <li>Prototyping</li>
+          <li>Design Systems</li>
+          <li>User Flows</li>
+          <li>Visual Hierarchy</li>
+          <li>Responsive Design</li>
+        </ul>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="monitor" class="skill-icon-svg"></i>
+          </div>
+          <h3>Frontend Development</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>HTML5</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>REACT</li>
+          <li>REST API Integration</li>
+        </ul>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="server" class="skill-icon-svg"></i>
+          </div>
+          <h3>Backend Integration</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>PHP</li>
+          <li>MongoDB</li>
+        </ul>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="palette" class="skill-icon-svg"></i>
+          </div>
+          <h3>Creative Tools</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>Photoshop</li>
+          <li>After Effects</li>
+          <li>Premiere Pro</li>
+          <li>Canva</li>
+        </ul>
+      </article>
+
+      <article class="skill-card fade-in">
+        <div class="card-glow-cursor"></div>
+        <div class="skill-card-header">
+          <div class="skill-icon-wrapper">
+            <i data-lucide="terminal" class="skill-icon-svg"></i>
+          </div>
+          <h3>Development Tools</h3>
+        </div>
+        <ul class="skill-tags">
+          <li>Git &amp; GitHub</li>
+          <li>VS Code</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+
+  <!-- Projects -->
+  <section id="projects" aria-labelledby="projects-title">
+    <h2 id="projects-title">PROJECTS</h2>
+
+    <article class="card project interactive-card" id="project-algomox">
+      <div class="card-glow-cursor"></div>
+      <div class="thumb" style="background: url('Algomox/1.png') center/cover;" loading="lazy"></div>
+      <div class="project-info">
+        <p class="eyebrow">AI-POWERED IT OPERATIONS PLATFORM</p>
+        <h3>Algomox – Product Experience Redesign</h3>
+        <p>
+          A modern product-led landing page redesign clearly showcasing Algomox’s ecosystem through interactive
+          dashboard previews and visualizations.
+          <span class="click-hint">Click to explore project details</span>
+        </p>
+      </div>
+    </article>
+
+    <article class="card project interactive-card" id="project-markflix">
+      <div class="card-glow-cursor"></div>
+      <div class="thumb"></div>
+      <div class="project-info">
+        <p class="eyebrow">FULL-STACK PROTOTYPE</p>
+        <h3>Interactive Streaming Platform Prototype (Netflix-Inspired)</h3>
+        <p>
+          A high-performance streaming interface featuring hover previews,
+          immersive transitions, and REST API integration.
+          <span class="click-hint">Click to explore prototype details</span>
+        </p>
+      </div>
+    </article>
+
+    <article class="card project interactive-card" id="project-novahr">
+      <div class="card-glow-cursor"></div>
+      <div class="thumb"></div>
+      <div class="project-info">
+        <p class="eyebrow">AI-POWERED WORKFORCE PLATFORM</p>
+        <h3>NOVA HR – Unified Workforce Management</h3>
+        <p>
+          An AI-driven platform streamlining HR operations, employee
+          performance tracking, and task management in one system.
+          <span class="click-hint">Click to explore project details</span>
+        </p>
+      </div>
+    </article>
+
+    <article class="card project interactive-card" id="project-collegego">
+      <div class="card-glow-cursor"></div>
+      <div class="thumb"></div>
+      <div class="project-info">
+        <p class="eyebrow">CASE STUDY</p>
+        <h3>CollegeGO – Smart Bus Pass System</h3>
+        <p>
+          A web-based platform digitizing student movement requests and bus
+          pass approvals through a structured multi-level workflow.
+          <span class="click-hint">Click to explore case study</span>
+        </p>
+      </div>
+    </article>
+  </section>
+
+  <!-- UI Experiments & Interaction Concepts -->
+  <section id="experiments" aria-labelledby="experiments-title">
+    <h2 id="experiments-title" class="section-title">UI EXPERIMENTS &amp; INTERACTION CONCEPTS</h2>
+
+    <div class="exp-carousel-container experiment-carousel">
+      <button class="carousel-btn prev-exp" aria-label="Previous Project">
+        <i data-lucide="chevron-left"></i>
+      </button>
+
+      <div class="exp-carousel-track experiments-track">
+        <article class="card project interactive-card active" id="project-nova">
+          <div class="card-glow-cursor"></div>
+          <div class="project-info">
+            <p class="eyebrow">UI Interaction Concept · Figma</p>
+            <h3>NOVA AI – Motion-Driven UI Experiment</h3>
+            <p>
+              An experimental AI SaaS landing page concept focused on
+              interactive 3D elements, dynamic background gradients, and
+              modern enterprise UI aesthetics.
+              <span class="click-hint">Click to explore prototype details</span>
+            </p>
+          </div>
+        </article>
+
+        <article class="card project interactive-card next" id="project-login">
+          <div class="card-glow-cursor"></div>
+          <div class="project-info">
+            <p class="eyebrow">UI Interaction Concept · Figma</p>
+            <h3>Modern Login Experience</h3>
+            <p>
+              A clean, modern login interface designed with smooth transitions
+              and structured hierarchy.
+              <span class="click-hint">Click to explore prototype details</span>
+            </p>
+          </div>
+        </article>
+
+        <article class="card project interactive-card hidden" id="project-sidebar">
+          <div class="card-glow-cursor"></div>
+          <div class="project-info">
+            <p class="eyebrow">UI Interaction Concept · Figma</p>
+            <h3>Adaptive Navigation Sidebar</h3>
+            <p>
+              Explored collapsible sidebar navigation with focus on clarity,
+              spatial awareness, and smooth transitions.
+              <span class="click-hint">Click to explore prototype details</span>
+            </p>
+          </div>
+        </article>
+
+        <article class="card project interactive-card prev" id="project-website">
+          <div class="card-glow-cursor"></div>
+          <div class="project-info">
+            <p class="eyebrow">Landing Page UI Concept</p>
+            <h3>Website Design Concept</h3>
+            <p>
+              Designed a modern landing page layout emphasizing hero
+              hierarchy, clean spacing, and structured content flow.
+              <span class="click-hint">Click to explore prototype details</span>
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <button class="carousel-btn next-exp" aria-label="Next Project">
+        <i data-lucide="chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- Nova AI Project Video Overlay -->
+  <div id="nova-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <button class="overlay-close-btn" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="overlay-content" style="grid-template-columns: 1fr">
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header style="
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 16px;
+                margin-bottom: 24px;
+              ">
+            <div>
+              <p class="eyebrow" style="margin-bottom: 8px">
+                UI Interaction Concept · Figma
+              <h1 style="margin: 0; line-height: 1.1">
+                NOVA AI – Motion-Driven UI Experiment
+              </h1>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1wqkTCaSaBM8-9kSESzawUmgJoIFZQ0Db?usp=drive_link"
+              target="_blank" class="btn btn-demo" style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  flex-shrink: 0;
+                  margin-bottom: 4px;
+                ">
+              <i data-lucide="play-circle"></i> Watch Demo
+            </a>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>
+              An experimental AI SaaS landing page concept focused on
+              interactive 3D elements, dynamic background gradients, and
+              modern enterprise UI aesthetics. This project explores visual
+              hierarchy, motion balance, and immersive hero section design
+              using subtle glow effects and depth layering.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Key Focus Areas</h3>
+            <ul class="feature-bullets">
+              <li>Interactive 3D hero model</li>
+              <li>Motion-driven gradient background</li>
+              <li>Dark-green AI branding system</li>
+              <li>Visual hierarchy & spacing refinement</li>
+              <li>CTA emphasis strategy</li>
+              <li>Ambient lighting & glow effects</li>
+            </ul>
+          </section>
+
+          <div style="height: 40px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Certificates and Creative Works Grid -->
+  <section id="credentials-and-works" aria-label="Credentials and Works"
+    style="padding-top: 60px; padding-bottom: 60px">
+    <div style="
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 40px;
+          align-items: stretch;
+        ">
+      <!-- Certificates -->
+      <div id="certificates" style="
+            text-align: center;
+            padding: 50px 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+          " onmouseover="
+            this.style.background = 'rgba(255, 255, 255, 0.04)';
+            this.style.borderColor = 'rgba(255, 193, 7, 0.2)';
+          " onmouseout="
+            this.style.background = 'rgba(255, 255, 255, 0.02)';
+            this.style.borderColor = 'rgba(255, 255, 255, 0.05)';
+          ">
+        <div>
+          <h2 id="certificates-title" style="margin-bottom: 24px; margin-top: 0">
+            Certificates
+          </h2>
+          <p style="color: var(--muted); margin-bottom: 32px">
+            View my professional certifications and workshop accomplishments.
+          </p>
+        </div>
+        <div>
+          <a href="certificates.html" class="btn btn-primary">View all Certificates</a>
+        </div>
+      </div>
+
+      <!-- Creative Works -->
+      <div id="creative-works" style="
+            text-align: center;
+            padding: 50px 30px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+          " onmouseover="
+            this.style.background = 'rgba(255, 255, 255, 0.04)';
+            this.style.borderColor = 'rgba(255, 193, 7, 0.2)';
+          " onmouseout="
+            this.style.background = 'rgba(255, 255, 255, 0.02)';
+            this.style.borderColor = 'rgba(255, 255, 255, 0.05)';
+          ">
+        <div>
+          <h2 id="creative-works-title" style="margin-bottom: 24px; margin-top: 0">
+            Creative Works
+          </h2>
+          <p style="color: var(--muted); margin-bottom: 32px">
+            Explore my visual storytelling and media edits.
+          </p>
+        </div>
+        <div style="
+              display: flex;
+              justify-content: center;
+              gap: 16px;
+              flex-wrap: wrap;
+            ">
+          <a href="https://drive.google.com/drive/folders/17MhIr0RS5MGdv3quc7gk-BLyIxtjqSb5?usp=drive_link"
+            target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px">
+            <i data-lucide="image"></i> Photo Editing
+          </a>
+          <a href="https://drive.google.com/drive/folders/1V6UIrUZWyU2SJltrcSSB6EgT0GLZuovF?usp=drive_link"
+            target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px">
+            <i data-lucide="video"></i> Video Editing
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Get In Touch</h2>
+
+    <div class="contact-card-container">
+      <div class="card contact-centered-card">
+        <div class="contact-section-group">
+          <h3 class="contact-group-title">Direct</h3>
+          <div class="contact-item">
+            <span class="contact-label">Email:</span>
+            <div class="contact-emails">
+              <a href="mailto:mark.j.kalathara@gmail.com">mark.j.kalathara@gmail.com</a>
+              <a href="mailto:markjohnson2026@cs.sjcetpalai.ac.in">markjohnson2026@cs.sjcetpalai.ac.in</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-label">Phone:</span>
+            <a href="tel:+919746843121">+91 9746843121</a>
+          </div>
+        </div>
+
+        <div class="contact-section-group">
+          <h3 class="contact-group-title">Links</h3>
+          <ul class="example-2">
+            <li class="icon-content">
+              <a href="https://www.linkedin.com/in/mark-johnson-marcus077/" aria-label="LinkedIn" data-social="linkedin"
+                target="_blank" rel="noopener noreferrer">
+                <div class="filled"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-linkedin" viewBox="0 0 16 16" xml:space="preserve">
+                  <path
+                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"
+                    fill="currentColor"></path>
+                </svg>
+              </a>
+
+            </li>
+            <li class="icon-content">
+              <a href="https://github.com/Markjohnson77" aria-label="GitHub" data-social="github" target="_blank"
+                rel="noopener noreferrer">
+                <div class="filled"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github"
+                  viewBox="0 0 16 16" xml:space="preserve">
+                  <path
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"
+                    fill="currentColor"></path>
+                </svg>
+              </a>
+
+            </li>
+            <li class="icon-content">
+              <a href="https://www.instagram.com/_marcus.j_/" aria-label="Instagram" data-social="instagram"
+                target="_blank" rel="noopener noreferrer">
+                <div class="filled"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-instagram" viewBox="0 0 16 16" xml:space="preserve">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"
+                    fill="currentColor"></path>
+                </svg>
+              </a>
+
+            </li>
+            <li class="icon-content">
+              <a href="https://www.youtube.com/@MJEDITS" aria-label="Youtube" data-social="youtube" target="_blank"
+                rel="noopener noreferrer">
+                <div class="filled"></div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
+                  viewBox="0 0 16 16" xml:space="preserve">
+                  <path
+                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"
+                    fill="currentColor"></path>
+                </svg>
+              </a>
+
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-final-cta">
+          <a class="btn btn-primary resume-btn"
+            href="https://drive.google.com/file/d/19Oq9QGBnhSgOhGyxswbZehSq-9dNV_4i/view?usp=drive_link" target="_blank"
+            aria-label="View Resume">View Resume</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-wrap">
+      <span>© <span id="year"></span> Mark Johnson</span>
+    </div>
+  </footer>
+
+  <!-- Algomox Project Overlay -->
+  <div id="algomox-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <button class="overlay-close-btn" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="overlay-content">
+        <!-- Left: Visuals -->
+        <div class="overlay-visuals">
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Algomox/1.png" alt="Algomox UI Screen 1" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Algomox/2.png" alt="Algomox UI Screen 2" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Algomox/3.png" alt="Algomox UI Screen 3" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Algomox/4.png" alt="Algomox UI Screen 4" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Algomox/5.png" alt="Algomox UI Screen 5" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Algomox/last.png" alt="Algomox UI Screen Final" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">AI-POWERED IT OPERATIONS PLATFORM</p>
+            <h1>Algomox – Product Experience Redesign</h1>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px;">
+              <a href="https://github.com/Markjohnson77/Algomoxlandingpg.git" target="_blank" class="repo-button"
+                style="text-decoration: none; width: max-content;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
+                    fill="#ffba00"></path>
+                </svg>
+                <p class="text" style="margin:0; padding:0;">View Repository</p>
+              </a>
+              <a href="https://markjohnson77.github.io/Algomoxlandingpg/" target="_blank" class="repo-button"
+                style="text-decoration: none; width: max-content;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M14 3V5H17.59L7.76 14.83L9.17 16.24L19 6.41V10H21V3H14ZM19 19H5V5H12V3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V12H19V19Z"
+                    fill="#ffba00"></path>
+                </svg>
+                <p class="text" style="margin:0; padding:0;">Live Link Demo</p>
+              </a>
+            </div>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>
+              Algomox is an enterprise AI-powered IT operations platform that helps organizations monitor
+              infrastructure, automate operations, reduce downtime, and optimize operational efficiency through products
+              like ITMox, Nora, and Algomox.Cloud.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Problem</h3>
+            <p>
+              The existing website communicated Algomox’s offerings well, but the product experience felt text-heavy,
+              visually fragmented, and lacked strong product storytelling. Core products like ITMox, Nora, and
+              Algomox.Cloud were not immediately understandable to first-time visitors.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Solution</h3>
+            <p>
+              A modern product-led landing page redesign that clearly showcases Algomox’s ecosystem through interactive
+              dashboard previews, AI assistant interfaces, platform visualizations, and modular content sections.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Key Features</h3>
+            <ul class="feature-bullets">
+              <li>Hero Section with product-first storytelling</li>
+              <li>ITMox Dashboard Preview with KPI cards</li>
+              <li>Nora AI Assistant Interface</li>
+              <li>Algomox.Cloud Control Plane Visualization</li>
+              <li>Interactive Product Modules &amp; Animated Counters</li>
+              <li>Dark / Light Mode &amp; Responsive Design</li>
+            </ul>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Design Approach</h3>
+            <p>
+              Focused on dashboard-first storytelling, enterprise-grade visual hierarchy, clean spacing, modular
+              card-based layouts, and Algomox-inspired blue/cyan branding. Designed to make complex IT products easy to
+              understand at first glance.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Impact &amp; Learnings</h3>
+            <p>
+              Improved product clarity, stronger visual storytelling, and a more modern SaaS experience. Key learning
+              was understanding enterprise product ecosystems and designing interfaces that simplify complex operational
+              workflows.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Tech Stack &amp; Tools</h3>
+            <div class="tech-stack-grid">
+              <!-- Frontend Column -->
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="monitor"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Frontend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>HTML5</li>
+                  <li><span class="tech-dot"></span>CSS3</li>
+                  <li><span class="tech-dot"></span>JavaScript</li>
+                </ul>
+              </div>
+              <!-- Design Column -->
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="palette"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Design</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>Figma</li>
+                  <li><span class="tech-dot"></span>Adobe Illustrator</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="stagger-reveal" style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="https://markjohnson77.github.io/Algomoxlandingpg/" target="_blank" class="btn btn-primary"
+              style="display: inline-flex; align-items: center; gap: 8px">
+              <i data-lucide="external-link"></i> Live Project
+            </a>
+          </section>
+
+          <div style="height: 40px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Netflix Project Overlay -->
+  <div id="markflix-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <button class="overlay-close-btn" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="overlay-content">
+        <!-- Left: Visuals -->
+        <div class="overlay-visuals">
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Markflix/Screenshot%202026-05-04%20215314.png" alt="Markflix Screen 1" loading="lazy"
+              decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Markflix/Screenshot%202026-05-04%20215337.png" alt="Markflix Screen 2" loading="lazy"
+              decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="Markflix/Screenshot%202026-05-04%20215347.png" alt="Markflix Screen 3" loading="lazy"
+              decoding="async" />
+          </div>
+
+          <!-- Video Concept (Last) -->
+          <div class="overlay-main-img stagger-reveal video-container">
+            <a href="https://drive.google.com/file/d/1MWjpX6_kJSxpOrgHEd6JGd2JJblYJdec/view?usp=drive_link"
+              target="_blank" class="video-link-wrapper">
+              <img src="images/markflix-thumb.png" alt="Markflix Prototype" class="overlay-video-placeholder" />
+              <div class="play-overlay">
+                <i data-lucide="play-circle"></i>
+                <span>Watch Demo</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">FULL-STACK PROTOTYPE</p>
+            <h1>
+              Interactive Streaming Platform Prototype (Netflix-Inspired)
+            </h1>
+            <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 16px;">
+              <a href="https://github.com/Markjohnson77/NETFLIXPROTO.git" target="_blank" class="repo-button"
+                style="text-decoration: none; width: max-content;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
+                    fill="#ffba00"></path>
+                </svg>
+                <p class="text" style="margin:0; padding:0;">View Repository</p>
+              </a>
+              <a href="https://drive.google.com/file/d/1MWjpX6_kJSxpOrgHEd6JGd2JJblYJdec/view?usp=sharing"
+                target="_blank" class="repo-button" style="text-decoration: none; width: max-content;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z"
+                    fill="#ffba00"></path>
+                </svg>
+                <p class="text" style="margin:0; padding:0;">Watch Demo</p>
+              </a>
+            </div>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>
+              Designed and developed a full-stack Netflix-inspired streaming
+              prototype featuring hover-based video previews, full-screen
+              playback transitions, and simulated streaming behavior. Built
+              with a modern React + Node.js architecture, optimized for
+              performance, scalability, and clean component structure.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Key Features</h3>
+            <ul class="feature-bullets">
+              <li>Hover-based auto-playing video previews</li>
+              <li>Controlled single-instance video playback logic</li>
+              <li>Full-screen immersive player with dynamic UI controls</li>
+              <li>Stream simulation with loading states</li>
+              <li>Fully responsive grid layout</li>
+              <li>Clean, modular component architecture</li>
+              <li>REST API integration</li>
+            </ul>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Architecture</h3>
+            <div class="tech-stack-grid">
+              <!-- Frontend Column -->
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="monitor"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Frontend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>React <span class="tech-version">v18.3.1</span></li>
+                  <li><span class="tech-dot"></span>Vite</li>
+                  <li><span class="tech-dot"></span>Tailwind CSS</li>
+                  <li><span class="tech-dot"></span>Framer Motion</li>
+                  <li><span class="tech-dot"></span>Lucide React</li>
+                  <li><span class="tech-dot"></span>Axios</li>
+                </ul>
+              </div>
+              <!-- Backend Column -->
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="server"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Backend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>Node.js</li>
+                  <li><span class="tech-dot"></span>Express</li>
+                  <li><span class="tech-dot"></span>CORS</li>
+                  <li><span class="tech-dot"></span>In-memory Data</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+
+
+          <div style="height: 40px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Login Project Video Overlay -->
+  <div id="login-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <button class="overlay-close-btn" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="overlay-content" style="grid-template-columns: 1fr">
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header style="
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 16px;
+                margin-bottom: 24px;
+              ">
+            <div>
+              <p class="eyebrow" style="margin-bottom: 8px">
+                UI Interaction Concept · Figma
+              </p>
+              <h1 style="margin: 0; line-height: 1.1">
+                Modern Login Experience
+              </h1>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1wqkTCaSaBM8-9kSESzawUmgJoIFZQ0Db?usp=drive_link"
+              target="_blank" class="btn btn-demo" style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  flex-shrink: 0;
+                  margin-bottom: 4px;
+                ">
+              <i data-lucide="play-circle"></i> Watch Demo
+            </a>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>
+              A clean, modern login interface designed with smooth transitions
+              and structured hierarchy. The focus was on clarity, visual
+              balance, and intuitive interaction flow.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Highlights</h3>
+            <ul class="feature-bullets">
+              <li>Clear input grouping and spacing</li>
+              <li>Smooth transition animations between states</li>
+              <li>Strong CTA hierarchy</li>
+              <li>Minimal, distraction-free layout</li>
+              <li>Focused on modern microinteraction feel</li>
+            </ul>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Tech Stack</h3>
+            <div class="tech-stack-grid" style="grid-template-columns: 1fr">
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="pen-tool"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Design Tools</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>Figma</li>
+                  <li><span class="tech-dot"></span>Auto Layout</li>
+                  <li><span class="tech-dot"></span>Component Library</li>
+                  <li><span class="tech-dot"></span>Prototyping</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <div style="height: 40px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sidebar Project Video Overlay -->
+  <div id="sidebar-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <button class="overlay-close-btn" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="overlay-content" style="grid-template-columns: 1fr">
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header style="
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 16px;
+                margin-bottom: 24px;
+              ">
+            <div>
+              <p class="eyebrow" style="margin-bottom: 8px">
+                UI Interaction Concept · Figma
+              </p>
+              <h1 style="margin: 0; line-height: 1.1">
+                Adaptive Navigation Sidebar
+              </h1>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1wqkTCaSaBM8-9kSESzawUmgJoIFZQ0Db?usp=drive_link"
+              target="_blank" class="btn btn-demo" style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  flex-shrink: 0;
+                  margin-bottom: 4px;
+                ">
+              <i data-lucide="play-circle"></i> Watch Demo
+            </a>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>
+              Explored collapsible sidebar navigation with focus on clarity,
+              spatial awareness, and smooth transitions. This shows system
+              thinking in interface design.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Highlights</h3>
+            <ul class="feature-bullets">
+              <li>Collapsible interaction</li>
+              <li>Active state indicators</li>
+              <li>Clean icon-text pairing</li>
+              <li>Responsive layout logic</li>
+            </ul>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Tech Stack</h3>
+            <div class="tech-stack-grid" style="grid-template-columns: 1fr">
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="pen-tool"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Design Tools</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>Figma</li>
+                  <li><span class="tech-dot"></span>Component System</li>
+                  <li><span class="tech-dot"></span>Interaction Design</li>
+                  <li><span class="tech-dot"></span>Prototyping</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <div style="height: 40px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Website Project Video Overlay -->
+  <div id="website-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <button class="overlay-close-btn" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="overlay-content" style="grid-template-columns: 1fr">
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header style="
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 16px;
+                margin-bottom: 24px;
+              ">
+            <div>
+              <p class="eyebrow" style="margin-bottom: 8px">
+                Landing Page UI Concept
+              </p>
+              <h1 style="margin: 0; line-height: 1.1">
+                Website Design Concept
+              </h1>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 12px; align-items: flex-end;">
+              <a href="https://drive.google.com/drive/folders/1wqkTCaSaBM8-9kSESzawUmgJoIFZQ0Db?usp=drive_link"
+                target="_blank" class="btn btn-demo" style="
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 8px;
+                    flex-shrink: 0;
+                  ">
+                <i data-lucide="play-circle"></i> Watch Demo
+              </a>
+            </div>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>
+              Designed a modern landing page layout emphasizing hero
+              hierarchy, clean spacing, and structured content flow.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Highlights</h3>
+            <ul class="feature-bullets">
+              <li>Visual hierarchy</li>
+              <li>Spacing system</li>
+              <li>CTA prominence</li>
+              <li>Layout grid alignment</li>
+            </ul>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Tech Stack</h3>
+            <div class="tech-stack-grid" style="grid-template-columns: 1fr">
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="pen-tool"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Design Tools</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>Figma</li>
+                  <li><span class="tech-dot"></span>Grid System</li>
+                  <li><span class="tech-dot"></span>Visual Hierarchy</li>
+                  <li><span class="tech-dot"></span>Responsive Layout</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <div style="height: 40px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NOVA HR Project Overlay -->
+  <div id="nova-hr-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <button class="overlay-close-btn" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="overlay-content">
+        <!-- Left: Visuals -->
+        <div class="overlay-visuals">
+          <div class="overlay-main-img stagger-reveal">
+            <img src="nova-hr/screenshot-1.png" alt="NOVA HR Dashboard" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="nova-hr/screenshot-2.png" alt="NOVA HR View 2" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="nova-hr/screenshot-3.png" alt="NOVA HR View 3" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="nova-hr/screenshot-4.png" alt="NOVA HR View 4" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="nova-hr/screenshot-5.png" alt="NOVA HR View 5" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="nova-hr/screenshot-6.png" alt="NOVA HR View 6" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="nova-hr/screenshot-7.png" alt="NOVA HR View 7" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="nova-hr/screenshot-8.png" alt="NOVA HR View 8" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="nova-hr/screenshot-9.png" alt="NOVA HR View 9" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="nova-hr/screenshot-10.png" alt="NOVA HR View 10" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="nova-hr/screenshot-11.png" alt="NOVA HR View 11" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="nova-hr/screenshot-12.png" alt="NOVA HR View 12" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">AI-POWERED WORKFORCE PLATFORM</p>
+            <h1>NOVA HR – Intelligent Workforce Management System</h1>
+            <a href="https://github.com/ashwinps0977/NOVAAA" target="_blank" class="repo-button"
+              style="text-decoration: none; width: max-content; margin-top: 16px;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z"
+                  fill="#ffba00"></path>
+              </svg>
+              <p class="text" style="margin:0; padding:0;">View Repository</p>
+            </a>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>
+              NOVA HR is an AI-powered workforce management platform that
+              streamlines HR operations, employee management, and performance
+              tracking in a single unified system.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Problem</h3>
+            <p>
+              Traditional HR systems are fragmented, manual, and inefficient,
+              leading to delayed workflows, lack of transparency, and poor
+              employee experience with no real-time insights.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Solution</h3>
+            <p>
+              A centralized, role-based HR platform that automates workflows,
+              provides real-time dashboards, enables data-driven decisions,
+              and improves employee self-service.
+            </p>
+          </section>
+
+          <div class="overlay-split">
+            <section class="stagger-reveal">
+              <h3>My Role</h3>
+              <ul class="role-list">
+                <li>UI/UX Design (Figma)</li>
+                <li>Frontend Development</li>
+                <li>Backend Integration</li>
+                <li>Database Design</li>
+              </ul>
+            </section>
+
+            <section class="stagger-reveal">
+              <h3>Key Features</h3>
+              <ul class="feature-bullets">
+                <li>Role-based Access (HR & Employee)</li>
+                <li>Operations Board (Task Tracking)</li>
+                <li>Performance Analytics (KPI)</li>
+                <li>Employee Management</li>
+                <li>Attendance & Leave System</li>
+                <li>Recruitment Module</li>
+                <li>Growth & Learning System</li>
+              </ul>
+            </section>
+          </div>
+
+          <section class="stagger-reveal">
+            <h3>Design Approach</h3>
+            <p>
+              Dashboard-first UX for quick insights, featuring a clean,
+              minimal UI with strong hierarchy and a color-coded system for
+              clarity and reduced cognitive load.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Tech Stack</h3>
+            <div class="tech-stack-grid">
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="monitor"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Frontend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>HTML5 / CSS3</li>
+                  <li><span class="tech-dot"></span>JavaScript</li>
+                  <li><span class="tech-dot"></span>Figma</li>
+                </ul>
+              </div>
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="server"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Backend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>PHP</li>
+                  <li><span class="tech-dot"></span>MongoDB</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>Impact & Learnings</h3>
+            <p>
+              Achieved faster HR workflows and improved transparency. Key
+              learnings included the criticality of role-based UX and that
+              data presentation matters more than quantity.
+            </p>
+          </section>
+
+          <section class="stagger-reveal" style="margin-top: 40px">
+            <a href="https://github.com/ashwinps0977/NOVAAA" target="_blank" class="btn btn-demo"
+              style="display: inline-flex; align-items: center; gap: 8px">
+              <i data-lucide="github"></i> View Repository
+            </a>
+          </section>
+
+          <div style="height: 40px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project Overlay / Case Study Modal -->
+  <div id="case-study-overlay" class="overlay-backdrop" aria-hidden="true">
+    <div class="overlay-container">
+      <button class="overlay-close-btn" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+
+      <div class="overlay-content">
+        <!-- Left: Visuals -->
+        <div class="overlay-visuals">
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337358.jpg" alt="CollegeGO Screen 1" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337509.jpg" alt="CollegeGO Screen 2" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337411.jpg" alt="CollegeGO Screen 3" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337439.jpg" alt="CollegeGO Screen 4" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337464.jpg" alt="CollegeGO Screen 5" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337550.jpg" alt="CollegeGO Screen 6" loading="lazy" decoding="async" />
+          </div>
+          <div class="overlay-main-img stagger-reveal">
+            <img src="COLLEGE GO/1752385337899.jpg" alt="CollegeGO Screen 7" loading="lazy" decoding="async" />
+          </div>
+        </div>
+
+        <!-- Right: Narrative -->
+        <div class="overlay-narrative">
+          <header>
+            <p class="eyebrow">FULL CASE STUDY</p>
+            <h1>CollegeGO – Smart Bus Pass & Movement Approval System</h1>
+          </header>
+
+          <section class="stagger-reveal">
+            <h3>Overview</h3>
+            <p>
+              CollegeGO is a web-based platform that digitizes student
+              movement requests and bus pass approvals through a structured
+              multi-level workflow. It replaces manual paperwork with a
+              secure, role-based approval system.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Problem</h3>
+            <p>
+              Bus pass approvals in colleges are often handled manually,
+              leading to delayed approvals, lack of transparency, and
+              administrative overload. Students often face uncertainty
+              regarding their request status while administrators manage
+              physical forms.
+            </p>
+          </section>
+
+          <section class="stagger-reveal">
+            <h3>The Solution</h3>
+            <p>
+              A digital approval workflow:
+              <strong>Student → HOD → Warden</strong>. Providing real-time
+              tracking, status-based dashboards, and paperless record
+              management.
+            </p>
+          </section>
+
+          <div class="overlay-split">
+            <section class="stagger-reveal">
+              <h3>My Role</h3>
+              <ul class="role-list">
+                <li>UI/UX Design</li>
+                <li>Frontend Development</li>
+                <li>Backend Integration</li>
+                <li>Database Design</li>
+              </ul>
+            </section>
+
+            <section class="stagger-reveal">
+              <h3>Key Features</h3>
+              <ul class="feature-bullets">
+                <li>Role-based Access</li>
+                <li>Multi-stage Approvals</li>
+                <li>Real-time Tracking</li>
+                <li>Responsive UI</li>
+              </ul>
+            </section>
+          </div>
+
+          <section class="stagger-reveal">
+            <h3>Tech Stack</h3>
+            <div class="tech-stack-grid">
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="monitor"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Frontend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>HTML5 / CSS3</li>
+                  <li><span class="tech-dot"></span>JavaScript</li>
+                  <li><span class="tech-dot"></span>Figma</li>
+                </ul>
+              </div>
+              <div class="tech-stack-col">
+                <p class="tech-stack-label"><i data-lucide="server"
+                    style="width:13px;height:13px;vertical-align:middle;margin-right:6px"></i>Backend</p>
+                <ul class="tech-stack-list">
+                  <li><span class="tech-dot"></span>PHP</li>
+                  <li><span class="tech-dot"></span>MongoDB</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <div style="height: 40px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Main Application Logic -->
+  <script src="js/main.js?v=2" defer></script>
+
+  <!-- Grid Switch Navigation Trigger -->
+  <div class="side-nav-trigger hidden-trigger" id="side-nav-trigger" title="Toggle and Lock Menu">
+    <label class="switch">
+      <input type="checkbox" id="nav-lock-checkbox" />
+      <span class="wrapper">
+        <span class="row">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+        <span class="row row-bottom">
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </span>
+        <span class="row-vertical">
+          <span class="dot"></span>
+          <span class="dot middle-dot"></span>
+          <span class="dot"></span>
+        </span>
+        <span class="row-horizontal">
+          <span class="dot"></span>
+          <span class="dot middle-dot-horizontal"></span>
+          <span class="dot"></span>
+        </span>
+      </span>
+    </label>
+  </div>
+
+  <!-- Vertical Scroll Navigation -->
+  <nav id="scroll-nav" class="scroll-nav" aria-label="Scroll Navigation">
+    <div class="scroll-nav-inner">
+      <a href="#about" class="scroll-nav-link" aria-label="About">
+        <i data-lucide="user"></i>
+        <span class="nav-tooltip">About</span>
+      </a>
+      <a href="#experience" class="scroll-nav-link" aria-label="Experience">
+        <i data-lucide="briefcase"></i>
+        <span class="nav-tooltip">Experience</span>
+      </a>
+      <a href="#skills" class="scroll-nav-link" aria-label="Skills & Services">
+        <i data-lucide="cpu"></i>
+        <span class="nav-tooltip">Skills</span>
+      </a>
+      <a href="#projects" class="scroll-nav-link" aria-label="Projects">
+        <i data-lucide="layout-grid"></i>
+        <span class="nav-tooltip">Projects</span>
+      </a>
+      <a href="#certificates" class="scroll-nav-link" aria-label="Certificates">
+        <i data-lucide="award"></i>
+        <span class="nav-tooltip">Certificates</span>
+      </a>
+      <a href="#contact" class="scroll-nav-link" aria-label="Contact">
+        <i data-lucide="mail"></i>
+        <span class="nav-tooltip">Contact</span>
+      </a>
+    </div>
+  </nav>
+</body>
+
+</html>
