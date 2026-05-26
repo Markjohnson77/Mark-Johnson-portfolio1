@@ -4388,3 +4388,15 @@ footer {
     display: none;
   }
 }
+
+/* ============================================================
+   CINEMATIC SCROLL REVEAL (GSAP)
+   ============================================================ */
+.cinematic-reveal .word {
+  display: inline-block;
+  opacity: 0.1;
+  transform: rotate(3deg);
+  filter: blur(4px);
+  will-change: opacity, transform, filter;
+  /* Add tiny right margin space for split words, or wait for JS to preserve space */
+}

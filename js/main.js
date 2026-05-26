@@ -833,3 +833,89 @@ window.addEventListener('load', () => {
 
 // Lucide Icons
 lucide.createIcons();
+
+// ===== CINEMATIC SCROLL REVEAL =====
+document.addEventListener("DOMContentLoaded", () => {
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+
+        const revealElements = document.querySelectorAll('.cinematic-reveal');
+
+        revealElements.forEach(el => {
+            // Split text dynamically into separate word spans
+            const text = el.innerText;
+            const words = text.split(/(\s+)/); // Preserve whitespace segments
+
+            el.innerHTML = '';
+
+            words.forEach(segment => {
+                if (segment.trim() === '') {
+                    // It's whitespace, just append
+                    el.appendChild(document.createTextNode(segment));
+                } else {
+                    const span = document.createElement('span');
+                    span.className = 'word';
+                    span.innerText = segment;
+                    el.appendChild(span);
+                }
+            });
+
+            // GSAP ScrollTrigger animation
+            gsap.to(el.querySelectorAll('.word'), {
+                scrollTrigger: {
+                    trigger: el,
+                    start: 'top 80%',
+                    end: 'center 70%', // Finish sooner
+                    scrub: 1, // Smooth scrub
+                },
+                opacity: 1,
+                rotate: 0,
+                filter: 'blur(0px)',
+                stagger: 0.015, // Faster text reveal
+                ease: 'power2.out'
+            });
+        });
+
+        // Scroll effect for About Me title
+        gsap.from('.av2-left h2', {
+            scrollTrigger: {
+                trigger: '.av2-left',
+                start: 'top 85%',
+                end: 'center 60%',
+                scrub: 1,
+            },
+            opacity: 0,
+            y: 30,
+            ease: 'power2.out'
+        });
+
+        // Scroll effects for Design Focus stack
+        gsap.from('.av2-focus-card', {
+            scrollTrigger: {
+                trigger: '.av2-right',
+                start: 'top 80%',
+                end: 'center 50%',
+                scrub: 1,
+            },
+            opacity: 0,
+            x: 40,
+            stagger: 0.5,
+            ease: 'power2.out'
+        });
+
+        // Scroll effects for Quote Row
+        gsap.from('.av2-quote-row', {
+            scrollTrigger: {
+                trigger: '.av2-quote-row',
+                start: 'top 95%',
+                end: 'center 85%',
+                scrub: 1,
+            },
+            opacity: 0,
+            y: 20,
+            scale: 1.05,
+            ease: 'power2.out'
+        });
+    }
+});
+
