@@ -973,24 +973,13 @@ section.reveal {
   border-style: solid;
   box-sizing: border-box;
   border-width: 40px 60px 30px 60px;
-  border-color: #C9A84C #C9A84C #C9A84C #C9A84C;
+  border-color: #E5C671 #C9A84C #8A6E14 #C9A227; /* Closed envelope colors */
   animation: envFloating 1s ease-in infinite alternate;
 }
 
 .loader:after {
   content: "";
-  position: absolute;
-  right: 62px;
-  top: -40px;
-  height: 70px;
-  width: 50px;
-  background-image: linear-gradient(#fff 45px, transparent 0),
-    linear-gradient(#fff 45px, transparent 0),
-    linear-gradient(#fff 45px, transparent 0);
-  background-repeat: no-repeat;
-  background-size: 30px 4px;
-  background-position: 0px 11px, 8px 35px, 0px 60px;
-  animation: envDropping 0.75s linear infinite;
+  display: none; /* Hide dropping letter for closed envelope */
 }
 
 @keyframes envFloating {
