@@ -634,7 +634,7 @@ window.addEventListener('load', () => {
     // --- Typewriter Logic ---
     const typingContainer = document.getElementById('typing-text');
     const phrases = [
-        "Designing experiences that feel effortless.",
+        "Designing effortless experiences.",
         "Building interfaces that perform.",
         "Turning ideas into real products.",
         "Where creativity meets clean code."
