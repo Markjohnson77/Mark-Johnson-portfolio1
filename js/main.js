@@ -450,7 +450,7 @@ window.addEventListener('load', () => {
             glowRadius: 140,
             glowIntensity: 2.2,
             coneSpread: 25,
-            colors: ['#ffba00', '#ffd500', '#e08a00']
+            colors: ['#C9A84C', '#D4B96A', '#C9A84C']
         });
     }
 });
