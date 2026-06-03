@@ -3350,14 +3350,14 @@ footer {
 }
 
 .overlay-container {
-  width: 90%;
-  max-width: 1100px;
-  max-height: 80vh;
+  width: 95%;
+  max-width: 1400px;
+  max-height: 90vh;
   background: rgba(15, 15, 15, 0.75);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 24px;
+  border-radius: 0;
   box-shadow: 0 40px 120px rgba(0, 0, 0, 0.7);
   position: relative;
   overflow: hidden;
@@ -3373,13 +3373,12 @@ footer {
 
 .overlay-content {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.3fr 0.7fr;
   height: 100%;
   overflow-y: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--accent-4) transparent;
   pointer-events: auto;
-  /* Active content within passive backdrop if needed, but backdrop is active now */
 }
 
 .overlay-content::-webkit-scrollbar {
@@ -3393,22 +3392,20 @@ footer {
 
 /* Visuals Column - Vertical Stack Refinement */
 .overlay-visuals {
-  padding: 40px;
+  padding: 20px;
   background: rgba(255, 255, 255, 0.02);
   display: flex;
   flex-direction: column;
-  gap: 32px;
-  /* Increased gap for vertical stack breathing room */
+  gap: 20px;
   border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .overlay-main-img {
   width: 100%;
-  border-radius: 20px;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
   border: 1px solid #C9A84C;
-  /* Added frame border to match "framed" request */
   transition: transform 0.4s ease;
 }
 
@@ -3593,6 +3590,9 @@ footer {
 /* Narrative Column */
 .overlay-narrative {
   padding: 60px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Scroll context for Login Overlay */
