@@ -973,13 +973,15 @@ section.reveal {
   border-style: solid;
   box-sizing: border-box;
   border-width: 40px 60px 30px 60px;
-  border-color: #E5C671 #C9A84C #8A6E14 #C9A227; /* Closed envelope colors */
+  border-color: #E5C671 #C9A84C #8A6E14 #C9A227;
+  /* Closed envelope colors */
   animation: envFloating 1s ease-in infinite alternate;
 }
 
 .loader:after {
   content: "";
-  display: none; /* Hide dropping letter for closed envelope */
+  display: none;
+  /* Hide dropping letter for closed envelope */
 }
 
 @keyframes envFloating {
@@ -1409,91 +1411,98 @@ section.reveal {
 
 /* ===== Design Focus ===== */
 
-.design-focus {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+.hidden-element {
+  display: none;
 }
 
-.focus-heading {
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent-4);
-  margin: 0 0 20px;
-}
-
-.focus-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-/* Each item — starts hidden, blurred, shifted right */
-.focus-item {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  opacity: 0;
-  filter: blur(5px);
-  transform: translateX(20px);
-  transition:
-    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1) calc(var(--i) * 90ms),
-    filter 0.7s cubic-bezier(0.22, 1, 0.36, 1) calc(var(--i) * 90ms),
-    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1) calc(var(--i) * 90ms);
-}
-
-/* Triggered class */
-.focus-item.focus-reveal {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-}
-
-/* Icon badge */
-.focus-icon {
+.av2-focus-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
-  background: rgba(201, 168, 76, 0.08);
-  border: 1px solid rgba(201, 168, 76, 0.18);
+  width: 52px;
+  /* was 36px */
+  height: 52px;
+  /* was 36px */
+  border-radius: 12px;
+  border: 1px solid rgba(201, 168, 76, 0.73);
   color: var(--accent-4);
   flex-shrink: 0;
-  transition:
-    background 0.25s ease,
-    border-color 0.25s ease;
+
+  transition: border-color 0.25s ease;
 }
 
-.focus-icon svg {
-  width: 16px;
-  height: 16px;
+
+.av2-focus-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--icon-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.02;
+  transform: scale(1);
+  transition: opacity 0.4s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.av2-focus-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 2s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.av2-focus-icon svg,
+.av2-focus-icon i {
+  position: relative;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
   stroke-width: 1.8;
 }
 
-.focus-item:hover .focus-icon {
-  background: rgba(201, 168, 76, 0.15);
-  border-color: rgba(201, 168, 76, 0.4);
+.av2-focus-card:hover .av2-focus-text h4 {
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
-/* Label */
-.focus-label {
-  font-size: 0.97rem;
-  font-weight: 500;
-  color: rgba(230, 230, 230, 0.85);
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-  transition: color 0.2s ease;
+.av2-focus-card:hover .av2-focus-text p {
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8), 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
-.focus-item:hover .focus-label {
-  color: #ffffff;
+.av2-focus-card:hover::before {
+  opacity: 0.15;
+  transform: scale(1.05);
+}
+
+.av2-focus-card:hover::after {
+  opacity: 1;
+}
+
+.av2-focus-card:hover .av2-focus-icon {
+  border-color: rgba(201, 168, 76, 0.3);
+}
+
+.av2-focus-card {
+  position: relative;
+  background: transparent;
+  overflow: hidden;
+}
+
+.av2-focus-text {
+  position: relative;
+  z-index: 2;
+}
+
+.av2-focus-icon {
+  position: relative;
+  z-index: 2;
 }
 
 /* ===== End Design Focus ===== */
@@ -1901,7 +1910,8 @@ section.reveal {
 /* Featured Project Redesign */
 .featured-project {
   position: relative;
-  display: block; /* Override previous grid */
+  display: block;
+  /* Override previous grid */
   min-height: 280px;
   padding: 40px 40px;
   border-radius: 0;
@@ -1935,7 +1945,10 @@ section.reveal {
 .featured-project::after {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(90deg, rgba(21, 21, 21, 1) 35%, rgba(21, 21, 21, 0.6) 70%, transparent 100%);
   z-index: 1;
   pointer-events: none;
@@ -1996,6 +2009,7 @@ section.reveal {
     padding: 40px 30px;
     min-height: 500px;
   }
+
   .featured-project .project-bg-image {
     width: 100%;
     height: 60%;
@@ -2006,20 +2020,24 @@ section.reveal {
     mask-image: linear-gradient(to top, transparent 0%, black 70%);
     -webkit-mask-image: linear-gradient(to top, transparent 0%, black 70%);
   }
+
   .featured-project::after {
     background: linear-gradient(to top, rgba(21, 21, 21, 1) 40%, rgba(21, 21, 21, 0.4) 100%);
   }
+
   .featured-project .project-info {
     max-width: 100%;
     margin-top: auto;
     justify-content: flex-end;
   }
+
   .featured-project .project-bg-number {
     top: 20px;
     left: 20px;
     transform: none;
     font-size: 10rem;
   }
+
   .featured-project .project-info h3 {
     font-size: 2.5rem;
   }
@@ -2216,6 +2234,8 @@ footer {
 }
 
 .contact-centered-card {
+  position: relative;
+  overflow: hidden;
   max-width: 540px;
   width: 100%;
   text-align: center;
@@ -2225,6 +2245,45 @@ footer {
   backdrop-filter: blur(25px) saturate(200%);
   border-radius: 32px;
   box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+}
+
+.contact-centered-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--contact-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+  transform: scale(1);
+  transition: opacity 0.5s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact-centered-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 2s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact-centered-card:hover::before {
+  opacity: 0.15;
+  transform: scale(1.05);
+}
+
+.contact-centered-card:hover::after {
+  opacity: 1;
+}
+
+.contact-centered-card > * {
+  position: relative;
+  z-index: 2;
 }
 
 @media (max-width: 640px) {
@@ -3861,6 +3920,40 @@ footer {
     box-shadow 0.4s ease;
 }
 
+.skill-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--skill-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.02;
+  transform: scale(1);
+  transition: opacity 0.4s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.skill-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 1s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.skill-card:hover::before {
+  opacity: 0.15;
+  transform: scale(1.05);
+}
+
+.skill-card:hover::after {
+  opacity: 1;
+}
+
 /* Scroll Reveal Visible State */
 .skill-card.visible {
   opacity: 1;
@@ -3880,7 +3973,7 @@ footer {
       transparent 60%);
   opacity: 0;
   transition: opacity 0.5s ease;
-  z-index: 0;
+  z-index: 1;
 }
 
 .skill-card:hover .card-glow-cursor {
@@ -3896,7 +3989,7 @@ footer {
 
 .skill-card-header {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: 14px;
@@ -3942,7 +4035,7 @@ footer {
 /* Refined Skill Tag Microinteractions */
 .skill-tags {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -4561,13 +4654,17 @@ footer {
    MOBILE RESPONSIVE FIXES
    ============================================================ */
 @media (max-width: 768px) {
+
   /* Global box-sizing to prevent padding overflows */
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     box-sizing: border-box !important;
   }
 
   /* Prevent horizontal scroll */
-  html, body {
+  html,
+  body {
     overflow-x: hidden !important;
     width: 100% !important;
     margin: 0;
@@ -4581,7 +4678,10 @@ footer {
   }
 
   /* About Me Fixes */
-  .av2-left h2, .styled-heading, .av2-left p, .cinematic-reveal {
+  .av2-left h2,
+  .styled-heading,
+  .av2-left p,
+  .cinematic-reveal {
     text-align: center !important;
   }
 
@@ -4591,31 +4691,36 @@ footer {
     text-align: center !important;
     padding: 40px 15px 40px !important;
   }
+
   .hero-title {
     text-align: center !important;
     font-size: clamp(2rem, 8vw, 3rem) !important;
   }
+
   .hero-label {
     text-align: center !important;
     width: 100%;
   }
+
   .hero-sub-wrapper {
     justify-content: center !important;
     text-align: center !important;
     width: 100%;
     margin: 0 auto !important;
   }
+
   .hero-cta {
     justify-content: center !important;
     width: 100%;
   }
 
   /* About / Design Focus Fixes */
-  .about-v2-container, .av2-top-row {
+  .about-v2-container,
+  .av2-top-row {
     width: 100% !important;
     max-width: 100% !important;
   }
-  
+
   .av2-right {
     width: 100% !important;
     max-width: 100% !important;
@@ -4634,14 +4739,18 @@ footer {
     margin: 0 !important;
     gap: 12px !important;
     border-radius: 10px !important;
-    transform: none !important; /* Disable scroll/touch shift */
+    transform: none !important;
+    /* Disable scroll/touch shift */
     transition: none !important;
   }
-  .av2-focus-card:hover, .av2-focus-card:active {
+
+  .av2-focus-card:hover,
+  .av2-focus-card:active {
     transform: none !important;
     background: #131210 !important;
     border-color: rgba(255, 255, 255, 0.04) !important;
   }
+
   .av2-focus-icon {
     width: 36px !important;
     height: 36px !important;
@@ -4650,19 +4759,23 @@ footer {
     border-radius: 8px !important;
     flex-shrink: 0 !important;
   }
+
   .av2-focus-icon i,
   .av2-focus-icon svg {
     width: 18px !important;
     height: 18px !important;
   }
+
   .av2-focus-text {
     flex: 1 !important;
     min-width: 0 !important;
   }
+
   .av2-focus-text h4 {
     font-size: 0.82rem !important;
     margin: 0 0 2px 0 !important;
   }
+
   .av2-focus-text p {
     font-size: 0.72rem !important;
     line-height: 1.3 !important;
@@ -4674,17 +4787,20 @@ footer {
     align-items: center !important;
   }
 
-  .project, .card {
+  .project,
+  .card {
     width: 100% !important;
-    max-width: 400px !important; /* Ensure it stays boxed and centered */
+    max-width: 400px !important;
+    /* Ensure it stays boxed and centered */
     margin: 0 auto !important;
     box-sizing: border-box !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    padding: 20px !important; /* Uniform padding so image doesn't touch edge */
+    padding: 20px !important;
+    /* Uniform padding so image doesn't touch edge */
   }
-  
+
   .project .thumb {
     width: 100% !important;
     box-sizing: border-box !important;
@@ -4702,7 +4818,9 @@ footer {
     padding-top: 15px !important;
   }
 
-  .project-info p, .project-info h3, .project-info .eyebrow {
+  .project-info p,
+  .project-info h3,
+  .project-info .eyebrow {
     text-align: center !important;
   }
 
@@ -4710,6 +4828,7 @@ footer {
   .overlay-backdrop {
     padding: 0 !important;
   }
+
   .overlay-container {
     width: 100% !important;
     max-width: 100% !important;
@@ -4719,6 +4838,7 @@ footer {
     margin: 0 !important;
     border: none !important;
   }
+
   .overlay-content {
     display: flex !important;
     flex-direction: column !important;
@@ -4726,40 +4846,48 @@ footer {
     box-sizing: border-box !important;
     overflow-x: hidden !important;
   }
+
   .overlay-visuals {
     width: 100% !important;
-    padding: 60px 20px 20px 20px !important; /* Clears close button */
+    padding: 60px 20px 20px 20px !important;
+    /* Clears close button */
     box-sizing: border-box !important;
   }
+
   .overlay-narrative {
     width: 100% !important;
     padding: 20px 20px 60px 20px !important;
     box-sizing: border-box !important;
   }
+
   .overlay-close-btn {
     top: 15px !important;
     right: 15px !important;
     background: rgba(0, 0, 0, 0.6) !important;
     border-radius: 50% !important;
     z-index: 9999 !important;
-    border: 1px solid rgba(255,255,255,0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
   }
+
   .overlay-split {
     display: flex !important;
     flex-direction: column !important;
     gap: 15px !important;
   }
+
   .overlay-narrative h1 {
     font-size: 1.6rem !important;
     word-wrap: break-word !important;
   }
+
   .overlay-narrative p {
     font-size: 0.95rem !important;
     word-wrap: break-word !important;
   }
 
   /* Container bounds */
-  .exp-carousel-container, .skills-grid {
+  .exp-carousel-container,
+  .skills-grid {
     width: 100% !important;
     max-width: 100% !important;
     box-sizing: border-box !important;
