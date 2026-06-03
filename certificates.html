@@ -13,7 +13,8 @@
   <meta property="og:title" content="Certificates — Mark Johnson" />
   <meta property="og:description"
     content="Certificates and accomplishments of Mark Johnson — Computer Science student & Creative Developer." />
-  <meta property="og:image" content="https://markjohnson77.github.io/Mark-Johnson-portfolio1/bacckgr/Profile_bgnd.png" />
+  <meta property="og:image"
+    content="https://markjohnson77.github.io/Mark-Johnson-portfolio1/bacckgr/Profile_bgnd.png" />
   <meta property="og:image:width" content="1500" />
   <meta property="og:image:height" content="750" />
   <meta property="og:image:type" content="image/png" />
@@ -26,7 +27,8 @@
   <meta name="twitter:title" content="Certificates — Mark Johnson" />
   <meta name="twitter:description"
     content="Certificates and accomplishments of Mark Johnson — Computer Science student & Creative Developer." />
-  <meta name="twitter:image" content="https://markjohnson77.github.io/Mark-Johnson-portfolio1/bacckgr/Profile_bgnd.png" />
+  <meta name="twitter:image"
+    content="https://markjohnson77.github.io/Mark-Johnson-portfolio1/bacckgr/Profile_bgnd.png" />
   <meta name="twitter:image:alt" content="Mark Johnson — UI/UX Designer & Front-End Developer portfolio hero banner" />
   <link rel="icon"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='%230C3B2E'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='sans-serif' font-size='54' fill='%23FFBA00'%3EM%3C/text%3E%3C/svg%3E" />
@@ -35,6 +37,45 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ── Modal viewport-centering fix ── */
+    #certModal.overlay-backdrop {
+      position: fixed !important;
+      inset: 0 !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      z-index: 9999 !important;
+      overflow: hidden !important;
+      /* hide when not active */
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    #certModal.overlay-backdrop.active {
+      opacity: 1 !important;
+      pointer-events: auto !important;
+      visibility: visible !important;
+    }
+
+    #certModal .overlay-container {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      transform: none !important;
+      max-width: min(1100px, 92vw) !important;
+      max-height: 90vh !important;
+      width: 100% !important;
+      overflow-y: auto !important;
+      margin: auto !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -64,76 +105,85 @@
     <section id="certificates" aria-labelledby="certificates-title" class="reveal">
       <h2 id="certificates-title">Certificates</h2>
       <div class="cert-grid">
-        <div class="cert-card" data-cert="SMEC1.png" data-title="Full Stack Web Development Internship" data-desc="Successfully completed a comprehensive Full Stack Web Development Internship at SMEC Automation Pvt. Ltd. Gained hands-on experience in building robust web applications and implementing seamless user interfaces in production environments.">
+        <div class="cert-card" data-cert="SMEC1.png" data-title="Full Stack Web Development Internship"
+          data-desc="Successfully completed a comprehensive Full Stack Web Development Internship at SMEC Automation Pvt. Ltd. Gained hands-on experience in building robust web applications and implementing seamless user interfaces in production environments.">
           <img src="SMEC1.png" alt="SMEC Full Stack Web Development Internship Certificate" loading="lazy"
             decoding="async" />
           <p>Full Stack Web Development Internship</p>
         </div>
 
-        <div class="cert-card" data-cert="PALAKKAD.jpg" data-title="KTU Techfest Workshop" data-desc="Participated in the KTU Techfest Workshop at Ahalia School of Engineering and Technology. The workshop focused on modern web development practices, technical problem-solving, and collaborative engineering methodologies.">
+        <div class="cert-card" data-cert="PALAKKAD.jpg" data-title="KTU Techfest Workshop"
+          data-desc="Participated in the KTU Techfest Workshop at Ahalia School of Engineering and Technology. The workshop focused on modern web development practices, technical problem-solving, and collaborative engineering methodologies.">
           <img src="PALAKKAD.jpg" alt="KTU Techfest Workshop Participation Certificate" loading="lazy"
             decoding="async" />
           <p>KTU Techfest Workshop</p>
         </div>
 
-        <div class="cert-card" data-cert="ASTHRA.jpeg" data-title="Volunteer - Web & Design Team" data-desc="Awarded a Certificate of Gratitude for volunteering in the Web & Design Team for ASTHRA 9.0 at St. Joseph's College of Engineering and Technology, Palai. Contributed to designing and managing the technical fest's digital branding and user experience.">
+        <div class="cert-card" data-cert="ASTHRA.jpeg" data-title="Volunteer - Web & Design Team"
+          data-desc="Awarded a Certificate of Gratitude for volunteering in the Web & Design Team for ASTHRA 9.0 at St. Joseph's College of Engineering and Technology, Palai. Contributed to designing and managing the technical fest's digital branding and user experience.">
           <img src="ASTHRA.jpeg" alt="ASTHRA Tech Fest Volunteer Certificate" loading="lazy" decoding="async" />
           <p>Volunteer - Web & Design Team</p>
         </div>
 
-        <div class="cert-card" data-cert="IEEE.jpeg" data-title="IEEE Participation Certificate" data-desc="Participated in the interactive IEEE workshop, expanding knowledge on advanced technological concepts, industry standards, and innovative problem-solving within the engineering and computer science domain.">
+        <div class="cert-card" data-cert="IEEE.jpeg" data-title="IEEE Participation Certificate"
+          data-desc="Participated in the interactive IEEE workshop, expanding knowledge on advanced technological concepts, industry standards, and innovative problem-solving within the engineering and computer science domain.">
           <img src="IEEE.jpeg" alt="IEEE Participation Certificate" loading="lazy" decoding="async" />
           <p>IEEE Participation Certificate</p>
         </div>
 
-        <div class="cert-card" data-cert="SUMMIT1.jpg" data-title="AI Summit Workshop" data-desc="Attended the AI Summit Workshop, exploring cutting-edge developments in Artificial Intelligence, machine learning models, neural networks, and their practical applications in the tech industry.">
+        <div class="cert-card" data-cert="SUMMIT1.jpg" data-title="AI Summit Workshop"
+          data-desc="Attended the AI Summit Workshop, exploring cutting-edge developments in Artificial Intelligence, machine learning models, neural networks, and their practical applications in the tech industry.">
           <img src="SUMMIT1.jpg" alt="AI Summit Workshop Certificate" loading="lazy" decoding="async" />
           <p>AI Summit Workshop</p>
         </div>
 
-        <div class="cert-card" data-cert="SUMMIT2.jpg" data-title="AI Summit Project Showcase" data-desc="Presented a project at the AI Summit Project Showcase, demonstrating applied AI techniques, creative problem-solving, and innovative implementation in a real-world technological scenario.">
+        <div class="cert-card" data-cert="SUMMIT2.jpg" data-title="AI Summit Project Showcase"
+          data-desc="Presented a project at the AI Summit Project Showcase, demonstrating applied AI techniques, creative problem-solving, and innovative implementation in a real-world technological scenario.">
           <img src="SUMMIT2.jpg" alt="AI Summit Project Showcase Certificate" loading="lazy" decoding="async" />
           <p>AI Summit Project Showcase</p>
         </div>
 
-        <div class="cert-card" data-cert="SimplyLearn.png" data-title="UI/UX Design Certification" data-desc="Successfully completed a UI/UX Design certification program via Simplilearn, validating skills in modern design frameworks, wireframing, prototyping, and user-centered design methodologies.">
+        <div class="cert-card" data-cert="SimplyLearn.png" data-title="UI/UX Design Certification"
+          data-desc="Successfully completed a UI/UX Design certification program via Simplilearn, validating skills in modern design frameworks, wireframing, prototyping, and user-centered design methodologies.">
           <img src="SimplyLearn.png" alt="SimplyLearn Certificate" loading="lazy" decoding="async" />
           <p>SimplyLearn Certificate</p>
         </div>
       </div>
+      </div>
+    </section>
 
-      <!-- Project-Style Overlay Modal -->
-      <div id="certModal" class="overlay-backdrop" aria-hidden="true">
-        <div class="overlay-container">
-          <button class="overlay-close-btn close" aria-label="Close">
-            <i data-lucide="x"></i>
-          </button>
-          
-          <div class="overlay-content">
-            <!-- Left: Visuals -->
-            <div class="overlay-visuals">
-              <div class="overlay-main-img stagger-reveal" style="opacity: 1; transform: none;">
-                <img id="modalImg" src="" alt="Certificate" loading="lazy" decoding="async" style="background: #fff; max-height: 80vh; object-fit: contain;" />
-              </div>
-            </div>
+    <!-- Project-Style Overlay Modal -->
+    <div id="certModal" class="overlay-backdrop" aria-hidden="true">
+      <div class="overlay-container">
+        <button class="overlay-close-btn close" aria-label="Close">
+          <i data-lucide="x"></i>
+        </button>
 
-            <!-- Right: Narrative -->
-            <div class="overlay-narrative">
-              <header>
-                <p class="eyebrow">CERTIFICATE</p>
-                <h1 id="modalTitle">Certificate Title</h1>
-              </header>
-              <section class="stagger-reveal" style="opacity: 1; transform: none; margin-top: 40px;">
-                <h3>Description</h3>
-                <p id="modalDesc">
-                  Description goes here.
-                </p>
-              </section>
+        <div class="overlay-content">
+          <!-- Left: Visuals -->
+          <div class="overlay-visuals">
+            <div class="overlay-main-img stagger-reveal" style="opacity: 1; transform: none;">
+              <img id="modalImg" src="" alt="Certificate" loading="lazy" decoding="async"
+                style="background: #fff; max-height: 80vh; object-fit: contain;" />
             </div>
+          </div>
+
+          <!-- Right: Narrative -->
+          <div class="overlay-narrative">
+            <header>
+              <p class="eyebrow">CERTIFICATE</p>
+              <h1 id="modalTitle">Certificate Title</h1>
+            </header>
+            <section class="stagger-reveal" style="opacity: 1; transform: none; margin-top: 40px;">
+              <h3>Description</h3>
+              <p id="modalDesc">
+                Description goes here.
+              </p>
+            </section>
           </div>
         </div>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer>
@@ -158,7 +208,7 @@
         modalImg.src = card.getAttribute("data-cert");
         modalTitle.textContent = card.getAttribute("data-title");
         modalDesc.textContent = card.getAttribute("data-desc");
-        
+
         const content = modal.querySelector(".overlay-content");
         if (content) content.scrollTop = 0;
       });
@@ -173,7 +223,7 @@
     if (closeBtn) {
       closeBtn.addEventListener("click", closeModal);
     }
-    
+
     modal.addEventListener("click", (e) => {
       if (e.target === modal) closeModal();
     });
