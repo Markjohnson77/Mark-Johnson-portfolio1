@@ -1424,7 +1424,7 @@ section.reveal {
   height: 52px;
   /* was 36px */
   border-radius: 12px;
-  border: 1px solid rgba(201, 168, 76, 0.73);
+  border: 1px solid lab(70.14% 1.51 50.89 / 0.73);
   color: var(--accent-4);
   flex-shrink: 0;
 
@@ -4942,4 +4942,74 @@ footer {
 .credential-card>div {
   position: relative;
   z-index: 2;
+}
+
+/* ===== Hero Image Hover Speech Bubble ===== */
+.hero-speech-bubble {
+  position: absolute;
+  top: -40px;
+  left: -200px;
+  width: 260px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+  /* Shifted text 5px downwards by adjusting padding */
+  padding-top: 55px;
+  padding-bottom: 55px;
+  padding-right: 15px;
+}
+
+.hero-speech-bubble::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgb(200, 161, 54);
+  -webkit-mask-image: url('bacckgr/cloud%20msg.png');
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-image: url('bacckgr/cloud%20msg.png');
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  z-index: -1;
+}
+
+/* Hover trigger */
+.tilted-card-figure:hover .hero-speech-bubble {
+  opacity: 1;
+  transform: translateY(-10px) scale(1);
+}
+
+.speech-text {
+  color: #fff;
+  font-family: 'Fira Code', 'Inter', monospace;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Responsive adjustment for mobile */
+@media (max-width: 768px) {
+  .hero-speech-bubble {
+    top: -50px;
+    left: -20px;
+    width: 200px;
+    height: 150px;
+    padding-bottom: 20px;
+    padding-right: 10px;
+  }
+
+  .speech-text {
+    font-size: 0.85rem;
+  }
 }
