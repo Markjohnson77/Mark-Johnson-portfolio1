@@ -1439,7 +1439,7 @@ section.reveal {
   background-image: var(--icon-bg);
   background-size: cover;
   background-position: center;
-  opacity: 0.02;
+  opacity: 0.05;
   transform: scale(1);
   transition: opacity 0.4s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
   z-index: 0;
@@ -2281,7 +2281,7 @@ footer {
   opacity: 1;
 }
 
-.contact-centered-card > * {
+.contact-centered-card>* {
   position: relative;
   z-index: 2;
 }
@@ -3927,7 +3927,7 @@ footer {
   background-image: var(--skill-bg);
   background-size: cover;
   background-position: center;
-  opacity: 0.02;
+  opacity: 0.035;
   transform: scale(1);
   transition: opacity 0.4s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
   z-index: 0;
