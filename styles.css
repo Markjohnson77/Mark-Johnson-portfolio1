@@ -4999,17 +4999,3 @@ footer {
 }
 
 /* Responsive adjustment for mobile */
-@media (max-width: 768px) {
-  .hero-speech-bubble {
-    top: -50px;
-    left: -20px;
-    width: 200px;
-    height: 150px;
-    padding-bottom: 20px;
-    padding-right: 10px;
-  }
-
-  .speech-text {
-    font-size: 0.85rem;
-  }
-}
