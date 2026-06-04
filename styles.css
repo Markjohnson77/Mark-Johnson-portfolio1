@@ -4893,3 +4893,53 @@ footer {
     box-sizing: border-box !important;
   }
 }
+
+/* ===== Credential Cards Hover Effect ===== */
+.credential-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.credential-card:hover {
+  border-color: rgba(255, 193, 7, 0.2) !important;
+  background: rgba(255, 255, 255, 0.04) !important;
+}
+
+.credential-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  transform: scale(1);
+  transition: opacity 0.4s ease, transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.credential-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0.3;
+  transition: opacity 1s ease;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.credential-card:hover::before {
+  opacity: 0.15;
+  transform: scale(1.05);
+}
+
+.credential-card:hover::after {
+  opacity: 1;
+}
+
+.credential-card>div {
+  position: relative;
+  z-index: 2;
+}
