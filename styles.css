@@ -237,12 +237,7 @@ body {
 }
 
 .brand.animated-logo:hover .logo-text {
-  transform: translateY(-2px) scale(1.05);
-  text-shadow:
-    1.5px 1.5px 0 #0E0D0B,
-    3px 3px 0 #0E0D0B,
-    4.5px 4.5px 0 #0E0D0B,
-    6px 6px 15px rgba(201, 168, 76, 0.4);
+  color: #f9f9f9;
 }
 
 .brand.animated-logo:hover .logo-text span {
