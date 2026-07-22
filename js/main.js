@@ -255,6 +255,7 @@ function initProjectOverlay(cardId, overlayId) {
 }
 
 // Initialize all interactive projects
+initProjectOverlay("project-eventforce", "eventforce-overlay");
 initProjectOverlay("project-algomox", "algomox-overlay");
 initProjectOverlay("project-markflix", "markflix-overlay");
 initProjectOverlay("project-collegego", "case-study-overlay");
