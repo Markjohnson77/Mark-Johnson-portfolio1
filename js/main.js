@@ -190,12 +190,26 @@ function initProjectOverlay(cardId, overlayId) {
     const content = backdrop.querySelector(".overlay-content");
     let closeTimeout;
 
+    // Track how many overlays are open so body scroll is only restored when ALL are closed
+    if (typeof window._openOverlayCount === 'undefined') window._openOverlayCount = 0;
+
+    // Apply scroll isolation on the scrollable panel to stop scroll-chaining
+    if (container) {
+        container.style.overscrollBehavior = 'contain';
+    }
+    if (content) {
+        content.style.overscrollBehavior = 'contain';
+    }
+
     function open(e) {
         if (e) e.stopPropagation();
         clearTimeout(closeTimeout);
         backdrop.classList.add("active");
         backdrop.setAttribute("aria-hidden", "false");
         if (content) content.scrollTop = 0;
+        // Lock main page scroll
+        window._openOverlayCount = (window._openOverlayCount || 0) + 1;
+        document.body.style.overflow = 'hidden';
     }
 
     function close(immediate = false) {
@@ -204,6 +218,11 @@ function initProjectOverlay(cardId, overlayId) {
         closeTimeout = setTimeout(() => {
             backdrop.classList.remove("active");
             backdrop.setAttribute("aria-hidden", "true");
+            // Restore main page scroll only when no overlays remain open
+            window._openOverlayCount = Math.max((window._openOverlayCount || 1) - 1, 0);
+            if (window._openOverlayCount === 0) {
+                document.body.style.overflow = '';
+            }
         }, delay);
     }
 

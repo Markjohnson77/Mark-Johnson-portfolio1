@@ -157,20 +157,6 @@ body {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
 
-.btn-ghost,
-.btn.ghost {
-  background: transparent;
-  color: var(--accent-4);
-  border: 1px solid var(--accent-4);
-}
-
-.btn-ghost:hover,
-.btn.ghost:hover {
-  background: var(--accent-4);
-  color: #0E0D0B;
-  box-shadow: 0 8px 20px rgba(201, 168, 76, 0.3);
-  transform: translateY(-2px);
-}
 
 /* Reveal Helpers */
 .stagger-reveal.reveal,
@@ -1994,10 +1980,14 @@ section.reveal {
   font-size: 2.5rem;
   font-weight: 900;
   line-height: 1.05;
-  color: #fff;
+  color: #C9A84C;
   margin-bottom: 12px;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+  text-shadow:
+    2px 2px 0 #0E0D0B,
+    4px 4px 0 #0E0D0B,
+    6px 6px 0 #0E0D0B;
 }
 
 .featured-project .project-info p {
@@ -2041,7 +2031,10 @@ section.reveal {
   }
 
   .featured-project .project-info h3 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    text-shadow:
+      2px 2px 0 #0E0D0B,
+      4px 4px 0 #0E0D0B;
   }
 }
 
@@ -2404,9 +2397,7 @@ footer {
 
 .resume-btn:hover {
   transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
   filter: brightness(1.1);
-  color: #000;
 }
 
 @keyframes geminiGradient {
@@ -4945,4 +4936,3 @@ footer {
   position: relative;
   z-index: 2;
 }
-
